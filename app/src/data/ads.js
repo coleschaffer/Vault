@@ -49,7 +49,7 @@ export const ads = [
         timestamp: "0:00-0:02",
         type: "video",
         description: "Pregnant woman in bathroom mirror selfie, pink tie-dye outfit",
-        transcript: "I got pregnant with my fifth kid and my fifth baby daddy dipped.",
+        transcript: "My fifth baby daddy, dipped.",
         purpose: "Rage-bait hook to stop scroll and polarize - immediately provocative"
       },
       {
@@ -57,7 +57,7 @@ export const ads = [
         timestamp: "0:02-0:04",
         type: "video",
         description: "Same woman continues, emotional expression",
-        transcript: "Mofo left.",
+        transcript: "Mofo left me with nothing.",
         purpose: "Escalate the drama, establish the problem (single mom, no support)"
       },
       {
@@ -65,7 +65,7 @@ export const ads = [
         timestamp: "0:04-0:06",
         type: "video",
         description: "Hands holding past-due bills with red 'PAST DUE' stamp",
-        transcript: "Bills stacked up.",
+        transcript: "Bills stacked, fridge empty.",
         purpose: "Transition from personal drama to universal financial pain point"
       },
       {
@@ -73,7 +73,7 @@ export const ads = [
         timestamp: "0:06-0:09",
         type: "video",
         description: "New woman (curly hair, blue shirt) at kitchen counter on phone",
-        transcript: "Then my girl put me onto this.",
+        transcript: "Luckily my homegirl put me onto this relief program. Just answered a few questions online.",
         purpose: "Introduce the solution tease - 'someone told me about this'"
       },
       {
@@ -81,7 +81,7 @@ export const ads = [
         timestamp: "0:10-0:13",
         type: "video",
         description: "Woman in pink fuzzy robe holding fanned-out cash",
-        transcript: "I got a little over four thousand.",
+        transcript: "Next day, a little over four bands hit my account.",
         purpose: "Social proof / result - show the money received from the loan"
       },
       {
@@ -89,7 +89,7 @@ export const ads = [
         timestamp: "0:14-0:17",
         type: "video",
         description: "Screen recording of mylendingwallet.com application form",
-        transcript: "They didn't ask about none of that—just simple questions.",
+        transcript: "They ain't even check my credit - they ain't tripping bout none of dat.",
         purpose: "Show how easy the process is - just basic info, no hassle"
       },
       {
@@ -97,7 +97,7 @@ export const ads = [
         timestamp: "0:18-0:21",
         type: "video",
         description: "Older child feeding baby sibling with bottle",
-        transcript: "Now we movin' and shakin'.",
+        transcript: "I paid rent, filled the fridge, and kept it movin and shakin.",
         purpose: "Emotional payoff - life is good now, family is taken care of"
       },
       {
@@ -105,7 +105,7 @@ export const ads = [
         timestamp: "0:22-0:25",
         type: "video",
         description: "Loan approval screen showing 96% approval likelihood",
-        transcript: "If you need it too,",
+        transcript: "So yeah, talk all you want,",
         purpose: "Build confidence with high approval rate, soft CTA"
       },
       {
@@ -113,7 +113,7 @@ export const ads = [
         timestamp: "0:25-0:27",
         type: "video",
         description: "Application form with keyboard typing name",
-        transcript: "it's just simple questions.",
+        transcript: "my babies are good boo.",
         purpose: "Final push - reinforce ease, drive to action"
       }
     ],
