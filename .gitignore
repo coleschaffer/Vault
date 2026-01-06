@@ -30,3 +30,6 @@ npm-debug.log*
 scripts/.venv/
 __pycache__/
 *.pyc
+
+# Temporary analysis frames (keep scene thumbnails)
+app/public/thumbnails/*_frame_*.jpg
