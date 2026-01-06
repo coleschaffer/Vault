@@ -86,12 +86,15 @@ export default function AdCard({ ad }) {
     </article>
 
       {/* Tags */}
-      <div className="px-6 py-3 mt-4">
+      <div className="bg-white border border-stone-200 rounded-sm px-6 py-4 mt-4">
+        <h3 className="text-xs font-semibold text-stone-400 uppercase tracking-wide mb-3">
+          Tags
+        </h3>
         <div className="flex flex-wrap gap-2">
           {ad.tags.map(tag => (
             <span
               key={tag}
-              className="px-2 py-1 text-xs text-stone-500 bg-white border border-stone-200 rounded-sm"
+              className="px-2 py-1 text-xs text-stone-500 bg-stone-50 border border-stone-200 rounded-sm"
             >
               {tag}
             </span>

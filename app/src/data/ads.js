@@ -10,11 +10,11 @@ export const ads = [
     type: "Affiliate",
 
     hook: {
-      textOverlay: "I got pregnant with my 5th kid... MY FIFTH BABY DADDY DIPPED. MOFO LEFT.",
-      spoken: "I got pregnant with my fifth kid and my fifth baby daddy dipped. Mofo left."
+      textOverlay: "I GOT PREGNANT WITH MY 5TH KID... MY FIFTH BABY DADDY DIPPED. MOFO LEFT.",
+      spoken: "My fifth baby daddy, dipped. Mofo left me with nothing."
     },
 
-    fullTranscript: "I got pregnant with my fifth kid and my fifth baby daddy dipped. Mofo left. Bills stacked up. Then my girl put me onto this. I got a little over four thousand. They didn't ask about none of that—just simple questions. Now we movin' and shakin'. If you need it too, it's just simple questions.",
+    fullTranscript: "My fifth baby daddy, dipped. Mofo left me with nothing. Bills stacked, fridge empty. Luckily my homegirl put me onto this relief program. Just answered a few questions online. Next day, a little over four bands hit my account. They ain't even check my credit - they ain't tripping bout none of dat. I paid rent, filled the fridge, and kept it movin and shakin. So yeah, talk all you want, my babies are good boo.",
 
     whyItWorked: {
       summary: "Rage-bait hook that polarizes the audience, driving engagement from both supporters and critics. The controversy tanks CPMs while resonating deeply with the target demographic through familiar language and cultural timing.",
