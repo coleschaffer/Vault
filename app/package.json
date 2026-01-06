@@ -8,7 +8,9 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "scrape": "node scripts/scrape-x.js"
+    "scrape": "node scripts/scrape-x.js",
+    "transcribe": "python ../scripts/transcribe.py",
+    "transcribe:json": "python ../scripts/transcribe.py --output json"
   },
   "dependencies": {
     "react": "^19.2.0",

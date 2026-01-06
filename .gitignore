@@ -25,3 +25,8 @@ npm-debug.log*
 
 # Beads (local tool data)
 .beads/
+
+# Python virtual environment
+scripts/.venv/
+__pycache__/
+*.pyc

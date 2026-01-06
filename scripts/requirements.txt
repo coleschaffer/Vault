@@ -1,0 +1,6 @@
+# Transcription
+openai-whisper>=20231117
+
+# For future X.com integration
+requests>=2.31.0
+yt-dlp>=2024.1.0
