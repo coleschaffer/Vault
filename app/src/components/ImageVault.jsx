@@ -275,9 +275,9 @@ Please modify the JSON prompt according to these changes. Output only the modifi
                   href={selectedImage.source}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-stone-600 hover:text-stone-900 underline"
+                  className="text-xs text-stone-400 hover:text-stone-600 transition-colors"
                 >
-                  View original source ↗
+                  Source ↗
                 </a>
               </div>
 

@@ -19,7 +19,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen flex flex-col">
       {/* Header */}
       <header className="border-b border-stone-200 bg-white">
         <div className="max-w-6xl mx-auto px-6 py-4">
@@ -79,7 +79,7 @@ function App() {
       </header>
 
       {/* Main Content */}
-      <main className="max-w-6xl mx-auto px-6 py-8">
+      <main className="max-w-6xl mx-auto px-6 py-8 flex-1">
         {activeVault === 'ads' ? (
           <>
             {/* Add Ad Form */}
@@ -119,7 +119,7 @@ function App() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-stone-200 bg-white mt-12">
+      <footer className="border-t border-stone-200 bg-white">
         <div className="max-w-6xl mx-auto px-6 py-6">
           <p className="text-xs text-stone-400 text-center">
             Personal ad swipe file · Not for distribution
