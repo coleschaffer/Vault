@@ -3,11 +3,20 @@ import { ads } from './data/ads';
 import { images } from './data/images';
 import AdCard from './components/AdCard';
 import AddAdForm from './components/AddAdForm';
+import AddImageForm from './components/AddImageForm';
 import ImageVault from './components/ImageVault';
 
 function App() {
   const [showAddForm, setShowAddForm] = useState(false);
+  const [showAddImageForm, setShowAddImageForm] = useState(false);
   const [activeVault, setActiveVault] = useState('ads'); // 'ads' or 'images'
+
+  // Reset forms when switching vaults
+  const switchVault = (vault) => {
+    setActiveVault(vault);
+    setShowAddForm(false);
+    setShowAddImageForm(false);
+  };
 
   return (
     <div className="min-h-screen">
@@ -18,7 +27,7 @@ function App() {
             <div>
               <h1 className="font-serif text-2xl text-stone-900">
                 <button
-                  onClick={() => setActiveVault('ads')}
+                  onClick={() => switchVault('ads')}
                   className={`hover:text-stone-600 transition-colors ${
                     activeVault === 'ads' ? 'underline underline-offset-4' : ''
                   }`}
@@ -27,7 +36,7 @@ function App() {
                 </button>
                 <span className="text-stone-300 mx-2">/</span>
                 <button
-                  onClick={() => setActiveVault('images')}
+                  onClick={() => switchVault('images')}
                   className={`hover:text-stone-600 transition-colors ${
                     activeVault === 'images' ? 'underline underline-offset-4' : ''
                   }`}
@@ -49,12 +58,19 @@ function App() {
                   : `${images.length} ${images.length === 1 ? 'image' : 'images'}`
                 }
               </span>
-              {activeVault === 'ads' && (
+              {activeVault === 'ads' ? (
                 <button
                   onClick={() => setShowAddForm(!showAddForm)}
                   className="px-3 py-1.5 text-sm font-medium bg-stone-900 text-white rounded-sm hover:bg-stone-800 transition-colors"
                 >
                   {showAddForm ? 'Cancel' : '+ Add Ad'}
+                </button>
+              ) : (
+                <button
+                  onClick={() => setShowAddImageForm(!showAddImageForm)}
+                  className="px-3 py-1.5 text-sm font-medium bg-stone-900 text-white rounded-sm hover:bg-stone-800 transition-colors"
+                >
+                  {showAddImageForm ? 'Cancel' : '+ Add Image'}
                 </button>
               )}
             </div>
@@ -89,7 +105,16 @@ function App() {
             )}
           </>
         ) : (
-          <ImageVault />
+          <>
+            {/* Add Image Form */}
+            {showAddImageForm && (
+              <div className="mb-8">
+                <AddImageForm onImageAdded={() => setShowAddImageForm(false)} />
+              </div>
+            )}
+
+            <ImageVault />
+          </>
         )}
       </main>
 
