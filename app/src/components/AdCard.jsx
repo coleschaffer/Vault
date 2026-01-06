@@ -1,9 +1,16 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import ShotBreakdown from './ShotBreakdown';
 
 export default function AdCard({ ad }) {
-  const [showBreakdown, setShowBreakdown] = useState(false);
   const [activeSection, setActiveSection] = useState('why');
+  const videoRef = useRef(null);
+
+  const seekTo = (timeInSeconds) => {
+    if (videoRef.current) {
+      videoRef.current.currentTime = timeInSeconds;
+      videoRef.current.play();
+    }
+  };
 
   return (
     <>
@@ -35,6 +42,7 @@ export default function AdCard({ ad }) {
         {/* Video */}
         <div className="bg-black aspect-[9/16] md:aspect-auto flex items-center justify-center">
           <video
+            ref={videoRef}
             src={ad.videoSrc}
             controls
             className="w-full h-full object-contain"
@@ -75,8 +83,8 @@ export default function AdCard({ ad }) {
             ) : (
               <ShotBreakdown
                 shots={ad.shots}
-                hook={ad.hook}
                 fullTranscript={ad.fullTranscript}
+                onSeek={seekTo}
               />
             )}
           </div>
