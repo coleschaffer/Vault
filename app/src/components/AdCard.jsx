@@ -31,7 +31,7 @@ export default function AdCard({ ad }) {
       </header>
 
       {/* Video + Analysis Grid */}
-      <div className="grid md:grid-cols-2 gap-0 md:h-[800px]">
+      <div className="grid md:grid-cols-2 gap-0 md:h-[900px]">
         {/* Video */}
         <div className="bg-black aspect-[9/16] md:aspect-auto flex items-center justify-center">
           <video
