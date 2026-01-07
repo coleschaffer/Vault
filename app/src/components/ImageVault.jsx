@@ -2,7 +2,9 @@ import { useState, useEffect, useMemo } from 'react';
 import { images } from '../data/images';
 import ImageCard from './ImageCard';
 
-const GEMINI_API_KEY = 'AIzaSyAWrHVBXb0xIz1wfZv3T9q3Izh9UOkUpZg';
+const GEMINI_API_KEY = 'AIzaSyCu47TAZqfXJwHSEq_dm1n84CRpbKFAwL8';
+const GEMINI_MODEL = 'gemini-3-flash-preview';
+const API_BASE = 'http://localhost:3001';
 
 export default function ImageVault() {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -16,6 +18,10 @@ export default function ImageVault() {
   const [modifiedPrompt, setModifiedPrompt] = useState(null);
   const [isGenerating, setIsGenerating] = useState(false);
   const [modifiedCopySuccess, setModifiedCopySuccess] = useState(false);
+
+  // Delete state
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
+  const [isDeleting, setIsDeleting] = useState(false);
 
   // Get all unique tags
   const allTags = useMemo(() => {
@@ -58,80 +64,147 @@ export default function ImageVault() {
     }
   };
 
+  // Delete image
+  const handleDelete = async () => {
+    if (!selectedImage) return;
+
+    setIsDeleting(true);
+    try {
+      const response = await fetch(`${API_BASE}/api/delete-image`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id: selectedImage.id, deleteFile: true })
+      });
+
+      if (response.ok) {
+        setSelectedImage(null);
+        setShowDeleteConfirm(false);
+        // Force page reload to refresh the images list
+        window.location.reload();
+      } else {
+        const data = await response.json();
+        console.error('Delete failed:', data.error);
+      }
+    } catch (err) {
+      console.error('Delete error:', err);
+    } finally {
+      setIsDeleting(false);
+    }
+  };
+
   // Generate modified prompt using Gemini
   const generateModifiedPrompt = async () => {
     if (!changeRequest.trim() || !selectedImage) return;
 
+    console.log('[ModifyPrompt] Starting...');
+    console.log('[ModifyPrompt] Change request:', changeRequest);
+
     setIsGenerating(true);
     setModifiedPrompt(null);
 
-    const originalPrompt = JSON.stringify(selectedImage.prompt, null, 2);
+    // Use rawPrompt to preserve exact formatting
+    const originalPrompt = selectedImage.rawPrompt || JSON.stringify(selectedImage.prompt, null, 2);
+    console.log('[ModifyPrompt] Original prompt length:', originalPrompt.length);
 
     const systemPrompt = `You are an expert at modifying JSON prompts for AI image generation.
-You will be given an original JSON prompt and a user request for changes.
-Your job is to modify the JSON prompt according to the user's request while preserving the overall structure and detail level.
-IMPORTANT: Output ONLY the modified JSON, no explanations or markdown. The output must be valid JSON.`;
 
-    const userMessage = `Original JSON prompt:
+CRITICAL FORMATTING RULES:
+1. PRESERVE THE EXACT FORMATTING of the original prompt - same newlines, same blank lines, same indentation
+2. ONLY change the specific values requested by the user
+3. Keep ALL other content, structure, keys, and formatting EXACTLY as they appear in the original
+4. If the original has blank lines between sections, keep those blank lines
+5. If the original has no indentation, don't add indentation
+6. Do NOT reformat, reorganize, or "clean up" the JSON
+7. Output ONLY the modified JSON, no explanations or markdown code blocks
+
+Your output should look IDENTICAL to the input, except for the specific values that need to change.`;
+
+    const userMessage = `ORIGINAL PROMPT (preserve this exact formatting):
 ${originalPrompt}
 
-User's requested changes:
+REQUESTED CHANGES:
 ${changeRequest}
 
-Please modify the JSON prompt according to these changes. Output only the modified JSON, nothing else.`;
+Output the modified prompt with EXACT same formatting as the original. Only change the specific content requested above.`;
+
+    const requestBody = {
+      contents: [
+        {
+          parts: [
+            { text: systemPrompt + '\n\n' + userMessage }
+          ]
+        }
+      ],
+      generationConfig: {
+        temperature: 0.1,
+        maxOutputTokens: 16384,
+      }
+    };
+
+    console.log('[ModifyPrompt] Sending request to Gemini...');
+    console.log('[ModifyPrompt] Total input length:', (systemPrompt + userMessage).length);
+    const startTime = Date.now();
 
     try {
       const response = await fetch(
-        `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_API_KEY}`,
+        `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${GEMINI_API_KEY}`,
         {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({
-            contents: [
-              {
-                parts: [
-                  { text: systemPrompt + '\n\n' + userMessage }
-                ]
-              }
-            ],
-            generationConfig: {
-              temperature: 0.7,
-              maxOutputTokens: 8192,
-            }
-          })
+          body: JSON.stringify(requestBody)
         }
       );
 
+      const elapsed = Date.now() - startTime;
+      console.log(`[ModifyPrompt] Response received in ${elapsed}ms, status: ${response.status}`);
+
       const data = await response.json();
+      console.log('[ModifyPrompt] Response data:', data);
+
+      if (data.error) {
+        console.error('[ModifyPrompt] API Error:', data.error);
+        setModifiedPrompt(`Error: ${data.error.message || 'API error'}`);
+        return;
+      }
 
       if (data.candidates && data.candidates[0]?.content?.parts?.[0]?.text) {
         let jsonText = data.candidates[0].content.parts[0].text;
+        console.log('[ModifyPrompt] Output length:', jsonText.length);
 
-        // Clean up any markdown code blocks
+        // Clean up any markdown code blocks if present
         jsonText = jsonText.replace(/```json\n?/g, '').replace(/```\n?/g, '').trim();
 
-        // Parse and re-stringify to validate JSON
-        const parsed = JSON.parse(jsonText);
-        setModifiedPrompt(JSON.stringify(parsed, null, 2));
+        // Validate it's parseable JSON but DON'T re-stringify (preserves formatting)
+        try {
+          JSON.parse(jsonText);
+          console.log('[ModifyPrompt] Valid JSON, setting result');
+        } catch (parseErr) {
+          console.warn('[ModifyPrompt] JSON validation warning:', parseErr.message);
+          // Don't append warning to the output - just log it
+        }
+        setModifiedPrompt(jsonText);  // Always set the raw output
       } else {
-        console.error('Unexpected API response:', data);
+        console.error('[ModifyPrompt] Unexpected response structure:', data);
         setModifiedPrompt('Error: Failed to generate modified prompt');
       }
     } catch (err) {
-      console.error('Error generating prompt:', err);
+      const elapsed = Date.now() - startTime;
+      console.error(`[ModifyPrompt] Error after ${elapsed}ms:`, err);
       setModifiedPrompt(`Error: ${err.message}`);
     } finally {
       setIsGenerating(false);
+      console.log('[ModifyPrompt] Done');
     }
   };
 
-  // Reset modified prompt when modal closes or image changes
+  // Reset state when modal closes or image changes
   useEffect(() => {
     setModifiedPrompt(null);
     setChangeRequest('');
     setPromptExpanded(false);
+    setShowDeleteConfirm(false);
   }, [selectedImage]);
 
   // Close modal on Escape
@@ -245,9 +318,19 @@ Please modify the JSON prompt according to these changes. Output only the modifi
 
             {/* Info Side */}
             <div className="md:w-3/5 p-6 overflow-y-auto max-h-[40vh] md:max-h-[90vh]">
-              <h2 className="font-serif text-xl text-stone-900 mb-2">
-                {selectedImage.title}
-              </h2>
+              <div className="flex items-start justify-between mb-2">
+                <h2 className="font-serif text-xl text-stone-900">
+                  {selectedImage.title}
+                </h2>
+                <a
+                  href={selectedImage.source}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs text-stone-400 hover:text-stone-600 transition-colors flex-shrink-0 ml-4"
+                >
+                  Source ↗
+                </a>
+              </div>
               <p className="text-sm text-stone-500 mb-4">
                 by {selectedImage.creator}
               </p>
@@ -267,18 +350,6 @@ Please modify the JSON prompt according to these changes. Output only the modifi
                     </span>
                   ))}
                 </div>
-              </div>
-
-              {/* Source Link */}
-              <div className="mb-4">
-                <a
-                  href={selectedImage.source}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs text-stone-400 hover:text-stone-600 transition-colors"
-                >
-                  Source ↗
-                </a>
               </div>
 
               {/* JSON Prompt Section */}
@@ -301,7 +372,7 @@ Please modify the JSON prompt according to these changes. Output only the modifi
 
                   {/* Copy Button */}
                   <button
-                    onClick={() => copyToClipboard(JSON.stringify(selectedImage.prompt, null, 2), setCopySuccess)}
+                    onClick={() => copyToClipboard(selectedImage.rawPrompt || JSON.stringify(selectedImage.prompt, null, 2), setCopySuccess)}
                     className={`px-3 py-1.5 text-xs font-medium rounded-sm transition-colors ${
                       copySuccess
                         ? 'bg-green-100 text-green-700'
@@ -315,7 +386,7 @@ Please modify the JSON prompt according to these changes. Output only the modifi
                 {promptExpanded && (
                   <div className="bg-stone-900 rounded-sm p-4 overflow-x-auto mb-4 max-h-60 overflow-y-auto">
                     <pre className="text-xs text-stone-100 whitespace-pre-wrap font-mono">
-                      {JSON.stringify(selectedImage.prompt, null, 2)}
+                      {selectedImage.rawPrompt || JSON.stringify(selectedImage.prompt, null, 2)}
                     </pre>
                   </div>
                 )}
@@ -370,6 +441,35 @@ Please modify the JSON prompt according to these changes. Output only the modifi
                     </div>
                   )}
                 </div>
+              </div>
+
+              {/* Delete - subtle, at bottom */}
+              <div className="mt-6 pt-4 border-t border-stone-100">
+                {!showDeleteConfirm ? (
+                  <button
+                    onClick={() => setShowDeleteConfirm(true)}
+                    className="text-xs text-stone-300 hover:text-red-400 transition-colors"
+                  >
+                    Delete image
+                  </button>
+                ) : (
+                  <div className="flex items-center gap-3">
+                    <span className="text-xs text-stone-500">Delete this image?</span>
+                    <button
+                      onClick={handleDelete}
+                      disabled={isDeleting}
+                      className="px-2 py-1 text-xs text-red-600 hover:text-red-700 hover:bg-red-50 rounded transition-colors disabled:opacity-50"
+                    >
+                      {isDeleting ? 'Deleting...' : 'Yes, delete'}
+                    </button>
+                    <button
+                      onClick={() => setShowDeleteConfirm(false)}
+                      className="text-xs text-stone-400 hover:text-stone-600"
+                    >
+                      Cancel
+                    </button>
+                  </div>
+                )}
               </div>
             </div>
           </div>

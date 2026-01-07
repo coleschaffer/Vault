@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ads } from './data/ads';
 import { images } from './data/images';
 import AdCard from './components/AdCard';
@@ -9,7 +9,16 @@ import ImageVault from './components/ImageVault';
 function App() {
   const [showAddForm, setShowAddForm] = useState(false);
   const [showAddImageForm, setShowAddImageForm] = useState(false);
-  const [activeVault, setActiveVault] = useState('ads'); // 'ads' or 'images'
+
+  // Initialize from localStorage or default to 'ads'
+  const [activeVault, setActiveVault] = useState(() => {
+    return localStorage.getItem('activeVault') || 'ads';
+  });
+
+  // Save to localStorage when vault changes
+  useEffect(() => {
+    localStorage.setItem('activeVault', activeVault);
+  }, [activeVault]);
 
   // Reset forms when switching vaults
   const switchVault = (vault) => {
