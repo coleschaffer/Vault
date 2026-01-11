@@ -5,7 +5,7 @@ const isDev = import.meta.env.DEV;
 
 export const API_BASE = isDev
   ? 'http://localhost:8787'  // Wrangler dev server
-  : '';  // Same origin in production (Cloudflare Pages + Workers)
+  : 'https://ad-vault-api.coleschaffer6.workers.dev';  // Cloudflare Worker
 
 export const config = {
   apiBase: API_BASE,

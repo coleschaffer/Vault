@@ -6,7 +6,7 @@ compatibility_date = "2024-01-01"
 [[d1_databases]]
 binding = "DB"
 database_name = "ad-vault-db"
-database_id = "placeholder-will-be-set-after-creation"
+database_id = "37ace019-4342-4649-bf29-78ebc5ca3945"
 
 # R2 Storage binding
 [[r2_buckets]]
