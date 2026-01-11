@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { useImages } from '../hooks/useData';
 import { API_BASE } from '../config';
 import ImageCard from './ImageCard';
