@@ -47,6 +47,33 @@ export default function ImageVault() {
     });
   }, [images, searchQuery, selectedTags]);
 
+  // Reset state when modal closes or image changes
+  useEffect(() => {
+    setModifiedPrompt(null);
+    setChangeRequest('');
+    setPromptExpanded(false);
+    setShowDeleteConfirm(false);
+  }, [selectedImage]);
+
+  // Close modal on Escape
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape' && selectedImage) {
+        setSelectedImage(null);
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    if (selectedImage) {
+      document.body.style.overflow = 'hidden';
+    }
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = 'unset';
+    };
+  }, [selectedImage]);
+
   // Show loading state
   if (loading) {
     return (
@@ -220,33 +247,6 @@ Output the modified prompt with EXACT same formatting as the original. Only chan
       console.log('[ModifyPrompt] Done');
     }
   };
-
-  // Reset state when modal closes or image changes
-  useEffect(() => {
-    setModifiedPrompt(null);
-    setChangeRequest('');
-    setPromptExpanded(false);
-    setShowDeleteConfirm(false);
-  }, [selectedImage]);
-
-  // Close modal on Escape
-  useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (e.key === 'Escape' && selectedImage) {
-        setSelectedImage(null);
-      }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    if (selectedImage) {
-      document.body.style.overflow = 'hidden';
-    }
-
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      document.body.style.overflow = 'unset';
-    };
-  }, [selectedImage]);
 
   return (
     <>
