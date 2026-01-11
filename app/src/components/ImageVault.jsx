@@ -1,12 +1,15 @@
-import { useState, useEffect, useMemo } from 'react';
-import { images } from '../data/images';
+import { useState, useMemo } from 'react';
+import { useImages } from '../hooks/useData';
+import { API_BASE } from '../config';
 import ImageCard from './ImageCard';
 
 const GEMINI_API_KEY = 'AIzaSyCu47TAZqfXJwHSEq_dm1n84CRpbKFAwL8';
-const GEMINI_MODEL = 'gemini-3-flash-preview';
-const API_BASE = 'http://localhost:3001';
+const GEMINI_MODEL = 'gemini-2.0-flash';
 
 export default function ImageVault() {
+  // Fetch images from API
+  const { images, loading, error, deleteImage, refetch } = useImages();
+
   const [selectedImage, setSelectedImage] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedTags, setSelectedTags] = useState([]);
@@ -26,23 +29,42 @@ export default function ImageVault() {
   // Get all unique tags
   const allTags = useMemo(() => {
     const tagSet = new Set();
-    images.forEach(img => img.tags.forEach(tag => tagSet.add(tag)));
+    (images || []).forEach(img => img.tags?.forEach(tag => tagSet.add(tag)));
     return Array.from(tagSet).sort();
-  }, []);
+  }, [images]);
 
   // Filter images based on search and tags
   const filteredImages = useMemo(() => {
-    return images.filter(img => {
+    return (images || []).filter(img => {
       const matchesSearch = searchQuery === '' ||
-        img.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        img.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+        img.title?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        img.tags?.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
 
       const matchesTags = selectedTags.length === 0 ||
-        selectedTags.every(tag => img.tags.includes(tag));
+        selectedTags.every(tag => img.tags?.includes(tag));
 
       return matchesSearch && matchesTags;
     });
-  }, [searchQuery, selectedTags]);
+  }, [images, searchQuery, selectedTags]);
+
+  // Show loading state
+  if (loading) {
+    return (
+      <div className="text-center py-20">
+        <p className="text-stone-400 font-serif text-lg animate-pulse">Loading images...</p>
+      </div>
+    );
+  }
+
+  // Show error state
+  if (error) {
+    return (
+      <div className="text-center py-20">
+        <p className="text-red-500 font-serif text-lg">Error: {error}</p>
+        <button onClick={refetch} className="mt-4 px-4 py-2 bg-stone-900 text-white rounded-sm">Retry</button>
+      </div>
+    );
+  }
 
   // Toggle tag filter
   const toggleTag = (tag) => {

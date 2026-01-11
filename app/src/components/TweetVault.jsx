@@ -1,34 +1,34 @@
 import { useState, useMemo } from 'react';
-import { tweets } from '../data/tweets';
+import { useTweets } from '../hooks/useData';
 import TweetCard from './TweetCard';
 
-const API_BASE = 'http://localhost:3001';
-
 export default function TweetVault() {
+  // Fetch tweets from API
+  const { tweets, loading, error, deleteTweet, refetch } = useTweets();
+
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedTags, setSelectedTags] = useState([]);
-  const [isDeleting, setIsDeleting] = useState(false);
 
   // Get all unique tags
   const allTags = useMemo(() => {
     const tagSet = new Set();
-    tweets.forEach(tweet => tweet.tags.forEach(tag => tagSet.add(tag)));
+    (tweets || []).forEach(tweet => tweet.tags?.forEach(tag => tagSet.add(tag)));
     return Array.from(tagSet).sort();
-  }, []);
+  }, [tweets]);
 
   // Filter tweets based on search and tags
   const filteredTweets = useMemo(() => {
-    return tweets.filter(tweet => {
+    return (tweets || []).filter(tweet => {
       const matchesSearch = searchQuery === '' ||
-        tweet.url.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        tweet.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+        tweet.url?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        tweet.tags?.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
 
       const matchesTags = selectedTags.length === 0 ||
-        selectedTags.every(tag => tweet.tags.includes(tag));
+        selectedTags.every(tag => tweet.tags?.includes(tag));
 
       return matchesSearch && matchesTags;
     });
-  }, [searchQuery, selectedTags]);
+  }, [tweets, searchQuery, selectedTags]);
 
   // Toggle tag filter
   const toggleTag = (tag) => {
@@ -41,26 +41,27 @@ export default function TweetVault() {
 
   // Delete tweet
   const handleDelete = async (tweetId) => {
-    setIsDeleting(true);
-    try {
-      const response = await fetch(`${API_BASE}/api/delete-tweet`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ id: tweetId })
-      });
-
-      if (response.ok) {
-        window.location.reload();
-      } else {
-        const data = await response.json();
-        console.error('Delete failed:', data.error);
-      }
-    } catch (err) {
-      console.error('Delete error:', err);
-    } finally {
-      setIsDeleting(false);
-    }
+    await deleteTweet(tweetId);
   };
+
+  // Show loading state
+  if (loading) {
+    return (
+      <div className="text-center py-20">
+        <p className="text-stone-400 font-serif text-lg animate-pulse">Loading tweets...</p>
+      </div>
+    );
+  }
+
+  // Show error state
+  if (error) {
+    return (
+      <div className="text-center py-20">
+        <p className="text-red-500 font-serif text-lg">Error: {error}</p>
+        <button onClick={refetch} className="mt-4 px-4 py-2 bg-stone-900 text-white rounded-sm">Retry</button>
+      </div>
+    );
+  }
 
   return (
     <>
@@ -119,7 +120,7 @@ export default function TweetVault() {
       {filteredTweets.length === 0 && (
         <div className="text-center py-20">
           <p className="text-stone-400 font-serif text-lg">
-            {tweets.length === 0
+            {(tweets || []).length === 0
               ? 'No tweets yet. Add your first one.'
               : 'No tweets match your filters.'
             }
