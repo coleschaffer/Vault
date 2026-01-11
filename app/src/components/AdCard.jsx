@@ -1,9 +1,38 @@
 import { useState, useRef } from 'react';
 import ShotBreakdown from './ShotBreakdown';
 
-export default function AdCard({ ad }) {
+const API_BASE = 'http://localhost:3001';
+
+export default function AdCard({ ad, onDelete }) {
   const [activeSection, setActiveSection] = useState('why');
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
+  const [isDeleting, setIsDeleting] = useState(false);
   const videoRef = useRef(null);
+
+  const handleDelete = async () => {
+    setIsDeleting(true);
+    try {
+      const response = await fetch(`${API_BASE}/api/delete-ad`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id: ad.id })
+      });
+
+      if (response.ok) {
+        if (onDelete) onDelete(ad.id);
+        window.location.reload();
+      } else {
+        const data = await response.json();
+        console.error('Delete failed:', data.error);
+        setIsDeleting(false);
+        setShowDeleteConfirm(false);
+      }
+    } catch (err) {
+      console.error('Delete error:', err);
+      setIsDeleting(false);
+      setShowDeleteConfirm(false);
+    }
+  };
 
   const seekTo = (timeInSeconds) => {
     if (videoRef.current) {
@@ -26,14 +55,41 @@ export default function AdCard({ ad }) {
               by {ad.creator} · {ad.product}
             </p>
           </div>
-          <a
-            href={ad.source}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-xs text-stone-400 hover:text-stone-600 transition-colors"
-          >
-            Source ↗
-          </a>
+          <div className="flex items-center gap-4">
+            <a
+              href={ad.source}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-stone-400 hover:text-stone-600 transition-colors"
+            >
+              Source ↗
+            </a>
+            {!showDeleteConfirm ? (
+              <button
+                onClick={() => setShowDeleteConfirm(true)}
+                className="text-xs text-stone-300 hover:text-red-400 transition-colors"
+              >
+                Delete
+              </button>
+            ) : (
+              <div className="flex items-center gap-2 text-xs">
+                <button
+                  onClick={handleDelete}
+                  disabled={isDeleting}
+                  className="text-red-500 hover:text-red-600 disabled:opacity-50"
+                >
+                  {isDeleting ? 'Deleting...' : 'Confirm'}
+                </button>
+                <button
+                  onClick={() => setShowDeleteConfirm(false)}
+                  disabled={isDeleting}
+                  className="text-stone-400 hover:text-stone-600"
+                >
+                  Cancel
+                </button>
+              </div>
+            )}
+          </div>
         </div>
       </header>
 

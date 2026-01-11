@@ -23957,5 +23957,3965 @@ QUALITY NOTES:
 }`,
     tags: ["Balcony", "Athletic Woman", "Sage Green Romper", "Vertical Split", "Photorealistic", "Lifestyle Photography", "Flexible", "Natural Lighting"],
     dateAdded: "2026-01-07"
+  },
+  {
+    id: "private-garden-patio-curvy-blonde-woman-in-black-bikini-1767998106407-chhl",
+    title: "Private Garden Patio - Curvy Blonde Woman in Black Bikini",
+    imageSrc: "/images/vault/private-garden-patio-curvy-blonde-woman-in-black-bikini-1767998106407-chhl.jpg",
+    source: "https://x.com/bananababydoll/status/2009357440244986250",
+    creator: "@bananababydoll",
+    prompt: {
+        "meta": {
+          "aspect_ratio": "4:5",
+          "quality": "ultra_photorealistic",
+          "camera": "iPhone 15 Pro Max",
+          "lens": "24mm wide",
+          "style": "raw iPhone outdoor photo, natural skin texture, zero plastic look, subtle handheld imperfection"
+        },
+      
+        "scene": {
+          "location": "private backyard patio",
+          "environment": [
+            "light gray stone tiles",
+            "minimal modern garden plants",
+            "sun lounger with fabric surface",
+            "soft natural shadows on the ground"
+          ],
+          "time": "early afternoon",
+          "atmosphere": "quiet, warm, intimate but casual outdoor moment"
+        },
+      
+        "lighting": {
+          "type": "natural sunlight",
+          "direction": "top-front sunlight",
+          "color_temperature": "neutral daylight",
+          "effect": "soft highlights on chest and thighs, gentle shadow under breasts, natural skin glow without shine"
+        },
+      
+        "camera_perspective": {
+          "pov": "third person standing close",
+          "angle": "slightly above chest level, looking down",
+          "distance": "close-medium",
+          "framing": "mid-thigh to top of head",
+          "stability": "slight handheld feel, not perfectly centered"
+        },
+      
+        "subject": {
+          "gender": "female",
+          "vibe": "young adult, soft confident energy",
+          "ethnicity": "light-skinned european",
+      
+          "body": {
+            "type": "curvy-slim with heavy upper curves",
+            "chest": "very full, naturally heavy breasts with realistic gravity, close-set, soft underboob shadow, no exaggerated lift",
+            "waist": "narrow but not extreme, smooth inward curve",
+            "hips": "wide and rounded, proportional to chest",
+            "legs": "thick upper thighs, soft inner thigh contact, natural fullness",
+            "stomach": "flat but soft, natural skin tension",
+            "overall_balance": "top-heavy hourglass, realistic weight distribution"
+          },
+      
+          "skin": {
+            "tone": "fair with warm undertone",
+            "texture": "visible natural skin texture, no airbrushing",
+            "details": "slight redness on cheeks and chest from sun exposure"
+          },
+      
+          "hair": {
+            "color": "natural blonde",
+            "length": "long",
+            "style": "straight with slight natural movement",
+            "part": "center part",
+            "behavior": "falls naturally over shoulders, not styled"
+          },
+      
+          "face": {
+            "expression": "eyes closed with a soft, relaxed smile",
+            "vibe": "peaceful, subtly flirty without posing",
+            "makeup": "minimal makeup, natural lashes, light blush",
+            "features": "soft youthful facial structure, rounded cheeks"
+          },
+      
+          "pose": {
+            "position": "sitting on a sun lounger",
+            "upper_body": "leaning slightly forward, shoulders relaxed",
+            "arms": "hands placed behind her on the lounger for support",
+            "chest_behavior": "breasts naturally pressed together due to posture, realistic compression",
+            "legs": "thighs together, knees slightly apart",
+            "posture": "casual, not posed, gravity-driven body language"
+          },
+      
+          "outfit": {
+            "type": "black bikini",
+            "top": {
+              "style": "triangle bikini top",
+              "fit": "tight and minimal, clearly strained by chest volume",
+              "support": "thin straps, no bra structure",
+              "effect": "natural cleavage created by body weight, not push-up"
+            },
+            "bottom": {
+              "style": "minimal bikini bottom",
+              "fit": "snug on hips, sits slightly high",
+              "effect": "emphasizes hip width and thigh fullness"
+            }
+          },
+      
+          "accessories": {
+            "necklace": "thin chain necklace with small pendant",
+            "piercing": "small belly button piercing"
+          }
+        },
+      
+        "realism_constraints": [
+          "no body exaggeration",
+          "no unreal symmetry",
+          "no anime proportions",
+          "no lifted or floating breasts",
+          "realistic gravity and skin compression",
+          "must look like a real iPhone photo taken casually"
+        ]
+      },
+    rawPrompt: `{
+  "meta": {
+    "aspect_ratio": "4:5",
+    "quality": "ultra_photorealistic",
+    "camera": "iPhone 15 Pro Max",
+    "lens": "24mm wide",
+    "style": "raw iPhone outdoor photo, natural skin texture, zero plastic look, subtle handheld imperfection"
+  },
+
+  "scene": {
+    "location": "private backyard patio",
+    "environment": [
+      "light gray stone tiles",
+      "minimal modern garden plants",
+      "sun lounger with fabric surface",
+      "soft natural shadows on the ground"
+    ],
+    "time": "early afternoon",
+    "atmosphere": "quiet, warm, intimate but casual outdoor moment"
+  },
+
+  "lighting": {
+    "type": "natural sunlight",
+    "direction": "top-front sunlight",
+    "color_temperature": "neutral daylight",
+    "effect": "soft highlights on chest and thighs, gentle shadow under breasts, natural skin glow without shine"
+  },
+
+  "camera_perspective": {
+    "pov": "third person standing close",
+    "angle": "slightly above chest level, looking down",
+    "distance": "close-medium",
+    "framing": "mid-thigh to top of head",
+    "stability": "slight handheld feel, not perfectly centered"
+  },
+
+  "subject": {
+    "gender": "female",
+    "vibe": "young adult, soft confident energy",
+    "ethnicity": "light-skinned european",
+
+    "body": {
+      "type": "curvy-slim with heavy upper curves",
+      "chest": "very full, naturally heavy breasts with realistic gravity, close-set, soft underboob shadow, no exaggerated lift",
+      "waist": "narrow but not extreme, smooth inward curve",
+      "hips": "wide and rounded, proportional to chest",
+      "legs": "thick upper thighs, soft inner thigh contact, natural fullness",
+      "stomach": "flat but soft, natural skin tension",
+      "overall_balance": "top-heavy hourglass, realistic weight distribution"
+    },
+
+    "skin": {
+      "tone": "fair with warm undertone",
+      "texture": "visible natural skin texture, no airbrushing",
+      "details": "slight redness on cheeks and chest from sun exposure"
+    },
+
+    "hair": {
+      "color": "natural blonde",
+      "length": "long",
+      "style": "straight with slight natural movement",
+      "part": "center part",
+      "behavior": "falls naturally over shoulders, not styled"
+    },
+
+    "face": {
+      "expression": "eyes closed with a soft, relaxed smile",
+      "vibe": "peaceful, subtly flirty without posing",
+      "makeup": "minimal makeup, natural lashes, light blush",
+      "features": "soft youthful facial structure, rounded cheeks"
+    },
+
+    "pose": {
+      "position": "sitting on a sun lounger",
+      "upper_body": "leaning slightly forward, shoulders relaxed",
+      "arms": "hands placed behind her on the lounger for support",
+      "chest_behavior": "breasts naturally pressed together due to posture, realistic compression",
+      "legs": "thighs together, knees slightly apart",
+      "posture": "casual, not posed, gravity-driven body language"
+    },
+
+    "outfit": {
+      "type": "black bikini",
+      "top": {
+        "style": "triangle bikini top",
+        "fit": "tight and minimal, clearly strained by chest volume",
+        "support": "thin straps, no bra structure",
+        "effect": "natural cleavage created by body weight, not push-up"
+      },
+      "bottom": {
+        "style": "minimal bikini bottom",
+        "fit": "snug on hips, sits slightly high",
+        "effect": "emphasizes hip width and thigh fullness"
+      }
+    },
+
+    "accessories": {
+      "necklace": "thin chain necklace with small pendant",
+      "piercing": "small belly button piercing"
+    }
+  },
+
+  "realism_constraints": [
+    "no body exaggeration",
+    "no unreal symmetry",
+    "no anime proportions",
+    "no lifted or floating breasts",
+    "realistic gravity and skin compression",
+    "must look like a real iPhone photo taken casually"
+  ]
+}`,
+    tags: ["backyard patio", "blonde woman", "black bikini", "curvy", "photorealistic", "relaxed mood", "summer", "iphone photo"],
+    dateAdded: "2026-01-09"
+  },
+  {
+    id: "sunny-parking-lot-athletic-woman-in-white-crop-top-1767998227385-libc",
+    title: "Sunny Parking Lot - Athletic Woman in White Crop Top",
+    imageSrc: "/images/vault/sunny-parking-lot-athletic-woman-in-white-crop-top-1767998227385-libc.jpg",
+    source: "https://x.com/brindleyai/status/2008810929132044517",
+    creator: "@brindleyai",
+    prompt: {
+      "subject": {
+      "description": "Young woman with an athletic, fit physique and tanned skin tone.",
+      "hair": "Long, wavy, dirty blonde hair with lighter highlights, parting in the middle and cascading down the back to mid-shoulder blade level.",
+      "face": "Oval face shape, soft features, neutral lips, direct gaze looking back at the viewer.",
+      "attire": {
+      "top": "White ribbed halter-neck crop top, sleeveless, exposing shoulders and upper back, fitted tightly to the torso.",
+      "bottom": "Grey high-waisted athletic compression shorts (spandex material), tight fit accentuating gluteal curves and thigh musculature.",
+      "footwear": "White sneakers with white socks visible."
+      },
+      "anatomy_constraints": {
+      "body_type": "Curvy and athletic, defined waist-to-hip ratio.",
+      "posture_effect": "Lordosis curvature in lower back emphasizing glute projection.",
+      "skin_texture": "Natural skin texture, visible tan lines, realistic rendering of soft tissue and muscle tone."
+      }
+      },
+      "pose": {
+      "orientation": "Standing, body facing away from the camera (rear 3/4 view), torso twisted slightly to the left.",
+      "head_position": "Head turned over the left shoulder, face fully visible looking directly at the camera.",
+      "arms": "Left arm hanging naturally straight down by the side; right arm bent slightly at the elbow with the hand obscured near the front of the waist.",
+      "legs": "Legs straight, weight balanced, feet planted on the asphalt.",
+      "spine": "Visible arch in the lower back (anterior pelvic tilt) accentuating the posterior chain."
+      },
+      "environment": {
+      "setting": "Outdoor paved parking lot on a sunny day.",
+      "foreground_left": "Large black SUV (side profile visible), highly polished surface showing a clear reflection of the subject.",
+      "background_right": "White SUV parked further back.",
+      "background_center": "Large, full green deciduous tree providing a backdrop behind the subject's head and shoulders.",
+      "sky": "Bright blue sky with faint, wispy clouds.",
+      "ground": "Grey asphalt with painted white parking stall lines."
+      },
+      "camera": {
+      "shot_type": "Medium-full shot (knees up to head).",
+      "angle": "Eye-level, slightly varying to capture the over-the-shoulder perspective.",
+      "focus": "Sharp focus on the subject, slight depth of field blurring the background tree and cars.",
+      "perspective": "Natural focal length (approx 50mm to 85mm), no wide-angle distortion, preserving realistic body proportions."
+      },
+      "lighting": {
+      "source": "Natural bright sunlight (mid-morning or afternoon).",
+      "direction": "Front-left relative to the subject (illuminating the face and back).",
+      "shadows": "Hard, distinct shadow cast by the subject onto the asphalt to the right; shadows defining the muscle tone in the legs and back.",
+      "quality": "High contrast, outdoor daylight white balance."
+      },
+      "mood_and_expression": {
+      "emotion": "Confident, relaxed, alluring.",
+      "gaze": "Direct, engaging eye contact with the viewer.",
+      "atmosphere": "Casual, lifestyle photography, summer vibe."
+      },
+      "style_and_realism": {
+      "aesthetic": "Photorealistic, high-fidelity social media lifestyle photography.",
+      "rendering": "Unreal Engine 5 level detail, raw photo finish.",
+      "texture_quality": "High resolution textures for fabric (ribbed top, smooth spandex), car metal, and skin pores."
+      },
+      "colors_and_tone": {
+      "palette": "Natural outdoors; vivid greens for the tree, stark white and grey for clothing, deep black for the car, rich skin tones.",
+      "contrast": "High contrast due to bright sunlight.",
+      "saturation": "Natural to slightly vibrant."
+      },
+      "quality_and_technical_details": {
+      "resolution": "8k uhd",
+      "noise": "Low ISO, minimal grain.",
+      "sharpness": "High sharpness on subject edges."
+      },
+      "aspect_ratio_and_output": {
+      "ratio": "3:4",
+      "framing": "Vertical orientation, subject centered horizontally but slightly offset to the right due to the car on the left."
+      },
+      "controlnet": {
+      "pose_control": {
+      "model_type": "DWPose",
+      "purpose": "Exact skeletal and pose lock",
+      "constraints": [
+      "preserve shoulder width",
+      "preserve hip angle",
+      "preserve spine curvature",
+      "preserve limb placement"
+      ],
+      "recommended_weight": 1.0
+      },
+      "depth_control": {
+      "model_type": "ZoeDepth",
+      "purpose": "Depth, volume, and camera-to-body spatial lock",
+      "constraints": [
+      "preserve chest foreground dominance if present",
+      "prevent flat or compressed depth",
+      "maintain clear torso-to-background separation"
+      ],
+      "recommended_weight": 0.8
+      }
+      },
+      "negative_prompt": {
+      "forbidden_elements": [
+      "anatomy normalization",
+      "body proportion averaging",
+      "smaller bust than reference",
+      "reduced chest volume",
+      "flattened or compressed breasts",
+      "tightened, lifted, or artificially supported breasts",
+      "slimmed torso",
+      "aesthetic proportion correction",
+      "beauty standard enforcement",
+      "dataset-average female anatomy",
+      "camera angles that reduce volume",
+      "wide-angle distortion not in reference",
+      "lens compression not in reference",
+      "cropping that removes volume",
+      "depth flattening",
+      "mirror selfies",
+      "phone-in-hand selfies",
+      "reflections",
+      "beautification filters",
+      "skin smoothing",
+      "plastic skin",
+      "airbrushed texture",
+      "stylized realism",
+      "editorial fashion proportions",
+      "more realistic reinterpretation",
+      "naturalization of prominent features",
+      "cartoon",
+      "illustration",
+      "3d render",
+      "drawing",
+      "anime"
+      ]
+      }
+      },
+    rawPrompt: `{
+"subject": {
+"description": "Young woman with an athletic, fit physique and tanned skin tone.",
+"hair": "Long, wavy, dirty blonde hair with lighter highlights, parting in the middle and cascading down the back to mid-shoulder blade level.",
+"face": "Oval face shape, soft features, neutral lips, direct gaze looking back at the viewer.",
+"attire": {
+"top": "White ribbed halter-neck crop top, sleeveless, exposing shoulders and upper back, fitted tightly to the torso.",
+"bottom": "Grey high-waisted athletic compression shorts (spandex material), tight fit accentuating gluteal curves and thigh musculature.",
+"footwear": "White sneakers with white socks visible."
+},
+"anatomy_constraints": {
+"body_type": "Curvy and athletic, defined waist-to-hip ratio.",
+"posture_effect": "Lordosis curvature in lower back emphasizing glute projection.",
+"skin_texture": "Natural skin texture, visible tan lines, realistic rendering of soft tissue and muscle tone."
+}
+},
+"pose": {
+"orientation": "Standing, body facing away from the camera (rear 3/4 view), torso twisted slightly to the left.",
+"head_position": "Head turned over the left shoulder, face fully visible looking directly at the camera.",
+"arms": "Left arm hanging naturally straight down by the side; right arm bent slightly at the elbow with the hand obscured near the front of the waist.",
+"legs": "Legs straight, weight balanced, feet planted on the asphalt.",
+"spine": "Visible arch in the lower back (anterior pelvic tilt) accentuating the posterior chain."
+},
+"environment": {
+"setting": "Outdoor paved parking lot on a sunny day.",
+"foreground_left": "Large black SUV (side profile visible), highly polished surface showing a clear reflection of the subject.",
+"background_right": "White SUV parked further back.",
+"background_center": "Large, full green deciduous tree providing a backdrop behind the subject's head and shoulders.",
+"sky": "Bright blue sky with faint, wispy clouds.",
+"ground": "Grey asphalt with painted white parking stall lines."
+},
+"camera": {
+"shot_type": "Medium-full shot (knees up to head).",
+"angle": "Eye-level, slightly varying to capture the over-the-shoulder perspective.",
+"focus": "Sharp focus on the subject, slight depth of field blurring the background tree and cars.",
+"perspective": "Natural focal length (approx 50mm to 85mm), no wide-angle distortion, preserving realistic body proportions."
+},
+"lighting": {
+"source": "Natural bright sunlight (mid-morning or afternoon).",
+"direction": "Front-left relative to the subject (illuminating the face and back).",
+"shadows": "Hard, distinct shadow cast by the subject onto the asphalt to the right; shadows defining the muscle tone in the legs and back.",
+"quality": "High contrast, outdoor daylight white balance."
+},
+"mood_and_expression": {
+"emotion": "Confident, relaxed, alluring.",
+"gaze": "Direct, engaging eye contact with the viewer.",
+"atmosphere": "Casual, lifestyle photography, summer vibe."
+},
+"style_and_realism": {
+"aesthetic": "Photorealistic, high-fidelity social media lifestyle photography.",
+"rendering": "Unreal Engine 5 level detail, raw photo finish.",
+"texture_quality": "High resolution textures for fabric (ribbed top, smooth spandex), car metal, and skin pores."
+},
+"colors_and_tone": {
+"palette": "Natural outdoors; vivid greens for the tree, stark white and grey for clothing, deep black for the car, rich skin tones.",
+"contrast": "High contrast due to bright sunlight.",
+"saturation": "Natural to slightly vibrant."
+},
+"quality_and_technical_details": {
+"resolution": "8k uhd",
+"noise": "Low ISO, minimal grain.",
+"sharpness": "High sharpness on subject edges."
+},
+"aspect_ratio_and_output": {
+"ratio": "3:4",
+"framing": "Vertical orientation, subject centered horizontally but slightly offset to the right due to the car on the left."
+},
+"controlnet": {
+"pose_control": {
+"model_type": "DWPose",
+"purpose": "Exact skeletal and pose lock",
+"constraints": [
+"preserve shoulder width",
+"preserve hip angle",
+"preserve spine curvature",
+"preserve limb placement"
+],
+"recommended_weight": 1.0
+},
+"depth_control": {
+"model_type": "ZoeDepth",
+"purpose": "Depth, volume, and camera-to-body spatial lock",
+"constraints": [
+"preserve chest foreground dominance if present",
+"prevent flat or compressed depth",
+"maintain clear torso-to-background separation"
+],
+"recommended_weight": 0.8
+}
+},
+"negative_prompt": {
+"forbidden_elements": [
+"anatomy normalization",
+"body proportion averaging",
+"smaller bust than reference",
+"reduced chest volume",
+"flattened or compressed breasts",
+"tightened, lifted, or artificially supported breasts",
+"slimmed torso",
+"aesthetic proportion correction",
+"beauty standard enforcement",
+"dataset-average female anatomy",
+"camera angles that reduce volume",
+"wide-angle distortion not in reference",
+"lens compression not in reference",
+"cropping that removes volume",
+"depth flattening",
+"mirror selfies",
+"phone-in-hand selfies",
+"reflections",
+"beautification filters",
+"skin smoothing",
+"plastic skin",
+"airbrushed texture",
+"stylized realism",
+"editorial fashion proportions",
+"more realistic reinterpretation",
+"naturalization of prominent features",
+"cartoon",
+"illustration",
+"3d render",
+"drawing",
+"anime"
+]
+}
+}`,
+    tags: ["parking lot", "athletic woman", "activewear", "photorealistic", "summer vibe", "lifestyle photography", "fit physique", "outdoor"],
+    dateAdded: "2026-01-09"
+  },
+  {
+    id: "turquoise-bay-motorboat-athletic-blonde-woman-in-black-bikini-1767998227385-9y6t",
+    title: "Turquoise Bay Motorboat - Athletic Blonde Woman in Black Bikini",
+    imageSrc: "/images/vault/turquoise-bay-motorboat-athletic-blonde-woman-in-black-bikini-1767998227385-9y6t.jpg",
+    source: "https://x.com/milaraeai/status/2008948428810703101",
+    creator: "@milaraeai",
+    prompt: {
+        "ar": "9:16",
+        "subject": {
+          "type": "adult woman",
+          "age": "mid-20s",
+          "identity_lock": "young athletic woman in her mid-20s with long platinum-blonde hair, fair skin with a light tan, soft feminine facial features (defined jawline, high cheekbones, natural lips), fit gym-trained body (toned shoulders, visible abs, strong legs and glutes)",
+          "face_details": {
+            "expression": "open-mouth smile, relaxed playful energy",
+            "gaze": "looking toward the camera",
+            "makeup": "natural everyday makeup, soft lips, subtle blush, no heavy contour",
+            "skin": "visible pores/texture, natural highlights from sun (no beauty filter)"
+          },
+          "hair": {
+            "style": "loose, windblown, middle part",
+            "texture": "slightly messy strands from sea breeze"
+          },
+          "jewelry": {
+            "earrings": "small gold hoop earrings",
+            "necklaces": [
+              "thin gold chain with a small V-shaped pendant",
+              "second thin gold chain with a tiny drop/coin pendant"
+            ]
+          }
+        },
+        "wardrobe": {
+          "bikini": {
+            "color": "solid black",
+            "top": {
+              "type": "structured underwire bikini top",
+              "straps": "thick shoulder straps (not strapless, not halter)",
+              "cups": "rounded cups with visible shaping/underwire line",
+              "center_hardware": "small gold ring/clasp connecting the cups at the center"
+            },
+            "bottom": {
+              "type": "simple black bikini bottoms",
+              "cut": "high-cut on the hips, moderate coverage",
+              "waistband": "slightly thicker band (not string ties)"
+            }
+          }
+        },
+        "pose": {
+          "position": "sitting on a white boat seat near the helm, torso angled slightly toward camera",
+          "legs": "one knee bent up on the seat, the other leg angled down/out of frame",
+          "left_hand": "holding a tall red soda can (white script visible but not readable)",
+          "right_hand": "resting on the seat/backrest edge for balance",
+          "body_language": "relaxed, confident, casual-candid"
+        },
+        "props": {
+          "drink_can": "tall red can with white script, opened pull tab visible",
+          "hands_details": "light neutral manicure; a ring visible on the hand holding the can"
+        },
+        "scene": {
+          "location": "small motorboat in a calm turquoise bay",
+          "boat_elements": [
+            "navy bimini canopy overhead",
+            "stainless steel canopy support bars forming diagonal lines above the subject",
+            "white vinyl/leather seats with visible seams and dark piping line",
+            "helm area with a white steering wheel in the left foreground",
+            "control/console equipment near the wheel (dark components)",
+            "round speaker grille on the right interior wall",
+            "a rope line draped along the right seat edge"
+          ],
+          "water": {
+            "color": "clear turquoise/teal",
+            "surface": "small ripples with sun sparkle highlights"
+          },
+          "background": [
+            "large pale layered rock cliff spanning most of the horizon",
+            "a small white boat anchored in the water behind the subject",
+            "clear blue sky with no dramatic clouds"
+          ],
+          "composition_notes": {
+            "framing": "subject centered; helm/steering wheel partially in the left foreground; canopy bars frame the top",
+            "horizon": "kept level and natural"
+          }
+        },
+        "lighting": {
+          "time": "midday",
+          "quality": "hard direct sunlight",
+          "shadows": "crisp shadows on seat and body; slight shade influence from canopy bars",
+          "highlights": "strong natural highlights on skin and glossy boat surfaces"
+        },
+        "camera": {
+          "device_vibe": "iPhone 17 Pro",
+          "look": "unretouched smartphone photo, low HDR, slight handheld feel, subtle grain, minimal sharpening",
+          "angle": "eye-level to slightly above waist level, shot from the left-front of the subject",
+          "lens_feel": "1x main camera perspective (natural wide, no fisheye)",
+          "focus": "face/eyes sharp, bikini fabric and center gold ring crisp; background slightly softer but still detailed",
+          "exposure": {
+            "metering": "skin-tone priority",
+            "ev_comp": -0.2,
+            "iso_hint": "25-160",
+            "shutter_hint": "1/1200-1/2000",
+            "white_balance": "daylight neutral"
+          }
+        }
+      },
+    rawPrompt: `{
+  "ar": "9:16",
+  "subject": {
+    "type": "adult woman",
+    "age": "mid-20s",
+    "identity_lock": "young athletic woman in her mid-20s with long platinum-blonde hair, fair skin with a light tan, soft feminine facial features (defined jawline, high cheekbones, natural lips), fit gym-trained body (toned shoulders, visible abs, strong legs and glutes)",
+    "face_details": {
+      "expression": "open-mouth smile, relaxed playful energy",
+      "gaze": "looking toward the camera",
+      "makeup": "natural everyday makeup, soft lips, subtle blush, no heavy contour",
+      "skin": "visible pores/texture, natural highlights from sun (no beauty filter)"
+    },
+    "hair": {
+      "style": "loose, windblown, middle part",
+      "texture": "slightly messy strands from sea breeze"
+    },
+    "jewelry": {
+      "earrings": "small gold hoop earrings",
+      "necklaces": [
+        "thin gold chain with a small V-shaped pendant",
+        "second thin gold chain with a tiny drop/coin pendant"
+      ]
+    }
+  },
+  "wardrobe": {
+    "bikini": {
+      "color": "solid black",
+      "top": {
+        "type": "structured underwire bikini top",
+        "straps": "thick shoulder straps (not strapless, not halter)",
+        "cups": "rounded cups with visible shaping/underwire line",
+        "center_hardware": "small gold ring/clasp connecting the cups at the center"
+      },
+      "bottom": {
+        "type": "simple black bikini bottoms",
+        "cut": "high-cut on the hips, moderate coverage",
+        "waistband": "slightly thicker band (not string ties)"
+      }
+    }
+  },
+  "pose": {
+    "position": "sitting on a white boat seat near the helm, torso angled slightly toward camera",
+    "legs": "one knee bent up on the seat, the other leg angled down/out of frame",
+    "left_hand": "holding a tall red soda can (white script visible but not readable)",
+    "right_hand": "resting on the seat/backrest edge for balance",
+    "body_language": "relaxed, confident, casual-candid"
+  },
+  "props": {
+    "drink_can": "tall red can with white script, opened pull tab visible",
+    "hands_details": "light neutral manicure; a ring visible on the hand holding the can"
+  },
+  "scene": {
+    "location": "small motorboat in a calm turquoise bay",
+    "boat_elements": [
+      "navy bimini canopy overhead",
+      "stainless steel canopy support bars forming diagonal lines above the subject",
+      "white vinyl/leather seats with visible seams and dark piping line",
+      "helm area with a white steering wheel in the left foreground",
+      "control/console equipment near the wheel (dark components)",
+      "round speaker grille on the right interior wall",
+      "a rope line draped along the right seat edge"
+    ],
+    "water": {
+      "color": "clear turquoise/teal",
+      "surface": "small ripples with sun sparkle highlights"
+    },
+    "background": [
+      "large pale layered rock cliff spanning most of the horizon",
+      "a small white boat anchored in the water behind the subject",
+      "clear blue sky with no dramatic clouds"
+    ],
+    "composition_notes": {
+      "framing": "subject centered; helm/steering wheel partially in the left foreground; canopy bars frame the top",
+      "horizon": "kept level and natural"
+    }
+  },
+  "lighting": {
+    "time": "midday",
+    "quality": "hard direct sunlight",
+    "shadows": "crisp shadows on seat and body; slight shade influence from canopy bars",
+    "highlights": "strong natural highlights on skin and glossy boat surfaces"
+  },
+  "camera": {
+    "device_vibe": "iPhone 17 Pro",
+    "look": "unretouched smartphone photo, low HDR, slight handheld feel, subtle grain, minimal sharpening",
+    "angle": "eye-level to slightly above waist level, shot from the left-front of the subject",
+    "lens_feel": "1x main camera perspective (natural wide, no fisheye)",
+    "focus": "face/eyes sharp, bikini fabric and center gold ring crisp; background slightly softer but still detailed",
+    "exposure": {
+      "metering": "skin-tone priority",
+      "ev_comp": -0.2,
+      "iso_hint": "25-160",
+      "shutter_hint": "1/1200-1/2000",
+      "white_balance": "daylight neutral"
+    }
+  }
+}`,
+    tags: ["boat", "turquoise water", "blonde woman", "black bikini", "athletic", "summer", "candid", "realistic"],
+    dateAdded: "2026-01-09"
+  },
+  {
+    id: "luxury-elevator-curvy-woman-in-grey-tank-and-micro-shorts-1767998227385-efv9",
+    title: "Luxury Elevator - Curvy Woman in Grey Tank and Micro Shorts",
+    imageSrc: "/images/vault/luxury-elevator-curvy-woman-in-grey-tank-and-micro-shorts-1767998227385-efv9.jpg",
+    source: "https://x.com/bananababydoll/status/2008782401510494539",
+    creator: "@bananababydoll",
+    prompt: {
+        "meta": {
+          "aspect_ratio": "9:16",
+          "quality": "ultra_photorealistic",
+          "resolution": "8k",
+          "camera": "iPhone front camera",
+          "lens": "24mm",
+          "style": "raw iPhone mirror realism, zero smoothing, heavy reflections, subtle grain, imperfect exposure"
+        },
+      
+        "scene": {
+          "location": "luxury apartment elevator",
+          "environment": [
+            "mirror walls on three sides",
+            "brushed stainless steel panels",
+            "glass-like reflection layering (multiple reflections of body)",
+            "LED ceiling strip lights",
+            "digital floor number glowing red",
+            "slight fingerprints and smudges on mirror"
+          ],
+          "time": "late night",
+          "atmosphere": "private tension in a public box, quiet, charged, intimate"
+        },
+      
+        "lighting": {
+          "type": "mixed elevator lighting",
+          "sources": [
+            "cool white overhead LEDs",
+            "warm spill from control panel lights"
+          ],
+          "effect": [
+            "high contrast highlights on hips and thighs",
+            "specular reflections multiplying curves in mirrors",
+            "face partially lit, partially disappearing in reflections",
+            "real iPhone low-light noise in shadows"
+          ]
+        },
+      
+        "camera_perspective": {
+          "pov": "mirror selfie",
+          "angle": "slightly low and close",
+          "framing": "upper thighs to head",
+          "distance": "arm-length",
+          "imperfections": [
+            "phone edge visible in reflection",
+            "finger slightly covering lens corner",
+            "minor motion blur from breathing"
+          ]
+        },
+      
+        "subject": {
+          "gender": "female",
+          "ethnicity": "light european / mediterranean mix",
+          "vibe": "young adult, controlled confidence, quietly provocative",
+      
+          "body": {
+            "type": "fit-curvy",
+            "waist": "tight and defined",
+            "hips": "round and visually repeated by reflections",
+            "thighs": "thick, softly compressed",
+            "chest": "full and natural, secondary focus"
+          },
+      
+          "skin": {
+            "tone": "warm fair",
+            "texture": "real skin texture, slight sheen, no blur"
+          },
+      
+          "hair": {
+            "color": "dark blonde",
+            "style": "loose, slightly messy",
+            "details": "a few strands stuck to lips and cheek"
+          },
+      
+          "face": {
+            "expression": "neutral with soft half-smirk",
+            "eyes": "focused on phone screen",
+            "makeup": "minimal, glossy lips catching light"
+          },
+      
+          "outfit": {
+            "top": {
+              "type": "tight cropped tank top",
+              "color": "soft grey",
+              "fit": "hugging chest naturally, no bra",
+              "details": "fabric stretched slightly, fine rib texture visible"
+            },
+            "bottom": {
+              "type": "ultra-short micro biker shorts",
+              "length": "barely covering upper thighs",
+              "material": "thin matte spandex",
+              "fit": "painted-on tight, amplified by mirror repetition",
+              "details": [
+                "fabric tension visible at hips",
+                "slight ride-up at inner thighs",
+                "clean, logo-free"
+              ]
+            },
+            "shoes": {
+              "type": "clean white sneakers",
+              "reflection": "duplicated multiple times in mirrors"
+            }
+          },
+      
+          "pose": {
+            "stance": "standing close to mirror",
+            "hips": "shifted strongly to one side",
+            "legs": "one knee bent inward",
+            "upper_body": "shoulders relaxed, torso angled",
+            "arms": {
+              "phone_hand": "holding phone low",
+              "free_hand": "resting lightly on upper thigh"
+            },
+            "movement": "still moment that feels like a pause, not a pose"
+          }
+        },
+      
+        "mood_keywords": [
+          "mirror multiplication",
+          "late night tension",
+          "quiet confidence",
+          "timeline stopper"
+        ]
+      },
+    rawPrompt: `{
+  "meta": {
+    "aspect_ratio": "9:16",
+    "quality": "ultra_photorealistic",
+    "resolution": "8k",
+    "camera": "iPhone front camera",
+    "lens": "24mm",
+    "style": "raw iPhone mirror realism, zero smoothing, heavy reflections, subtle grain, imperfect exposure"
+  },
+
+  "scene": {
+    "location": "luxury apartment elevator",
+    "environment": [
+      "mirror walls on three sides",
+      "brushed stainless steel panels",
+      "glass-like reflection layering (multiple reflections of body)",
+      "LED ceiling strip lights",
+      "digital floor number glowing red",
+      "slight fingerprints and smudges on mirror"
+    ],
+    "time": "late night",
+    "atmosphere": "private tension in a public box, quiet, charged, intimate"
+  },
+
+  "lighting": {
+    "type": "mixed elevator lighting",
+    "sources": [
+      "cool white overhead LEDs",
+      "warm spill from control panel lights"
+    ],
+    "effect": [
+      "high contrast highlights on hips and thighs",
+      "specular reflections multiplying curves in mirrors",
+      "face partially lit, partially disappearing in reflections",
+      "real iPhone low-light noise in shadows"
+    ]
+  },
+
+  "camera_perspective": {
+    "pov": "mirror selfie",
+    "angle": "slightly low and close",
+    "framing": "upper thighs to head",
+    "distance": "arm-length",
+    "imperfections": [
+      "phone edge visible in reflection",
+      "finger slightly covering lens corner",
+      "minor motion blur from breathing"
+    ]
+  },
+
+  "subject": {
+    "gender": "female",
+    "ethnicity": "light european / mediterranean mix",
+    "vibe": "young adult, controlled confidence, quietly provocative",
+
+    "body": {
+      "type": "fit-curvy",
+      "waist": "tight and defined",
+      "hips": "round and visually repeated by reflections",
+      "thighs": "thick, softly compressed",
+      "chest": "full and natural, secondary focus"
+    },
+
+    "skin": {
+      "tone": "warm fair",
+      "texture": "real skin texture, slight sheen, no blur"
+    },
+
+    "hair": {
+      "color": "dark blonde",
+      "style": "loose, slightly messy",
+      "details": "a few strands stuck to lips and cheek"
+    },
+
+    "face": {
+      "expression": "neutral with soft half-smirk",
+      "eyes": "focused on phone screen",
+      "makeup": "minimal, glossy lips catching light"
+    },
+
+    "outfit": {
+      "top": {
+        "type": "tight cropped tank top",
+        "color": "soft grey",
+        "fit": "hugging chest naturally, no bra",
+        "details": "fabric stretched slightly, fine rib texture visible"
+      },
+      "bottom": {
+        "type": "ultra-short micro biker shorts",
+        "length": "barely covering upper thighs",
+        "material": "thin matte spandex",
+        "fit": "painted-on tight, amplified by mirror repetition",
+        "details": [
+          "fabric tension visible at hips",
+          "slight ride-up at inner thighs",
+          "clean, logo-free"
+        ]
+      },
+      "shoes": {
+        "type": "clean white sneakers",
+        "reflection": "duplicated multiple times in mirrors"
+      }
+    },
+
+    "pose": {
+      "stance": "standing close to mirror",
+      "hips": "shifted strongly to one side",
+      "legs": "one knee bent inward",
+      "upper_body": "shoulders relaxed, torso angled",
+      "arms": {
+        "phone_hand": "holding phone low",
+        "free_hand": "resting lightly on upper thigh"
+      },
+      "movement": "still moment that feels like a pause, not a pose"
+    }
+  },
+
+  "mood_keywords": [
+    "mirror multiplication",
+    "late night tension",
+    "quiet confidence",
+    "timeline stopper"
+  ]
+}`,
+    tags: ["elevator", "mirror selfie", "fit-curvy", "micro shorts", "crop top", "late night", "iphone realism", "reflections"],
+    dateAdded: "2026-01-09"
+  },
+  {
+    id: "indoor-kitchen-blonde-woman-in-black-fur-hat-1767998227385-2eos",
+    title: "Indoor Kitchen - Blonde Woman in Black Fur Hat",
+    imageSrc: "/images/vault/indoor-kitchen-blonde-woman-in-black-fur-hat-1767998227385-2eos.jpg",
+    source: "https://x.com/jackcashout/status/2008868215334588808",
+    creator: "@jackcashout",
+    prompt: {
+        "prompt": "EXTREME ultra close-up smartphone selfie, EXACT same camera angle and distance as the reference image. Camera is positioned VERY close to the face (approximately 15–18 cm), slightly BELOW eye level and tilted upward. The perspective exaggerates the nose and lips naturally, exactly like a real front-facing phone camera.\n\nThe frame is tightly cropped: the top of the black fur hat is visible, eyebrows fully visible, eyes partially relaxed and half-open, nose centered and dominant, lips fully visible, and the chin partially cropped by the bottom edge of the frame. NO additional headroom. NO zooming out. NO reframing.\n\nThe subject is resting her face on her LEFT hand. The palm presses into the cheek, slightly deforming the skin naturally. Fingers are vertical along the cheek. Fingernails are almond-shaped, medium length, painted glossy deep red. Nail color, length, and position must match exactly.\n\nLips are full, soft pink, slightly glossy, relaxed and closed. Lip shape and angle must remain neutral, no smile, no tension. Visible natural lip lines and moisture.\n\nNose is close to the camera with visible nostrils due to the upward angle. Natural skin shine on the nose tip. No contouring.\n\nSkin is COMPLETELY natural: visible pores, freckles across nose and cheeks, slight redness, uneven tone, no smoothing, no beauty filters, no retouching.\n\nEyes are relaxed, looking slightly downward toward the camera. Eyelashes are natural, eyebrows thick and natural with visible individual hairs.\n\nHair is straight blonde with darker roots, visible on both sides of the face, falling naturally. A dense black fur hat frames the forehead closely, touching near the eyebrows, with visible individual fur strands.\n\nLighting is soft indoor ambient daylight, neutral temperature, coming from above and slightly to the side. No dramatic shadows, no studio lighting.\n\nBackground is an indoor kitchen environment, softly out of focus. Light-colored wall texture, refrigerator visible on the right side. Background must remain secondary and blurred.\n\nDO NOT beautify. DO NOT correct proportions. DO NOT adjust symmetry. DO NOT change camera angle. DO NOT move the hand. DO NOT alter nail color or length. DO NOT change facial expression.\n\nNo logos, no text, no watermarks, no UI icons, no navigation dots, no arrows, no interface overlays.",
+        
+        "negative_prompt": "beauty portrait, studio shot, cinematic lighting, DSLR look, face slimming, smooth skin, plastic skin, symmetry correction, aesthetic framing, zoomed-out view, smile, expression change, hand reposition, different nail color, different nail shape, different lip shape, illustration, CGI, anime, filters, logos, UI elements, arrows, dots",
+        
+        "camera": {
+          "camera_type": "smartphone front camera",
+          "lens": "wide selfie lens",
+          "focal_length": "approximately 24–26mm equivalent",
+          "distance_to_subject": "15–18 cm",
+          "angle": "slightly low angle, upward tilt",
+          "focus": "fixed selfie focus"
+        },
+        
+        "quality": {
+          "resolution": "4K realistic",
+          "detail_fidelity": "raw, unretouched",
+          "texture_preservation": "maximum skin and nail detail",
+          "noise": "subtle natural phone noise"
+        },
+        
+        "style": [
+          "raw smartphone selfie",
+          "unfiltered",
+          "extreme close-up",
+          "natural perspective distortion",
+          "casual indoor selfie"
+        ],
+        
+        "exclude_elements": [
+          "left-side icon",
+          "bottom pagination dots",
+          "right-side navigation icons",
+          "any UI or social media overlay"
+        ]
+      },
+    rawPrompt: `{
+  "prompt": "EXTREME ultra close-up smartphone selfie, EXACT same camera angle and distance as the reference image. Camera is positioned VERY close to the face (approximately 15–18 cm), slightly BELOW eye level and tilted upward. The perspective exaggerates the nose and lips naturally, exactly like a real front-facing phone camera.\\n\\nThe frame is tightly cropped: the top of the black fur hat is visible, eyebrows fully visible, eyes partially relaxed and half-open, nose centered and dominant, lips fully visible, and the chin partially cropped by the bottom edge of the frame. NO additional headroom. NO zooming out. NO reframing.\\n\\nThe subject is resting her face on her LEFT hand. The palm presses into the cheek, slightly deforming the skin naturally. Fingers are vertical along the cheek. Fingernails are almond-shaped, medium length, painted glossy deep red. Nail color, length, and position must match exactly.\\n\\nLips are full, soft pink, slightly glossy, relaxed and closed. Lip shape and angle must remain neutral, no smile, no tension. Visible natural lip lines and moisture.\\n\\nNose is close to the camera with visible nostrils due to the upward angle. Natural skin shine on the nose tip. No contouring.\\n\\nSkin is COMPLETELY natural: visible pores, freckles across nose and cheeks, slight redness, uneven tone, no smoothing, no beauty filters, no retouching.\\n\\nEyes are relaxed, looking slightly downward toward the camera. Eyelashes are natural, eyebrows thick and natural with visible individual hairs.\\n\\nHair is straight blonde with darker roots, visible on both sides of the face, falling naturally. A dense black fur hat frames the forehead closely, touching near the eyebrows, with visible individual fur strands.\\n\\nLighting is soft indoor ambient daylight, neutral temperature, coming from above and slightly to the side. No dramatic shadows, no studio lighting.\\n\\nBackground is an indoor kitchen environment, softly out of focus. Light-colored wall texture, refrigerator visible on the right side. Background must remain secondary and blurred.\\n\\nDO NOT beautify. DO NOT correct proportions. DO NOT adjust symmetry. DO NOT change camera angle. DO NOT move the hand. DO NOT alter nail color or length. DO NOT change facial expression.\\n\\nNo logos, no text, no watermarks, no UI icons, no navigation dots, no arrows, no interface overlays.",
+  
+  "negative_prompt": "beauty portrait, studio shot, cinematic lighting, DSLR look, face slimming, smooth skin, plastic skin, symmetry correction, aesthetic framing, zoomed-out view, smile, expression change, hand reposition, different nail color, different nail shape, different lip shape, illustration, CGI, anime, filters, logos, UI elements, arrows, dots",
+  
+  "camera": {
+    "camera_type": "smartphone front camera",
+    "lens": "wide selfie lens",
+    "focal_length": "approximately 24–26mm equivalent",
+    "distance_to_subject": "15–18 cm",
+    "angle": "slightly low angle, upward tilt",
+    "focus": "fixed selfie focus"
+  },
+  
+  "quality": {
+    "resolution": "4K realistic",
+    "detail_fidelity": "raw, unretouched",
+    "texture_preservation": "maximum skin and nail detail",
+    "noise": "subtle natural phone noise"
+  },
+  
+  "style": [
+    "raw smartphone selfie",
+    "unfiltered",
+    "extreme close-up",
+    "natural perspective distortion",
+    "casual indoor selfie"
+  ],
+  
+  "exclude_elements": [
+    "left-side icon",
+    "bottom pagination dots",
+    "right-side navigation icons",
+    "any UI or social media overlay"
+  ]
+}`,
+    tags: ["kitchen", "blonde hair", "black fur hat", "red nails", "smartphone selfie", "extreme close-up", "natural skin", "casual"],
+    dateAdded: "2026-01-09"
+  },
+  {
+    id: "modern-architectural-staircase-blonde-woman-in-black-romper-1767998227385-5vt7",
+    title: "Modern Architectural Staircase - Blonde Woman in Black Romper",
+    imageSrc: "/images/vault/modern-architectural-staircase-blonde-woman-in-black-romper-1767998227385-5vt7.jpg",
+    source: "https://x.com/brindleyai/status/2008571227812884506",
+    creator: "@brindleyai",
+    prompt: {
+      "subject": {
+      "description": "Young woman with tanned skin and long, wavy blonde balayage hair falling over shoulders.",
+      "clothing": {
+      "outfit": "Tight-fitting black romper or playsuit with thin spaghetti straps, form-fitting fabric accentuating the figure.",
+      "footwear": "Black high-heeled patent leather sandals with distinct structural metallic heels (resembling YSL Opyum heels) featuring a logo design as the heel support.",
+      "accessories": "Small black shoulder bag tucked under the left arm, thin gold bracelet on left wrist, rings on fingers."
+      },
+      "hair": "Rooted blonde, wavy texture, mid-back length, parting slightly off-center.",
+      "anatomy_and_proportions": {
+      "body_type": "Fit, athletic, and curvy physique.",
+      "features": "Prominent gluteal definition due to rear angle pose, toned legs, natural skin texture with visible tan lines or lighting gradients. Side profile of chest visible, maintaining natural volume and gravity as per reference."
+      }
+      },
+      "pose": {
+      "orientation": "Standing, rear 3/4 view, body angled away from the camera.",
+      "head_position": "Head turned over the left shoulder, looking directly back at the camera.",
+      "limbs": {
+      "legs": "Standing straight with weight slightly shifted, legs elongated by heels.",
+      "arms": "Left arm relaxed by side holding the bag, right arm slightly obscured but visible."
+      },
+      "posture": "Upright spine with a natural arch, engaging the lower back and glutes."
+      },
+      "environment": {
+      "location": "Modern indoor staircase.",
+      "elements": [
+      "Grey stone or tiled steps with integrated LED strip lighting under the nosing of each step.",
+      "Glass balustrade railing with metal handrail on the left.",
+      "Dark, possibly black marble or panelled walls.",
+      "Door on the right background with a silver sign reading 'FIRE HOSE REEL / FIRE HYDRANT'."
+      ],
+      "ambiance": "Upscale, modern, architectural interior, nightlife or hotel setting."
+      },
+      "camera": {
+      "shot_type": "Full body shot, vertical framing.",
+      "angle": "Low angle, shooting slightly upwards from lower on the stairs.",
+      "perspective": "Three-point perspective emphasized by the stair lines.",
+      "depth_of_field": "Subject sharply in focus, background slightly preserved but depth cues provided by the stairs."
+      },
+      "lighting": {
+      "type": "Mixed artificial indoor lighting.",
+      "sources": [
+      "Cool white LED strips illuminating the stair risers, creating horizontal lines of light.",
+      "Overhead ambient lighting creating highlights on the hair and shoulders.",
+      "Soft fill light on the face and body."
+      ],
+      "quality": "Contrast between the bright stair lights and the darker environment, reflective highlights on the patent leather shoes and glass railing."
+      },
+      "mood_and_expression": {
+      "expression": "Neutral, confident, slightly alluring gaze.",
+      "mood": "Chic, sophisticated, evening aesthetic."
+      },
+      "style_and_realism": {
+      "style": "Photorealistic, high-end social media influencer aesthetic.",
+      "fidelity": "Raw, unpolished texture simulation, preserving anatomical accuracy and fabric tension."
+      },
+      "colors_and_tone": {
+      "palette": "Dominant blacks (outfit, walls), greys (stairs), cool whites (lights), and warm tanned skin tones.",
+      "contrast": "High contrast due to the strip lighting against dark surroundings."
+      },
+      "quality_and_technical_details": {
+      "resolution": "High definition.",
+      "texture_focus": "Skin pores, fabric weave, glossy patent leather, glass reflections."
+      },
+      "aspect_ratio_and_output": "3:4",
+      "controlnet": {
+      "pose_control": {
+      "model_type": "OpenPose",
+      "purpose": "Exact skeletal and pose lock",
+      "constraints": [
+      "preserve shoulder width",
+      "preserve hip angle",
+      "preserve spine curvature",
+      "preserve limb placement",
+      "lock head turn angle"
+      ],
+      "recommended_weight": 1.0
+      },
+      "depth_control": {
+      "model_type": "MiDaS",
+      "purpose": "Depth, volume, and camera-to-body spatial lock",
+      "constraints": [
+      "preserve glute and leg volume relative to background",
+      "maintain distinct separation between subject and stair risers",
+      "prevent flat or compressed depth"
+      ],
+      "recommended_weight": 0.8
+      }
+      },
+      "negative_prompt": {
+      "forbidden_elements": [
+      "anatomy normalization",
+      "body proportion averaging",
+      "flattened glutes",
+      "reduced muscle definition",
+      "slimmed thighs",
+      "aesthetic proportion correction",
+      "beauty standard enforcement",
+      "dataset-average female anatomy",
+      "camera angles that reduce volume",
+      "wide-angle distortion not in reference",
+      "lens compression not in reference",
+      "cropping that removes feet or head",
+      "mirror selfies",
+      "phone-in-hand selfies",
+      "reflections in mirrors",
+      "beautification filters",
+      "skin smoothing",
+      "plastic skin",
+      "airbrushed texture",
+      "stylized realism",
+      "cartoonish rendering",
+      "daylight",
+      "sunlight",
+      "outdoor setting"
+      ]
+      }
+      },
+    rawPrompt: `{
+"subject": {
+"description": "Young woman with tanned skin and long, wavy blonde balayage hair falling over shoulders.",
+"clothing": {
+"outfit": "Tight-fitting black romper or playsuit with thin spaghetti straps, form-fitting fabric accentuating the figure.",
+"footwear": "Black high-heeled patent leather sandals with distinct structural metallic heels (resembling YSL Opyum heels) featuring a logo design as the heel support.",
+"accessories": "Small black shoulder bag tucked under the left arm, thin gold bracelet on left wrist, rings on fingers."
+},
+"hair": "Rooted blonde, wavy texture, mid-back length, parting slightly off-center.",
+"anatomy_and_proportions": {
+"body_type": "Fit, athletic, and curvy physique.",
+"features": "Prominent gluteal definition due to rear angle pose, toned legs, natural skin texture with visible tan lines or lighting gradients. Side profile of chest visible, maintaining natural volume and gravity as per reference."
+}
+},
+"pose": {
+"orientation": "Standing, rear 3/4 view, body angled away from the camera.",
+"head_position": "Head turned over the left shoulder, looking directly back at the camera.",
+"limbs": {
+"legs": "Standing straight with weight slightly shifted, legs elongated by heels.",
+"arms": "Left arm relaxed by side holding the bag, right arm slightly obscured but visible."
+},
+"posture": "Upright spine with a natural arch, engaging the lower back and glutes."
+},
+"environment": {
+"location": "Modern indoor staircase.",
+"elements": [
+"Grey stone or tiled steps with integrated LED strip lighting under the nosing of each step.",
+"Glass balustrade railing with metal handrail on the left.",
+"Dark, possibly black marble or panelled walls.",
+"Door on the right background with a silver sign reading 'FIRE HOSE REEL / FIRE HYDRANT'."
+],
+"ambiance": "Upscale, modern, architectural interior, nightlife or hotel setting."
+},
+"camera": {
+"shot_type": "Full body shot, vertical framing.",
+"angle": "Low angle, shooting slightly upwards from lower on the stairs.",
+"perspective": "Three-point perspective emphasized by the stair lines.",
+"depth_of_field": "Subject sharply in focus, background slightly preserved but depth cues provided by the stairs."
+},
+"lighting": {
+"type": "Mixed artificial indoor lighting.",
+"sources": [
+"Cool white LED strips illuminating the stair risers, creating horizontal lines of light.",
+"Overhead ambient lighting creating highlights on the hair and shoulders.",
+"Soft fill light on the face and body."
+],
+"quality": "Contrast between the bright stair lights and the darker environment, reflective highlights on the patent leather shoes and glass railing."
+},
+"mood_and_expression": {
+"expression": "Neutral, confident, slightly alluring gaze.",
+"mood": "Chic, sophisticated, evening aesthetic."
+},
+"style_and_realism": {
+"style": "Photorealistic, high-end social media influencer aesthetic.",
+"fidelity": "Raw, unpolished texture simulation, preserving anatomical accuracy and fabric tension."
+},
+"colors_and_tone": {
+"palette": "Dominant blacks (outfit, walls), greys (stairs), cool whites (lights), and warm tanned skin tones.",
+"contrast": "High contrast due to the strip lighting against dark surroundings."
+},
+"quality_and_technical_details": {
+"resolution": "High definition.",
+"texture_focus": "Skin pores, fabric weave, glossy patent leather, glass reflections."
+},
+"aspect_ratio_and_output": "3:4",
+"controlnet": {
+"pose_control": {
+"model_type": "OpenPose",
+"purpose": "Exact skeletal and pose lock",
+"constraints": [
+"preserve shoulder width",
+"preserve hip angle",
+"preserve spine curvature",
+"preserve limb placement",
+"lock head turn angle"
+],
+"recommended_weight": 1.0
+},
+"depth_control": {
+"model_type": "MiDaS",
+"purpose": "Depth, volume, and camera-to-body spatial lock",
+"constraints": [
+"preserve glute and leg volume relative to background",
+"maintain distinct separation between subject and stair risers",
+"prevent flat or compressed depth"
+],
+"recommended_weight": 0.8
+}
+},
+"negative_prompt": {
+"forbidden_elements": [
+"anatomy normalization",
+"body proportion averaging",
+"flattened glutes",
+"reduced muscle definition",
+"slimmed thighs",
+"aesthetic proportion correction",
+"beauty standard enforcement",
+"dataset-average female anatomy",
+"camera angles that reduce volume",
+"wide-angle distortion not in reference",
+"lens compression not in reference",
+"cropping that removes feet or head",
+"mirror selfies",
+"phone-in-hand selfies",
+"reflections in mirrors",
+"beautification filters",
+"skin smoothing",
+"plastic skin",
+"airbrushed texture",
+"stylized realism",
+"cartoonish rendering",
+"daylight",
+"sunlight",
+"outdoor setting"
+]
+}
+}`,
+    tags: ["Modern Interior", "Staircase", "Blonde Hair", "Black Romper", "Designer Heels", "Photorealistic", "Sophisticated", "Nightlife"],
+    dateAdded: "2026-01-09"
+  },
+  {
+    id: "lush-tropical-setting-young-woman-riding-pinto-horse-1767998227385-j7s1",
+    title: "Lush Tropical Setting - Young Woman Riding Pinto Horse",
+    imageSrc: "/images/vault/lush-tropical-setting-young-woman-riding-pinto-horse-1767998227385-j7s1.jpg",
+    source: "https://x.com/johnnprofits/status/2008550876307202090",
+    creator: "@johnnprofits",
+    prompt: {
+        "lighting": {
+          "source": "natural evening light",
+          "quality": "soft, diffused",
+          "shadows": "gentle shadows defining forms, under trees",
+          "direction": "from the left",
+          "highlights": "soft light on woman's hair and shoulder, horse's white patches"
+        },
+        "background": {
+          "setting": "lush, tropical outdoor area",
+          "elements": "dense green trees and bushes, blue sky with some white clouds, distant building with blue roof",
+          "depth_of_field": "medium, background slightly blurred"
+        },
+        "typography": {
+          "description": "Small logo on jeans back pocket and a tag, text illegible.",
+          "text_present": false
+        },
+        "composition": {
+          "framing": "subject centered, looking over shoulder",
+          "shot_type": "medium-wide shot",
+          "orientation": "vertical",
+          "camera_angle": "low-angle"
+        },
+        "color_profile": {
+          "mood": "serene, relaxed, outdoorsy",
+          "palette": "natural, earthy tones with bright white and blue accents",
+          "dominant_colors": [
+            "#FFFFFF",
+            "#87CEEB",
+            "#8B4513",
+            "#228B22",
+            "#4682B4"
+          ]
+        },
+        "technical_specs": {
+          "lens": "standard wide",
+          "focus": "sharp on the woman and horse, slightly softer background",
+          "camera": "smartphone camera",
+          "file_format": "JPEG"
+        },
+        "subject_analysis": {
+          "animal": {
+            "tack": "brown leather western saddle, bridle, reins",
+            "type": "horse",
+            "breed": "pinto",
+            "color": "brown and white patches"
+          },
+          "person": {
+            "hair": "long, wavy blonde hair, parted in the middle",
+            "pose": "sitting on horse, looking back over left shoulder, right hand on saddle",
+            "gender": "female",
+            "clothing": "white ribbed tank top, light blue high-waisted jeans",
+            "age_group": "young adult",
+            "expression": "calm, neutral, looking at camera",
+            "accessories": "small yellow tag/keychain on belt loop"
+          }
+        },
+        "artistic_elements": {
+          "mood": "candid, peaceful",
+          "style": "lifestyle photography",
+          "texture": "smooth skin, denim, leather saddle, horse hair, foliage"
+        },
+        "generation_parameters": {
+          "prompt": "A vertical medium-wide photograph of a young blonde woman in a white tank top and light blue jeans, sitting on a brown and white pinto horse with a western saddle, looking back over her shoulder. The setting is a lush, tropical outdoor area with trees and a distant building under a blue sky with soft evening light.",
+          "negative_prompt": "blurry, dark, indoor, studio, harsh lighting, multiple people"
+        }
+      },
+    rawPrompt: `{
+  "lighting": {
+    "source": "natural evening light",
+    "quality": "soft, diffused",
+    "shadows": "gentle shadows defining forms, under trees",
+    "direction": "from the left",
+    "highlights": "soft light on woman's hair and shoulder, horse's white patches"
+  },
+  "background": {
+    "setting": "lush, tropical outdoor area",
+    "elements": "dense green trees and bushes, blue sky with some white clouds, distant building with blue roof",
+    "depth_of_field": "medium, background slightly blurred"
+  },
+  "typography": {
+    "description": "Small logo on jeans back pocket and a tag, text illegible.",
+    "text_present": false
+  },
+  "composition": {
+    "framing": "subject centered, looking over shoulder",
+    "shot_type": "medium-wide shot",
+    "orientation": "vertical",
+    "camera_angle": "low-angle"
+  },
+  "color_profile": {
+    "mood": "serene, relaxed, outdoorsy",
+    "palette": "natural, earthy tones with bright white and blue accents",
+    "dominant_colors": [
+      "#FFFFFF",
+      "#87CEEB",
+      "#8B4513",
+      "#228B22",
+      "#4682B4"
+    ]
+  },
+  "technical_specs": {
+    "lens": "standard wide",
+    "focus": "sharp on the woman and horse, slightly softer background",
+    "camera": "smartphone camera",
+    "file_format": "JPEG"
+  },
+  "subject_analysis": {
+    "animal": {
+      "tack": "brown leather western saddle, bridle, reins",
+      "type": "horse",
+      "breed": "pinto",
+      "color": "brown and white patches"
+    },
+    "person": {
+      "hair": "long, wavy blonde hair, parted in the middle",
+      "pose": "sitting on horse, looking back over left shoulder, right hand on saddle",
+      "gender": "female",
+      "clothing": "white ribbed tank top, light blue high-waisted jeans",
+      "age_group": "young adult",
+      "expression": "calm, neutral, looking at camera",
+      "accessories": "small yellow tag/keychain on belt loop"
+    }
+  },
+  "artistic_elements": {
+    "mood": "candid, peaceful",
+    "style": "lifestyle photography",
+    "texture": "smooth skin, denim, leather saddle, horse hair, foliage"
+  },
+  "generation_parameters": {
+    "prompt": "A vertical medium-wide photograph of a young blonde woman in a white tank top and light blue jeans, sitting on a brown and white pinto horse with a western saddle, looking back over her shoulder. The setting is a lush, tropical outdoor area with trees and a distant building under a blue sky with soft evening light.",
+    "negative_prompt": "blurry, dark, indoor, studio, harsh lighting, multiple people"
+  }
+}`,
+    tags: ["Tropical", "Outdoors", "Blonde", "White Tank Top", "Blue Jeans", "Serene", "Lifestyle Photography", "Pinto Horse", "Equestrian", "Evening Light"],
+    dateAdded: "2026-01-09"
+  },
+  {
+    id: "modern-bathroom-young-woman-in-blue-sweater-brushing-teeth-1768114947996-pzad",
+    title: "Modern Bathroom - Young Woman in Blue Sweater Brushing Teeth",
+    imageSrc: "/images/vault/modern-bathroom-young-woman-in-blue-sweater-brushing-teeth-1768114947996-pzad.jpg",
+    source: "https://x.com/xmliisu/status/2005991465571258466",
+    creator: "@xmliisu",
+    prompt: {
+        "lighting": {
+          "source": "overhead artificial bathroom lights",
+          "shadows": "soft and minimal",
+          "direction": "top-down",
+          "intensity": "bright and functional",
+          "highlights": "visible on hair and skin"
+        },
+        "background": {
+          "depth": "shallow due to mirror reflection",
+          "clutter": "minimal, some items in shower area and on tub ledge",
+          "setting": "modern bathroom",
+          "elements": [
+            "glass shower enclosure with chrome frame and fixtures",
+            "white textured wave-patterned wall tiles",
+            "white built-in bathtub",
+            "recessed shelf with toiletries",
+            "doorway visible in reflection leading to another room"
+          ]
+        },
+        "typography": {
+          "text_present": false
+        },
+        "composition": {
+          "type": "mirror selfie",
+          "angle": "slightly high angle, looking down",
+          "framing": "waist-up shot",
+          "focal_point": "subject's face and toothbrush",
+          "subject_position": "off-center, left-aligned"
+        },
+        "color_profile": {
+          "color_scheme": "neutral with a dark blue accent",
+          "accent_colors": [
+            "#004080",
+            "#FFFFFF"
+          ],
+          "dominant_colors": [
+            "#2C2C3C",
+            "#E0E0D8",
+            "#8C7C6C"
+          ]
+        },
+        "technical_specs": {
+          "lens": "wide-angle",
+          "focus": "sharp on subject",
+          "device": "smartphone camera",
+          "resolution": "moderate",
+          "camera_type": "likely iPhone"
+        },
+        "subject_analysis": {
+          "hair": "long, wavy, light brown hair, parted in the middle",
+          "pose": "standing, looking at phone screen in mirror",
+          "hands": "holding phone with left hand, fingers showing white manicured nails, right hand brushing teeth",
+          "subject": "young woman",
+          "clothing": "dark blue textured knit sweater",
+          "expression": "playful, tongue slightly out, brushing teeth",
+          "accessories": "black smartphone held in hand, blue and white manual toothbrush"
+        },
+        "artistic_elements": {
+          "mood": "relaxed, playful",
+          "style": "casual, candid, everyday life",
+          "texture": "knitted sweater, wavy hair, smooth tiles",
+          "reflections": "mirror reflection showing the subject and bathroom interior"
+        },
+        "generation_parameters": {
+          "prompt": "A candid mirror selfie of a young woman with long wavy brown hair, wearing a dark blue knitted sweater, brushing her teeth with a blue and white toothbrush. She is holding a black smartphone with her left hand, which has white painted nails. Her tongue is slightly out in a playful expression. The background is a bright, modern bathroom with a glass shower, chrome fixtures, white textured tiles, and a white bathtub. Overhead lighting casts a warm glow. The shot is framed from the waist up."
+        }
+      },
+    rawPrompt: `{
+  "lighting": {
+    "source": "overhead artificial bathroom lights",
+    "shadows": "soft and minimal",
+    "direction": "top-down",
+    "intensity": "bright and functional",
+    "highlights": "visible on hair and skin"
+  },
+  "background": {
+    "depth": "shallow due to mirror reflection",
+    "clutter": "minimal, some items in shower area and on tub ledge",
+    "setting": "modern bathroom",
+    "elements": [
+      "glass shower enclosure with chrome frame and fixtures",
+      "white textured wave-patterned wall tiles",
+      "white built-in bathtub",
+      "recessed shelf with toiletries",
+      "doorway visible in reflection leading to another room"
+    ]
+  },
+  "typography": {
+    "text_present": false
+  },
+  "composition": {
+    "type": "mirror selfie",
+    "angle": "slightly high angle, looking down",
+    "framing": "waist-up shot",
+    "focal_point": "subject's face and toothbrush",
+    "subject_position": "off-center, left-aligned"
+  },
+  "color_profile": {
+    "color_scheme": "neutral with a dark blue accent",
+    "accent_colors": [
+      "#004080",
+      "#FFFFFF"
+    ],
+    "dominant_colors": [
+      "#2C2C3C",
+      "#E0E0D8",
+      "#8C7C6C"
+    ]
+  },
+  "technical_specs": {
+    "lens": "wide-angle",
+    "focus": "sharp on subject",
+    "device": "smartphone camera",
+    "resolution": "moderate",
+    "camera_type": "likely iPhone"
+  },
+  "subject_analysis": {
+    "hair": "long, wavy, light brown hair, parted in the middle",
+    "pose": "standing, looking at phone screen in mirror",
+    "hands": "holding phone with left hand, fingers showing white manicured nails, right hand brushing teeth",
+    "subject": "young woman",
+    "clothing": "dark blue textured knit sweater",
+    "expression": "playful, tongue slightly out, brushing teeth",
+    "accessories": "black smartphone held in hand, blue and white manual toothbrush"
+  },
+  "artistic_elements": {
+    "mood": "relaxed, playful",
+    "style": "casual, candid, everyday life",
+    "texture": "knitted sweater, wavy hair, smooth tiles",
+    "reflections": "mirror reflection showing the subject and bathroom interior"
+  },
+  "generation_parameters": {
+    "prompt": "A candid mirror selfie of a young woman with long wavy brown hair, wearing a dark blue knitted sweater, brushing her teeth with a blue and white toothbrush. She is holding a black smartphone with her left hand, which has white painted nails. Her tongue is slightly out in a playful expression. The background is a bright, modern bathroom with a glass shower, chrome fixtures, white textured tiles, and a white bathtub. Overhead lighting casts a warm glow. The shot is framed from the waist up."
+  }
+}`,
+    tags: ["bathroom", "mirror selfie", "young woman", "blue sweater", "brushing teeth", "playful", "candid", "modern interior"],
+    dateAdded: "2026-01-11"
+  },
+  {
+    id: "modern-caf-interior-blonde-woman-in-beige-activewear-1768114947996-6lkw",
+    title: "Modern Caf\u00e9 Interior - Blonde Woman in Beige Activewear",
+    imageSrc: "/images/vault/modern-caf-interior-blonde-woman-in-beige-activewear-1768114947996-6lkw.jpg",
+    source: "https://x.com/johnnprofits/status/2007519491903664373",
+    creator: "@johnnprofits",
+    prompt: {
+        "type": "image",
+        "style": "lifestyle café photography, casual and aesthetic",
+        "scene": {
+          "setting": "modern café interior",
+          "environment": {
+            "furniture": "wooden tables and chairs",
+            "floor": "polished concrete",
+            "background": "people seated and working casually",
+            "lighting": "warm indoor ambient light"
+          }
+        },
+        "subject": {
+          "count": 1,
+          "position": "center frame, seated at table",
+          "pose": "relaxed, one leg bent on chair, holding drink",
+          "expression": "calm, confident, direct gaze",
+          "appearance": {
+            "hair": {
+              "color": "blonde",
+              "style": "long, loose, center-parted"
+            },
+            "features": {
+              "eyes": "blue",
+              "skin_details": "natural freckles"
+            }
+          },
+          "clothing": {
+            "outfit": "fitted beige activewear set",
+            "footwear": "light-colored sneakers with white socks",
+            "accessories": [
+              "gold necklace",
+              "bracelet",
+              "ring"
+            ]
+          }
+        },
+        "activity": {
+          "action": "drinking a green beverage",
+          "drink": "green iced drink in glass with straw"
+        },
+        "objects_on_table": [
+          "designer handbag",
+          "sunglasses",
+          "small plate with green residue"
+        ],
+        "composition": {
+          "orientation": "portrait",
+          "framing": "medium-full body shot",
+          "focus": "subject with café context"
+        },
+        "color_palette": {
+          "dominant_colors": ["beige", "tan", "wood brown"],
+          "accent_colors": ["green", "black", "gold"]
+        },
+        "overall_tone": "relaxed, stylish, everyday luxury"
+      },
+    rawPrompt: `{
+  "type": "image",
+  "style": "lifestyle café photography, casual and aesthetic",
+  "scene": {
+    "setting": "modern café interior",
+    "environment": {
+      "furniture": "wooden tables and chairs",
+      "floor": "polished concrete",
+      "background": "people seated and working casually",
+      "lighting": "warm indoor ambient light"
+    }
+  },
+  "subject": {
+    "count": 1,
+    "position": "center frame, seated at table",
+    "pose": "relaxed, one leg bent on chair, holding drink",
+    "expression": "calm, confident, direct gaze",
+    "appearance": {
+      "hair": {
+        "color": "blonde",
+        "style": "long, loose, center-parted"
+      },
+      "features": {
+        "eyes": "blue",
+        "skin_details": "natural freckles"
+      }
+    },
+    "clothing": {
+      "outfit": "fitted beige activewear set",
+      "footwear": "light-colored sneakers with white socks",
+      "accessories": [
+        "gold necklace",
+        "bracelet",
+        "ring"
+      ]
+    }
+  },
+  "activity": {
+    "action": "drinking a green beverage",
+    "drink": "green iced drink in glass with straw"
+  },
+  "objects_on_table": [
+    "designer handbag",
+    "sunglasses",
+    "small plate with green residue"
+  ],
+  "composition": {
+    "orientation": "portrait",
+    "framing": "medium-full body shot",
+    "focus": "subject with café context"
+  },
+  "color_palette": {
+    "dominant_colors": ["beige", "tan", "wood brown"],
+    "accent_colors": ["green", "black", "gold"]
+  },
+  "overall_tone": "relaxed, stylish, everyday luxury"
+}`,
+    tags: ["caf\u00e9", "lifestyle", "beige activewear", "blonde woman", "aesthetic", "modern interior", "everyday luxury", "iced drink"],
+    dateAdded: "2026-01-11"
+  },
+  {
+    id: "bright-modern-kitchen-blonde-woman-in-white-homewear-preparing-food-1768114947996-u73s",
+    title: "Bright Modern Kitchen - Blonde Woman in White Homewear Preparing Food",
+    imageSrc: "/images/vault/bright-modern-kitchen-blonde-woman-in-white-homewear-preparing-food-1768114947996-u73s.jpg",
+    source: "https://x.com/johnnprofits/status/2007139776843964422",
+    creator: "@johnnprofits",
+    prompt: {
+        "type": "image",
+        "style": "lifestyle photography, natural and candid",
+        "scene": {
+          "setting": "bright, modern kitchen",
+          "environment": {
+            "interior": "white cabinetry with glass panels",
+            "lighting": "soft natural daylight from windows",
+            "surfaces": "light stone countertop, white wood floors",
+            "background_elements": [
+              "dining table and chairs",
+              "large window with outdoor view"
+            ]
+          }
+        },
+        "subject": {
+          "count": 1,
+          "position": "left of frame, standing at kitchen counter",
+          "pose": "leaning slightly forward while preparing food",
+          "appearance": {
+            "hair": {
+              "color": "blonde",
+              "style": "straight, shoulder-length"
+            },
+            "expression": "focused and calm"
+          },
+          "clothing": {
+            "top": "white sleeveless tank top",
+            "bottom": "white pants",
+            "style": "casual, minimal, homewear"
+          }
+        },
+        "activity": {
+          "action": "preparing ingredients",
+          "items_being_used": [
+            "bowls with chopped vegetables",
+            "grater",
+            "knife",
+            "cutting board"
+          ]
+        },
+        "objects_on_counter": [
+          "stacked plates",
+          "small glasses",
+          "smartphone",
+          "food containers"
+        ],
+        "lighting": {
+          "type": "natural daylight",
+          "mood": "warm, relaxed, domestic"
+        },
+        "composition": {
+          "orientation": "portrait",
+          "framing": "medium full-body shot",
+          "focus": "subject and food preparation area"
+        },
+        "color_palette": {
+          "dominant_colors": ["white", "cream", "light wood"],
+          "accent_colors": ["green", "red", "yellow"]
+        },
+        "overall_tone": "cozy, everyday, homey"
+      },
+    rawPrompt: `{
+  "type": "image",
+  "style": "lifestyle photography, natural and candid",
+  "scene": {
+    "setting": "bright, modern kitchen",
+    "environment": {
+      "interior": "white cabinetry with glass panels",
+      "lighting": "soft natural daylight from windows",
+      "surfaces": "light stone countertop, white wood floors",
+      "background_elements": [
+        "dining table and chairs",
+        "large window with outdoor view"
+      ]
+    }
+  },
+  "subject": {
+    "count": 1,
+    "position": "left of frame, standing at kitchen counter",
+    "pose": "leaning slightly forward while preparing food",
+    "appearance": {
+      "hair": {
+        "color": "blonde",
+        "style": "straight, shoulder-length"
+      },
+      "expression": "focused and calm"
+    },
+    "clothing": {
+      "top": "white sleeveless tank top",
+      "bottom": "white pants",
+      "style": "casual, minimal, homewear"
+    }
+  },
+  "activity": {
+    "action": "preparing ingredients",
+    "items_being_used": [
+      "bowls with chopped vegetables",
+      "grater",
+      "knife",
+      "cutting board"
+    ]
+  },
+  "objects_on_counter": [
+    "stacked plates",
+    "small glasses",
+    "smartphone",
+    "food containers"
+  ],
+  "lighting": {
+    "type": "natural daylight",
+    "mood": "warm, relaxed, domestic"
+  },
+  "composition": {
+    "orientation": "portrait",
+    "framing": "medium full-body shot",
+    "focus": "subject and food preparation area"
+  },
+  "color_palette": {
+    "dominant_colors": ["white", "cream", "light wood"],
+    "accent_colors": ["green", "red", "yellow"]
+  },
+  "overall_tone": "cozy, everyday, homey"
+}`,
+    tags: ["modern kitchen", "blonde hair", "white loungewear", "cozy mood", "lifestyle photography", "candid", "food preparation", "natural lighting"],
+    dateAdded: "2026-01-11"
+  },
+  {
+    id: "luxury-suv-interior-young-woman-in-white-tube-top-1768119686129-r1i4",
+    title: "Luxury SUV Interior - Young Woman in White Tube Top",
+    imageSrc: "/images/vault/luxury-suv-interior-young-woman-in-white-tube-top-1768119686129-r1i4.jpg",
+    source: "https://x.com/xmliisu/status/1993306227300790420",
+    creator: "@xmliisu",
+    prompt: {
+        "project_constraints": {
+          "facial_rendering": "100% original facial features (Do not edit the face)",
+          "resolution": "1200x1200px",
+          "output_quality": "Photo-realistic, 8K resolution"
+        },
+        "camera_and_style": {
+          "device_emulation": "Y2k-era digital camera (Canon IXUS / Sony Cyber-shot)",
+          "perspective": "Low-angle, shot from behind at a 3/4 angle",
+          "visual_aesthetic": "Cinematic, nostalgic",
+          "post_processing": {
+            "grain": "Thin film grain",
+            "depth_of_field": "Shallow",
+            "color_grading": "Bright overall tone with a slight pinkish-purple hue"
+          }
+        },
+        "subject_details": {
+          "demographics": "Beautiful young woman",
+          "physique": "Hourglass figure, fair dewy skin",
+          "hair": "Long, wavy, thick milk-brown hair, spiral curls reaching waist",
+          "makeup": {
+            "base": "Light brown nude",
+            "eyes": "Aussie eyeliner",
+            "finish": "Glossy cheek and lip color"
+          },
+          "nails": "Long, polished in shiny wine red"
+        },
+        "pose_and_action": {
+          "position": "Sitting sideways in passenger seat",
+          "hands": "Right hand gripping steering wheel, left hand lifting hair up",
+          "expression": "Looking back over shoulder, seductive and confident"
+        },
+        "fashion_and_accessories": {
+          "top": "Shiny white tube top with open back and delicate crisscross detail",
+          "bottom": "Light blue high-waisted jeans (fitted)",
+          "jewelry": "Several gold rings, matching bracelet",
+          "bag": "Small Chanel Vanity bag with black gold chain (on armrest)"
+        },
+        "environment": {
+          "location": "Interior of luxury SUV (Mercedes-Benz style)",
+          "interior_elements": "Wooden trim, light beige leather seats",
+          "time_of_day": "Night"
+        },
+        "lighting": {
+          "technique": "Direct flash photography",
+          "sources": [
+            "Soft warm interior lighting",
+            "Cool blue dashboard light",
+            "City light bokeh through windows"
+          ],
+          "characteristics": "High contrast, pronounced flash shadows, realistic cinematic lighting"
+        }
+      },
+    rawPrompt: `{
+  "project_constraints": {
+    "facial_rendering": "100% original facial features (Do not edit the face)",
+    "resolution": "1200x1200px",
+    "output_quality": "Photo-realistic, 8K resolution"
+  },
+  "camera_and_style": {
+    "device_emulation": "Y2k-era digital camera (Canon IXUS / Sony Cyber-shot)",
+    "perspective": "Low-angle, shot from behind at a 3/4 angle",
+    "visual_aesthetic": "Cinematic, nostalgic",
+    "post_processing": {
+      "grain": "Thin film grain",
+      "depth_of_field": "Shallow",
+      "color_grading": "Bright overall tone with a slight pinkish-purple hue"
+    }
+  },
+  "subject_details": {
+    "demographics": "Beautiful young woman",
+    "physique": "Hourglass figure, fair dewy skin",
+    "hair": "Long, wavy, thick milk-brown hair, spiral curls reaching waist",
+    "makeup": {
+      "base": "Light brown nude",
+      "eyes": "Aussie eyeliner",
+      "finish": "Glossy cheek and lip color"
+    },
+    "nails": "Long, polished in shiny wine red"
+  },
+  "pose_and_action": {
+    "position": "Sitting sideways in passenger seat",
+    "hands": "Right hand gripping steering wheel, left hand lifting hair up",
+    "expression": "Looking back over shoulder, seductive and confident"
+  },
+  "fashion_and_accessories": {
+    "top": "Shiny white tube top with open back and delicate crisscross detail",
+    "bottom": "Light blue high-waisted jeans (fitted)",
+    "jewelry": "Several gold rings, matching bracelet",
+    "bag": "Small Chanel Vanity bag with black gold chain (on armrest)"
+  },
+  "environment": {
+    "location": "Interior of luxury SUV (Mercedes-Benz style)",
+    "interior_elements": "Wooden trim, light beige leather seats",
+    "time_of_day": "Night"
+  },
+  "lighting": {
+    "technique": "Direct flash photography",
+    "sources": [
+      "Soft warm interior lighting",
+      "Cool blue dashboard light",
+      "City light bokeh through windows"
+    ],
+    "characteristics": "High contrast, pronounced flash shadows, realistic cinematic lighting"
+  }
+}`,
+    tags: ["Luxury SUV", "Y2K Aesthetic", "Direct Flash", "White Tube Top", "Long Brown Hair", "Night Photography", "Cinematic", "Seductive"],
+    dateAdded: "2026-01-11"
+  },
+  {
+    id: "private-night-patio-two-curvy-blonde-women-in-bikinis-1768167814320-ru74",
+    title: "Private Night Patio - Two Curvy Blonde Women in Bikinis",
+    imageSrc: "/images/vault/private-night-patio-two-curvy-blonde-women-in-bikinis-1768167814320-ru74.jpg",
+    source: "https://x.com/bananababydoll/status/2008542911495811085",
+    creator: "@bananababydoll",
+    prompt: {
+        "meta": {
+          "aspect_ratio": "4:5",
+          "quality": "ultra_photorealistic",
+          "camera": "iPhone 15 Pro Max",
+          "lens": "24mm wide",
+          "style": "raw iPhone night flash photo, harsh flash realism, visible handheld imperfections"
+        },
+      
+        "scene": {
+          "location": "private outdoor patio at night",
+          "environment": [
+            "dark stone tiles fading into black",
+            "minimal garden silhouettes",
+            "two sun loungers placed close together"
+          ],
+          "time": "late night",
+          "atmosphere": "private, reckless, flash-lit intimacy"
+        },
+      
+        "lighting": {
+          "type": "direct iPhone flash",
+          "source": "strong frontal flash",
+          "background": "nearly black",
+          "effect": [
+            "bright porcelain skin highlights",
+            "hard flash shadows behind bodies",
+            "high contrast nightlife look"
+          ]
+        },
+      
+        "camera_perspective": {
+          "pov": "third person very close",
+          "angle": "slightly above chest level, pointing down",
+          "distance": "close",
+          "framing": "upper thighs to head, both subjects filling frame",
+          "stability": "slight tilt, imperfect framing"
+        },
+      
+        "subjects": [
+          {
+            "role": "left girl",
+            "gender": "female",
+            "vibe": "young adult, dominant tease",
+            "ethnicity": "light-skinned european",
+      
+            "body": {
+              "type": "extreme hourglass",
+              "chest": "very large, heavy, full breasts, deep natural cleavage under flash",
+              "waist": "very slim, sharp inward curve",
+              "hips": "wide and round",
+              "legs": "thick thighs"
+            },
+      
+            "skin": {
+              "tone": "porcelain white",
+              "texture": "flawless, smooth",
+              "contrast": "bright against dark background"
+            },
+      
+            "tattoos": {
+              "presence": "yes",
+              "location": [
+                "upper arm",
+                "side of ribcage"
+              ],
+              "style": "fine-line black tattoos, feminine and visible under flash"
+            },
+      
+            "face": {
+              "expression": "intense thirsty gaze",
+              "eyes": "locked directly into camera",
+              "mouth": "slightly open lips",
+              "tongue": "tip of tongue subtly visible, teasing not exaggerated",
+              "vibe": "confident, hungry, controlled"
+            },
+      
+            "hair": {
+              "color": "light blonde",
+              "style": "loose, slightly messy"
+            },
+      
+            "pose": {
+              "position": "sitting forward on lounger",
+              "upper_body": "leaning slightly toward camera",
+              "arms": "hands resting behind or on lounger",
+              "chest_behavior": "breasts pressed together naturally by posture"
+            },
+      
+            "outfit": {
+              "type": "black minimal bikini",
+              "fit": "tight, strained by curves"
+            }
+          },
+      
+          {
+            "role": "right girl",
+            "gender": "female",
+            "vibe": "young adult, innocent-looking but thirsty",
+            "ethnicity": "light-skinned european",
+      
+            "body": {
+              "type": "curvy-slim",
+              "chest": "full and round",
+              "waist": "slim",
+              "hips": "soft and wide",
+              "legs": "smooth thick thighs"
+            },
+      
+            "skin": {
+              "tone": "porcelain white",
+              "texture": "perfect, unblemished"
+            },
+      
+            "tattoos": {
+              "presence": "none"
+            },
+      
+            "face": {
+              "expression": "soft but desperate gaze",
+              "eyes": "half-lidded, looking at camera",
+              "mouth": "open slightly",
+              "tongue": "resting gently on lower lip, subtle",
+              "vibe": "sweet but clearly thirsty"
+            },
+      
+            "hair": {
+              "color": "soft blonde",
+              "style": "straight, falling over shoulders"
+            },
+      
+            "pose": {
+              "position": "sitting very close to the other girl",
+              "upper_body": "angled slightly inward toward her",
+              "effect": "their shoulders nearly touching"
+            },
+      
+            "outfit": {
+              "type": "black bikini",
+              "fit": "snug, minimal"
+            }
+          }
+        ],
+      
+        "realism_constraints": [
+          "no pornographic actions",
+          "no exaggerated tongues",
+          "suggestive but Twitter-safe",
+          "realistic flash behavior",
+          "must look like a spontaneous late-night phone photo"
+        ]
+      },
+    rawPrompt: `{
+  "meta": {
+    "aspect_ratio": "4:5",
+    "quality": "ultra_photorealistic",
+    "camera": "iPhone 15 Pro Max",
+    "lens": "24mm wide",
+    "style": "raw iPhone night flash photo, harsh flash realism, visible handheld imperfections"
+  },
+
+  "scene": {
+    "location": "private outdoor patio at night",
+    "environment": [
+      "dark stone tiles fading into black",
+      "minimal garden silhouettes",
+      "two sun loungers placed close together"
+    ],
+    "time": "late night",
+    "atmosphere": "private, reckless, flash-lit intimacy"
+  },
+
+  "lighting": {
+    "type": "direct iPhone flash",
+    "source": "strong frontal flash",
+    "background": "nearly black",
+    "effect": [
+      "bright porcelain skin highlights",
+      "hard flash shadows behind bodies",
+      "high contrast nightlife look"
+    ]
+  },
+
+  "camera_perspective": {
+    "pov": "third person very close",
+    "angle": "slightly above chest level, pointing down",
+    "distance": "close",
+    "framing": "upper thighs to head, both subjects filling frame",
+    "stability": "slight tilt, imperfect framing"
+  },
+
+  "subjects": [
+    {
+      "role": "left girl",
+      "gender": "female",
+      "vibe": "young adult, dominant tease",
+      "ethnicity": "light-skinned european",
+
+      "body": {
+        "type": "extreme hourglass",
+        "chest": "very large, heavy, full breasts, deep natural cleavage under flash",
+        "waist": "very slim, sharp inward curve",
+        "hips": "wide and round",
+        "legs": "thick thighs"
+      },
+
+      "skin": {
+        "tone": "porcelain white",
+        "texture": "flawless, smooth",
+        "contrast": "bright against dark background"
+      },
+
+      "tattoos": {
+        "presence": "yes",
+        "location": [
+          "upper arm",
+          "side of ribcage"
+        ],
+        "style": "fine-line black tattoos, feminine and visible under flash"
+      },
+
+      "face": {
+        "expression": "intense thirsty gaze",
+        "eyes": "locked directly into camera",
+        "mouth": "slightly open lips",
+        "tongue": "tip of tongue subtly visible, teasing not exaggerated",
+        "vibe": "confident, hungry, controlled"
+      },
+
+      "hair": {
+        "color": "light blonde",
+        "style": "loose, slightly messy"
+      },
+
+      "pose": {
+        "position": "sitting forward on lounger",
+        "upper_body": "leaning slightly toward camera",
+        "arms": "hands resting behind or on lounger",
+        "chest_behavior": "breasts pressed together naturally by posture"
+      },
+
+      "outfit": {
+        "type": "black minimal bikini",
+        "fit": "tight, strained by curves"
+      }
+    },
+
+    {
+      "role": "right girl",
+      "gender": "female",
+      "vibe": "young adult, innocent-looking but thirsty",
+      "ethnicity": "light-skinned european",
+
+      "body": {
+        "type": "curvy-slim",
+        "chest": "full and round",
+        "waist": "slim",
+        "hips": "soft and wide",
+        "legs": "smooth thick thighs"
+      },
+
+      "skin": {
+        "tone": "porcelain white",
+        "texture": "perfect, unblemished"
+      },
+
+      "tattoos": {
+        "presence": "none"
+      },
+
+      "face": {
+        "expression": "soft but desperate gaze",
+        "eyes": "half-lidded, looking at camera",
+        "mouth": "open slightly",
+        "tongue": "resting gently on lower lip, subtle",
+        "vibe": "sweet but clearly thirsty"
+      },
+
+      "hair": {
+        "color": "soft blonde",
+        "style": "straight, falling over shoulders"
+      },
+
+      "pose": {
+        "position": "sitting very close to the other girl",
+        "upper_body": "angled slightly inward toward her",
+        "effect": "their shoulders nearly touching"
+      },
+
+      "outfit": {
+        "type": "black bikini",
+        "fit": "snug, minimal"
+      }
+    }
+  ],
+
+  "realism_constraints": [
+    "no pornographic actions",
+    "no exaggerated tongues",
+    "suggestive but Twitter-safe",
+    "realistic flash behavior",
+    "must look like a spontaneous late-night phone photo"
+  ]
+}`,
+    tags: ["Night Patio", "Blonde", "Curvy", "Black Bikini", "iPhone Flash", "Realistic", "Intimate", "High Contrast"],
+    dateAdded: "2026-01-11"
+  },
+  {
+    id: "late-night-parking-lot-young-woman-in-black-crop-top-1768167814320-i96k",
+    title: "Late-Night Parking Lot - Young Woman in Black Crop Top",
+    imageSrc: "/images/vault/late-night-parking-lot-young-woman-in-black-crop-top-1768167814320-i96k.jpg",
+    source: "https://x.com/bananababydoll/status/2008902695130714491",
+    creator: "@bananababydoll",
+    prompt: {
+        "meta": {
+          "aspect_ratio": "4:5",
+          "quality": "ultra_photorealistic",
+          "camera": "iPhone 15 Pro Max",
+          "lens": "24mm wide",
+          "style": "raw iPhone night flash selfie, harsh flash realism, slight grain, no AI smoothness"
+        },
+      
+        "scene": {
+          "location": "nighttime parking lot or quiet side street",
+          "environment": [
+            "dark asphalt ground",
+            "parked cars barely visible",
+            "street lights and distant neon bokeh",
+            "empty late-night city feeling"
+          ],
+          "time": "late night",
+          "atmosphere": "reckless, private, spontaneous night energy"
+        },
+      
+        "lighting": {
+          "type": "direct iPhone flash",
+          "source": "front camera flash",
+          "background": "almost completely dark",
+          "effect": [
+            "very bright porcelain skin",
+            "strong flash highlights on chest",
+            "hard shadow edges",
+            "classic nightlife selfie contrast"
+          ]
+        },
+      
+        "camera_perspective": {
+          "pov": "WE ARE HER PHONE",
+          "angle": "slightly above eye level, tilted down",
+          "distance": "arm-length selfie",
+          "framing": "chest-dominant crop, upper torso to top of head",
+          "imperfection": "slight tilt, imperfect centering like a real selfie"
+        },
+      
+        "subject": {
+          "gender": "female",
+          "vibe": "young adult, dangerous confidence",
+      
+          "body": {
+            "type": "extreme hourglass (UNCHANGED)",
+            "chest": "very large, heavy, full breasts, deep natural cleavage emphasized by selfie angle and flash",
+            "waist": "very slim, sharply defined",
+            "hips": "wide and rounded",
+            "legs": "not fully visible, implied thickness",
+            "overall_balance": "top-heavy, seductive, realistic gravity"
+          },
+      
+          "skin": {
+            "tone": "porcelain white",
+            "texture": "flawless, smooth, flash-perfect",
+            "effect": "bright reflective glow without oil shine"
+          },
+      
+          "face": {
+            "structure": "sharper jawline, slightly feline eyes",
+            "eyes": "dark, half-lidded, locked into camera",
+            "expression": "mouth open slightly, tongue resting softly on lower lip",
+            "vibe": "thirsty, teasing, self-aware",
+            "makeup": "night glam eyes, clean perfect skin"
+          },
+      
+          "hair": {
+            "color": "dark blonde / light brunette",
+            "style": "loose, slightly messy",
+            "behavior": "some strands falling forward toward camera"
+          },
+      
+          "action": {
+            "activity": "taking a selfie",
+            "detail": "one arm extended holding phone, shoulder slightly raised",
+            "effect": "natural chest compression from arm position"
+          },
+      
+          "pose": {
+            "upper_body": "leaning slightly forward into the camera",
+            "shoulders": "relaxed but angled",
+            "chest_behavior": "breasts pressed together naturally by posture and gravity"
+          },
+      
+          "outfit": {
+            "top": {
+              "type": "tight black crop top or bikini-style top",
+              "fit": "very tight, no bra",
+              "effect": "maximum cleavage, fabric clearly under tension"
+            }
+          }
+        },
+      
+        "realism_constraints": [
+          "selfie perspective only",
+          "same body proportions must remain unchanged",
+          "new face identity",
+          "no pornographic actions",
+          "must look like a real late-night iPhone selfie"
+        ]
+      },
+    rawPrompt: `{
+  "meta": {
+    "aspect_ratio": "4:5",
+    "quality": "ultra_photorealistic",
+    "camera": "iPhone 15 Pro Max",
+    "lens": "24mm wide",
+    "style": "raw iPhone night flash selfie, harsh flash realism, slight grain, no AI smoothness"
+  },
+
+  "scene": {
+    "location": "nighttime parking lot or quiet side street",
+    "environment": [
+      "dark asphalt ground",
+      "parked cars barely visible",
+      "street lights and distant neon bokeh",
+      "empty late-night city feeling"
+    ],
+    "time": "late night",
+    "atmosphere": "reckless, private, spontaneous night energy"
+  },
+
+  "lighting": {
+    "type": "direct iPhone flash",
+    "source": "front camera flash",
+    "background": "almost completely dark",
+    "effect": [
+      "very bright porcelain skin",
+      "strong flash highlights on chest",
+      "hard shadow edges",
+      "classic nightlife selfie contrast"
+    ]
+  },
+
+  "camera_perspective": {
+    "pov": "WE ARE HER PHONE",
+    "angle": "slightly above eye level, tilted down",
+    "distance": "arm-length selfie",
+    "framing": "chest-dominant crop, upper torso to top of head",
+    "imperfection": "slight tilt, imperfect centering like a real selfie"
+  },
+
+  "subject": {
+    "gender": "female",
+    "vibe": "young adult, dangerous confidence",
+
+    "body": {
+      "type": "extreme hourglass (UNCHANGED)",
+      "chest": "very large, heavy, full breasts, deep natural cleavage emphasized by selfie angle and flash",
+      "waist": "very slim, sharply defined",
+      "hips": "wide and rounded",
+      "legs": "not fully visible, implied thickness",
+      "overall_balance": "top-heavy, seductive, realistic gravity"
+    },
+
+    "skin": {
+      "tone": "porcelain white",
+      "texture": "flawless, smooth, flash-perfect",
+      "effect": "bright reflective glow without oil shine"
+    },
+
+    "face": {
+      "structure": "sharper jawline, slightly feline eyes",
+      "eyes": "dark, half-lidded, locked into camera",
+      "expression": "mouth open slightly, tongue resting softly on lower lip",
+      "vibe": "thirsty, teasing, self-aware",
+      "makeup": "night glam eyes, clean perfect skin"
+    },
+
+    "hair": {
+      "color": "dark blonde / light brunette",
+      "style": "loose, slightly messy",
+      "behavior": "some strands falling forward toward camera"
+    },
+
+    "action": {
+      "activity": "taking a selfie",
+      "detail": "one arm extended holding phone, shoulder slightly raised",
+      "effect": "natural chest compression from arm position"
+    },
+
+    "pose": {
+      "upper_body": "leaning slightly forward into the camera",
+      "shoulders": "relaxed but angled",
+      "chest_behavior": "breasts pressed together naturally by posture and gravity"
+    },
+
+    "outfit": {
+      "top": {
+        "type": "tight black crop top or bikini-style top",
+        "fit": "very tight, no bra",
+        "effect": "maximum cleavage, fabric clearly under tension"
+      }
+    }
+  },
+
+  "realism_constraints": [
+    "selfie perspective only",
+    "same body proportions must remain unchanged",
+    "new face identity",
+    "no pornographic actions",
+    "must look like a real late-night iPhone selfie"
+  ]
+}`,
+    tags: ["nighttime", "parking lot", "hourglass figure", "black crop top", "iphone flash", "selfie", "realism", "urban"],
+    dateAdded: "2026-01-11"
+  },
+  {
+    id: "modern-lived-in-bedroom-curvy-woman-in-yellow-cartoon-bodysuit-1768167814320-rybj",
+    title: "Modern Lived-in Bedroom - Curvy Woman in Yellow Cartoon Bodysuit",
+    imageSrc: "/images/vault/modern-lived-in-bedroom-curvy-woman-in-yellow-cartoon-bodysuit-1768167814320-rybj.jpg",
+    source: "https://x.com/bananababydoll/status/2008994045901893813",
+    creator: "@bananababydoll",
+    prompt: {
+        "meta": {
+          "aspect_ratio": "4:5",
+          "quality": "ultra_photorealistic",
+          "resolution": "8k",
+          "camera": "iPhone front camera",
+          "lens": "24mm",
+          "style": "raw iPhone indoor realism, no beauty filter, subtle grain, slightly imperfect framing"
+        },
+      
+        "scene": {
+          "location": "modern lived-in bedroom",
+          "environment": [
+            "low platform bed with slightly messy neutral sheets",
+            "large flat-screen TV mounted on wall",
+            "minimal wooden TV console under TV",
+            "abstract framed wall art above the console",
+            "second framed print leaning casually against wall",
+            "small side table with phone charger and random items",
+            "soft area rug with visible texture",
+            "clean but lived-in atmosphere, not staged"
+          ],
+          "time": "late morning daylight",
+          "atmosphere": "casual, private, real apartment energy"
+        },
+      
+        "lighting": {
+          "type": "natural daylight",
+          "source": "window out of frame",
+          "effect": "soft even light, realistic indoor exposure, gentle shadows under hips and thighs"
+        },
+      
+        "camera_perspective": {
+          "pov": "self-timer or phone placed low on a surface",
+          "angle": "low angle from behind subject",
+          "framing": "hips and lower back dominant, upper body turned back",
+          "distance": "close to medium",
+          "imperfections": [
+            "slight perspective distortion",
+            "not perfectly centered",
+            "natural phone-camera feel"
+          ]
+        },
+      
+        "subject": {
+          "gender": "female",
+          "ethnicity": "fair-skinned european",
+          "vibe": "young adult, relaxed confidence, aware but not posing hard",
+      
+          "body": {
+            "type": "curvy-fit",
+            "waist": "defined",
+            "hips": "round and full",
+            "glutes": "prominent due to low angle",
+            "legs": "thick thighs, natural compression",
+            "chest": "full but proportional"
+          },
+      
+          "skin": {
+            "tone": "fair warm",
+            "texture": "real skin texture, no smoothing"
+          },
+      
+          "hair": {
+            "color": "light brown",
+            "style": "long loose waves",
+            "details": "natural volume, slightly imperfect strands"
+          },
+      
+          "face": {
+            "expression": "neutral to mildly pouty",
+            "eyes": "looking back at camera",
+            "makeup": "minimal, natural lips, light mascara"
+          },
+      
+          "outfit": {
+            "type": "one-piece tight loungewear bodysuit",
+            "material": "thin cotton-spandex",
+            "color": "bright yellow",
+            "pattern": "playful cartoon character print",
+            "fit": "skin-tight, stretched naturally over hips and thighs",
+            "details": [
+              "fabric tension visible",
+              "print slightly distorted over curves",
+              "no bra, natural fit"
+            ]
+          },
+      
+          "pose": {
+            "position": "seated on floor",
+            "support": "one hand planted on floor behind",
+            "hips": "resting on heels, pushed back toward camera",
+            "upper_body": "torso twisted to look back",
+            "free_hand": "resting casually on hip",
+            "movement": "still frame that feels accidental, not posed"
+          }
+        },
+      
+        "mood_keywords": [
+          "real apartment moment",
+          "accidental thirst trap",
+          "comfortable but dangerous",
+          "twitter timeline stopper"
+        ]
+      },
+    rawPrompt: `{
+  "meta": {
+    "aspect_ratio": "4:5",
+    "quality": "ultra_photorealistic",
+    "resolution": "8k",
+    "camera": "iPhone front camera",
+    "lens": "24mm",
+    "style": "raw iPhone indoor realism, no beauty filter, subtle grain, slightly imperfect framing"
+  },
+
+  "scene": {
+    "location": "modern lived-in bedroom",
+    "environment": [
+      "low platform bed with slightly messy neutral sheets",
+      "large flat-screen TV mounted on wall",
+      "minimal wooden TV console under TV",
+      "abstract framed wall art above the console",
+      "second framed print leaning casually against wall",
+      "small side table with phone charger and random items",
+      "soft area rug with visible texture",
+      "clean but lived-in atmosphere, not staged"
+    ],
+    "time": "late morning daylight",
+    "atmosphere": "casual, private, real apartment energy"
+  },
+
+  "lighting": {
+    "type": "natural daylight",
+    "source": "window out of frame",
+    "effect": "soft even light, realistic indoor exposure, gentle shadows under hips and thighs"
+  },
+
+  "camera_perspective": {
+    "pov": "self-timer or phone placed low on a surface",
+    "angle": "low angle from behind subject",
+    "framing": "hips and lower back dominant, upper body turned back",
+    "distance": "close to medium",
+    "imperfections": [
+      "slight perspective distortion",
+      "not perfectly centered",
+      "natural phone-camera feel"
+    ]
+  },
+
+  "subject": {
+    "gender": "female",
+    "ethnicity": "fair-skinned european",
+    "vibe": "young adult, relaxed confidence, aware but not posing hard",
+
+    "body": {
+      "type": "curvy-fit",
+      "waist": "defined",
+      "hips": "round and full",
+      "glutes": "prominent due to low angle",
+      "legs": "thick thighs, natural compression",
+      "chest": "full but proportional"
+    },
+
+    "skin": {
+      "tone": "fair warm",
+      "texture": "real skin texture, no smoothing"
+    },
+
+    "hair": {
+      "color": "light brown",
+      "style": "long loose waves",
+      "details": "natural volume, slightly imperfect strands"
+    },
+
+    "face": {
+      "expression": "neutral to mildly pouty",
+      "eyes": "looking back at camera",
+      "makeup": "minimal, natural lips, light mascara"
+    },
+
+    "outfit": {
+      "type": "one-piece tight loungewear bodysuit",
+      "material": "thin cotton-spandex",
+      "color": "bright yellow",
+      "pattern": "playful cartoon character print",
+      "fit": "skin-tight, stretched naturally over hips and thighs",
+      "details": [
+        "fabric tension visible",
+        "print slightly distorted over curves",
+        "no bra, natural fit"
+      ]
+    },
+
+    "pose": {
+      "position": "seated on floor",
+      "support": "one hand planted on floor behind",
+      "hips": "resting on heels, pushed back toward camera",
+      "upper_body": "torso twisted to look back",
+      "free_hand": "resting casually on hip",
+      "movement": "still frame that feels accidental, not posed"
+    }
+  },
+
+  "mood_keywords": [
+    "real apartment moment",
+    "accidental thirst trap",
+    "comfortable but dangerous",
+    "twitter timeline stopper"
+  ]
+}`,
+    tags: ["bedroom", "curvy", "yellow bodysuit", "loungewear", "realistic", "iPhone photography", "apartment", "young adult"],
+    dateAdded: "2026-01-11"
+  },
+  {
+    id: "night-kitchen-candid-young-woman-on-digital-camera-screen-1768167814320-0ynj",
+    title: "Night Kitchen - Candid Young Woman on Digital Camera Screen",
+    imageSrc: "/images/vault/night-kitchen-candid-young-woman-on-digital-camera-screen-1768167814320-0ynj.jpg",
+    source: "https://x.com/bananababydoll/status/2009265082476450121",
+    creator: "@bananababydoll",
+    prompt: {
+        "meta": {
+          "aspect_ratio": "4:5",
+          "quality": "ultra_photorealistic",
+          "render_style": "raw digital snapshot realism",
+          "grain": "authentic early-2000s compact camera noise",
+          "no_ai_artifacts": true
+        },
+      
+        "camera": {
+          "device": "compact Canon digital camera",
+          "lens_equivalent": "28–35mm",
+          "aperture": "f/2.8",
+          "iso": 400,
+          "shutter_speed": "1/60 with flash",
+          "white_balance": "auto flash",
+          "display_effect": "LCD screen glow with slight pixel texture"
+        },
+      
+        "composition": {
+          "shot_type": "close-up",
+          "framing": "subject centered within camera LCD screen",
+          "outer_frame": "Canon camera body visible around screen",
+          "details_visible": [
+            "FUNC/SET wheel",
+            "DISP button",
+            "textured plastic surface",
+            "\"IMAGE STABILIZER\" label on side"
+          ],
+          "perspective": "viewer looking directly at the camera screen"
+        },
+      
+        "scene": {
+          "location": "indoor kitchen",
+          "time": "night",
+          "background": {
+            "elements": [
+              "cluttered countertop",
+              "metallic kitchen appliances",
+              "open shelves with random items"
+            ],
+            "focus": "softly blurred",
+            "lighting": "dim ambient, overpowered by flash"
+          },
+          "atmosphere": "candid, raw, nostalgic, early-2000s digital camera vibe"
+        },
+      
+        "lighting": {
+          "type": "harsh direct built-in flash",
+          "effect": [
+            "strong facial highlights",
+            "hard shadow falloff",
+            "slight shine on lips and hair",
+            "flattened but intimate flash look"
+          ],
+          "contrast": "high",
+          "color_temperature": "cool flash tones"
+        },
+      
+        "subject": {
+          "identity": {
+            "gender": "female",
+            "age_vibe": "early 20s",
+            "face_reference": "use facial structure, eye shape, nose proportion, and mouth softness from the attached photo",
+            "body": "curvy, tight waist, round hips, full chest",
+            "skin": "wet, glowing, subtle pink flush as if from cold night air",
+            "hair": {
+              "color": "dark brown",
+              "state": "slightly wet",
+              "behavior": "loose strands falling across face and collarbone"
+            }
+          },
+      
+          "expression": {
+            "eyes": "heavy-lidded bedroom eyes looking directly into lens",
+            "mouth": "slightly parted lips, relaxed and soft",
+            "overall": "warm, wine-softened, flirtatious confidence without posing"
+          },
+      
+          "pose": {
+            "head": "slight tilt toward flash",
+            "shoulders": "relaxed, close to frame edge",
+            "energy": "caught-in-the-moment, not performing"
+          }
+        },
+      
+        "color_grading": {
+          "palette": "slightly muted",
+          "undertones": "cool",
+          "contrast": "strong flash contrast",
+          "screen_effect": "subtle LCD pixel grain and glow"
+        },
+      
+        "restrictions": {
+          "no_text_inside_photo": true,
+          "no_logos_on_screen": true,
+          "no_watermarks": true,
+          "no_studio_lighting": true,
+          "no_ai_symmetry": true
+        }
+      },
+    rawPrompt: `{
+  "meta": {
+    "aspect_ratio": "4:5",
+    "quality": "ultra_photorealistic",
+    "render_style": "raw digital snapshot realism",
+    "grain": "authentic early-2000s compact camera noise",
+    "no_ai_artifacts": true
+  },
+
+  "camera": {
+    "device": "compact Canon digital camera",
+    "lens_equivalent": "28–35mm",
+    "aperture": "f/2.8",
+    "iso": 400,
+    "shutter_speed": "1/60 with flash",
+    "white_balance": "auto flash",
+    "display_effect": "LCD screen glow with slight pixel texture"
+  },
+
+  "composition": {
+    "shot_type": "close-up",
+    "framing": "subject centered within camera LCD screen",
+    "outer_frame": "Canon camera body visible around screen",
+    "details_visible": [
+      "FUNC/SET wheel",
+      "DISP button",
+      "textured plastic surface",
+      "\\"IMAGE STABILIZER\\" label on side"
+    ],
+    "perspective": "viewer looking directly at the camera screen"
+  },
+
+  "scene": {
+    "location": "indoor kitchen",
+    "time": "night",
+    "background": {
+      "elements": [
+        "cluttered countertop",
+        "metallic kitchen appliances",
+        "open shelves with random items"
+      ],
+      "focus": "softly blurred",
+      "lighting": "dim ambient, overpowered by flash"
+    },
+    "atmosphere": "candid, raw, nostalgic, early-2000s digital camera vibe"
+  },
+
+  "lighting": {
+    "type": "harsh direct built-in flash",
+    "effect": [
+      "strong facial highlights",
+      "hard shadow falloff",
+      "slight shine on lips and hair",
+      "flattened but intimate flash look"
+    ],
+    "contrast": "high",
+    "color_temperature": "cool flash tones"
+  },
+
+  "subject": {
+    "identity": {
+      "gender": "female",
+      "age_vibe": "early 20s",
+      "face_reference": "use facial structure, eye shape, nose proportion, and mouth softness from the attached photo",
+      "body": "curvy, tight waist, round hips, full chest",
+      "skin": "wet, glowing, subtle pink flush as if from cold night air",
+      "hair": {
+        "color": "dark brown",
+        "state": "slightly wet",
+        "behavior": "loose strands falling across face and collarbone"
+      }
+    },
+
+    "expression": {
+      "eyes": "heavy-lidded bedroom eyes looking directly into lens",
+      "mouth": "slightly parted lips, relaxed and soft",
+      "overall": "warm, wine-softened, flirtatious confidence without posing"
+    },
+
+    "pose": {
+      "head": "slight tilt toward flash",
+      "shoulders": "relaxed, close to frame edge",
+      "energy": "caught-in-the-moment, not performing"
+    }
+  },
+
+  "color_grading": {
+    "palette": "slightly muted",
+    "undertones": "cool",
+    "contrast": "strong flash contrast",
+    "screen_effect": "subtle LCD pixel grain and glow"
+  },
+
+  "restrictions": {
+    "no_text_inside_photo": true,
+    "no_logos_on_screen": true,
+    "no_watermarks": true,
+    "no_studio_lighting": true,
+    "no_ai_symmetry": true
+  }
+}`,
+    tags: ["kitchen", "brunette", "wet hair", "nostalgic", "candid", "digital camera", "flash photography", "Y2K"],
+    dateAdded: "2026-01-11"
+  },
+  {
+    id: "minimalist-vinyl-boutique-young-japanese-woman-in-boho-knit-1768167814320-bqak",
+    title: "Minimalist Vinyl Boutique - Young Japanese Woman in Boho Knit",
+    imageSrc: "/images/vault/minimalist-vinyl-boutique-young-japanese-woman-in-boho-knit-1768167814320-bqak.jpg",
+    source: "https://x.com/bananababydoll/status/2009629483448627597",
+    creator: "@bananababydoll",
+    prompt: {
+        "meta": {
+          "aspect_ratio": "4:5",
+          "quality": "ultra_photorealistic",
+          "resolution": "8k",
+          "camera": "iPhone 15 Pro Max (rear camera)",
+          "lens": "35mm",
+          "style": "high-end candid, k-beauty realism, natural skin, soft bokeh"
+        },
+        "scene": {
+          "location": "minimalist vinyl record boutique",
+          "environment": [
+            "clean white shelves with vinyl covers displayed",
+            "warm wood bins",
+            "small coffee corner",
+            "soft ambient music vibe"
+          ],
+          "time": "late afternoon",
+          "atmosphere": "modern + cozy"
+        },
+        "lighting": {
+          "type": "soft window light",
+          "key_light": "diffused daylight from large window",
+          "fill_light": "warm bounce from interior lights",
+          "contrast": "low-medium",
+          "effect": "bright eyes, smooth flattering light, gentle highlights"
+        },
+        "camera_perspective": {
+          "pov": "shot by a friend (not selfie)",
+          "angle": "slightly above eye-line for extra flattering face",
+          "framing": "waist-up with shoes visible in lower frame",
+          "focus": "eyes + vinyl cover sharp"
+        },
+        "subject": {
+          "gender": "female",
+          "age": "22 (clearly adult)",
+          "ethnicity": "Japanese / East Asian (non-black)",
+          "beauty_level": "instagram model / idol visuals",
+          "face": {
+            "features": [
+              "big bright eyes",
+              "clean nose bridge",
+              "soft jawline",
+              "glossy lips"
+            ],
+            "expression": "cute smirk, playful side glance",
+            "makeup": "soft k-beauty: dewy skin, subtle liner, rosy lip tint"
+          },
+          "hair": {
+            "color": "dark brown",
+            "style": "silky long hair, light curtain bangs",
+            "detail": "healthy shine, neat but natural"
+          },
+          "outfit": {
+            "top": {
+              "type": "cropped boho knit top",
+              "color": "cream",
+              "details": "no bra straps visible"
+            },
+            "bottom": {
+              "type": "high-waist flared pants",
+              "color": "rust",
+              "material": "soft velvet"
+            },
+            "shoes": {
+              "type": "open-toe heeled sandals",
+              "color": "caramel",
+              "details": "toes visible, ankle straps"
+            },
+            "accessories": [
+              "thin gold necklace",
+              "small hoops",
+              "vintage ring set"
+            ]
+          },
+          "action": {
+            "activity": "pulling a record from a bin",
+            "details": [
+              "vinyl sleeve angled toward camera",
+              "other hand holding the bin divider card",
+              "slight lean forward, confident posture"
+            ]
+          }
+        },
+        "negative_prompt": [
+          "male",
+          "nudity",
+          "explicit",
+          "nipples visible",
+          "logos",
+          "watermark",
+          "text",
+          "distorted face",
+          "uncanny skin",
+          "extra fingers"
+        ]
+      },
+    rawPrompt: `{
+  "meta": {
+    "aspect_ratio": "4:5",
+    "quality": "ultra_photorealistic",
+    "resolution": "8k",
+    "camera": "iPhone 15 Pro Max (rear camera)",
+    "lens": "35mm",
+    "style": "high-end candid, k-beauty realism, natural skin, soft bokeh"
+  },
+  "scene": {
+    "location": "minimalist vinyl record boutique",
+    "environment": [
+      "clean white shelves with vinyl covers displayed",
+      "warm wood bins",
+      "small coffee corner",
+      "soft ambient music vibe"
+    ],
+    "time": "late afternoon",
+    "atmosphere": "modern + cozy"
+  },
+  "lighting": {
+    "type": "soft window light",
+    "key_light": "diffused daylight from large window",
+    "fill_light": "warm bounce from interior lights",
+    "contrast": "low-medium",
+    "effect": "bright eyes, smooth flattering light, gentle highlights"
+  },
+  "camera_perspective": {
+    "pov": "shot by a friend (not selfie)",
+    "angle": "slightly above eye-line for extra flattering face",
+    "framing": "waist-up with shoes visible in lower frame",
+    "focus": "eyes + vinyl cover sharp"
+  },
+  "subject": {
+    "gender": "female",
+    "age": "22 (clearly adult)",
+    "ethnicity": "Japanese / East Asian (non-black)",
+    "beauty_level": "instagram model / idol visuals",
+    "face": {
+      "features": [
+        "big bright eyes",
+        "clean nose bridge",
+        "soft jawline",
+        "glossy lips"
+      ],
+      "expression": "cute smirk, playful side glance",
+      "makeup": "soft k-beauty: dewy skin, subtle liner, rosy lip tint"
+    },
+    "hair": {
+      "color": "dark brown",
+      "style": "silky long hair, light curtain bangs",
+      "detail": "healthy shine, neat but natural"
+    },
+    "outfit": {
+      "top": {
+        "type": "cropped boho knit top",
+        "color": "cream",
+        "details": "no bra straps visible"
+      },
+      "bottom": {
+        "type": "high-waist flared pants",
+        "color": "rust",
+        "material": "soft velvet"
+      },
+      "shoes": {
+        "type": "open-toe heeled sandals",
+        "color": "caramel",
+        "details": "toes visible, ankle straps"
+      },
+      "accessories": [
+        "thin gold necklace",
+        "small hoops",
+        "vintage ring set"
+      ]
+    },
+    "action": {
+      "activity": "pulling a record from a bin",
+      "details": [
+        "vinyl sleeve angled toward camera",
+        "other hand holding the bin divider card",
+        "slight lean forward, confident posture"
+      ]
+    }
+  },
+  "negative_prompt": [
+    "male",
+    "nudity",
+    "explicit",
+    "nipples visible",
+    "logos",
+    "watermark",
+    "text",
+    "distorted face",
+    "uncanny skin",
+    "extra fingers"
+  ]
+}`,
+    tags: ["vinyl record store", "Japanese woman", "boho knit top", "velvet pants", "k-beauty", "minimalist", "candid", "photorealistic"],
+    dateAdded: "2026-01-11"
+  },
+  {
+    id: "lamborghini-hurac-n-interior-mediterranean-woman-in-white-and-blue-bikini-1768167814320-ndlj",
+    title: "Lamborghini Hurac\u00e1n Interior - Mediterranean Woman in White and Blue Bikini",
+    imageSrc: "/images/vault/lamborghini-hurac-n-interior-mediterranean-woman-in-white-and-blue-bikini-1768167814320-ndlj.jpg",
+    source: "https://x.com/bananababydoll/status/2010232455958278199",
+    creator: "@bananababydoll",
+    prompt: {
+        "meta": {
+          "aspect_ratio": "4:5",
+          "quality": "ultra_photorealistic",
+          "resolution": "8k",
+          "camera": "iPhone 14 Pro",
+          "lens": "24mm wide",
+          "style": "raw iPhone realism, natural skin texture, subtle grain, zero AI smoothness"
+        },
+      
+        "scene": {
+          "location": "ultra-luxury Lamborghini Huracán interior",
+          "car_model": "Lamborghini Huracán",
+          "roof_state": "sunroof fully open",
+          "setting": [
+            "driver seat centered",
+            "premium black leather and alcantara interior",
+            "Lamborghini steering wheel clearly visible",
+            "digital dashboard edge visible",
+            "sunlight pouring directly from above",
+            "blurred upscale city street below"
+          ],
+          "time": "late afternoon",
+          "atmosphere": "effortless wealth, reckless summer confidence, flirtatious spontaneity"
+        },
+      
+        "lighting": {
+          "type": "natural sunlight",
+          "direction": "strong top-down sunlight through sunroof",
+          "color_temperature": "warm golden",
+          "effect": "bright highlights on shoulders and chest, natural shadow contouring on waist and thighs, realistic contrast"
+        },
+      
+        "camera_perspective": {
+          "pov": "sunroof top-down shot",
+          "angle": "slightly diagonal downward",
+          "framing": "upper thighs to head",
+          "distance": "approximately 1 meter",
+          "imperfection": [
+            "handheld framing",
+            "minor tilt",
+            "off-center crop",
+            "feels unplanned and real"
+          ]
+        },
+      
+        "subject": {
+          "gender": "female",
+          "age_vibe": "young adult",
+          "ethnicity": "Mediterranean / mixed European",
+      
+          "body": {
+            "type": "slim-curvy",
+            "waist": "defined and tight",
+            "hips": "round and soft",
+            "chest": "full and natural",
+            "legs": "toned thighs naturally pressed into driver seat"
+          },
+      
+          "skin": {
+            "tone": "warm sun-kissed",
+            "texture": "visible pores, light freckles, natural glow",
+            "imperfections": "very subtle and realistic"
+          },
+      
+          "hair": {
+            "color": "deep brunette",
+            "length": "long",
+            "style": "loose waves",
+            "behavior": "slightly wind-blown, strands glowing in sunlight"
+          },
+      
+          "face": {
+            "expression": "caught mid-laugh, confident and playful",
+            "eyes": "looking straight up into the camera above",
+            "makeup": "minimal summer makeup, glossy lips, soft blush",
+            "vibe": "sweet but dangerous"
+          },
+      
+          "outfit": {
+            "top": {
+              "type": "bikini-style crop top",
+              "color": "white with muted blue trim",
+              "fit": "tight, naturally stretched over chest, no bra",
+              "fabric_behavior": "visible tension from posture and breathing"
+            },
+            "bottom": {
+              "type": "matching bikini bottom",
+              "color": "white and blue",
+              "fit": "high-cut, hugging hips while seated"
+            }
+          },
+      
+          "pose": {
+            "position": "seated confidently in the driver seat",
+            "legs": "angled slightly inward, relaxed",
+            "arms": "one hand resting on thigh, other lightly gripping steering wheel",
+            "shoulders": "slightly forward",
+            "micro_action": "leaning upward toward sunroof as if reacting to something funny"
+          }
+        },
+      
+        "post_processing": {
+          "editing": "very light",
+          "color_grading": "warm highlights, neutral shadows",
+          "retouching": "none beyond basic exposure balance",
+          "final_look": "indistinguishable from a real iPhone camera roll photo"
+        }
+      },
+    rawPrompt: `{
+  "meta": {
+    "aspect_ratio": "4:5",
+    "quality": "ultra_photorealistic",
+    "resolution": "8k",
+    "camera": "iPhone 14 Pro",
+    "lens": "24mm wide",
+    "style": "raw iPhone realism, natural skin texture, subtle grain, zero AI smoothness"
+  },
+
+  "scene": {
+    "location": "ultra-luxury Lamborghini Huracán interior",
+    "car_model": "Lamborghini Huracán",
+    "roof_state": "sunroof fully open",
+    "setting": [
+      "driver seat centered",
+      "premium black leather and alcantara interior",
+      "Lamborghini steering wheel clearly visible",
+      "digital dashboard edge visible",
+      "sunlight pouring directly from above",
+      "blurred upscale city street below"
+    ],
+    "time": "late afternoon",
+    "atmosphere": "effortless wealth, reckless summer confidence, flirtatious spontaneity"
+  },
+
+  "lighting": {
+    "type": "natural sunlight",
+    "direction": "strong top-down sunlight through sunroof",
+    "color_temperature": "warm golden",
+    "effect": "bright highlights on shoulders and chest, natural shadow contouring on waist and thighs, realistic contrast"
+  },
+
+  "camera_perspective": {
+    "pov": "sunroof top-down shot",
+    "angle": "slightly diagonal downward",
+    "framing": "upper thighs to head",
+    "distance": "approximately 1 meter",
+    "imperfection": [
+      "handheld framing",
+      "minor tilt",
+      "off-center crop",
+      "feels unplanned and real"
+    ]
+  },
+
+  "subject": {
+    "gender": "female",
+    "age_vibe": "young adult",
+    "ethnicity": "Mediterranean / mixed European",
+
+    "body": {
+      "type": "slim-curvy",
+      "waist": "defined and tight",
+      "hips": "round and soft",
+      "chest": "full and natural",
+      "legs": "toned thighs naturally pressed into driver seat"
+    },
+
+    "skin": {
+      "tone": "warm sun-kissed",
+      "texture": "visible pores, light freckles, natural glow",
+      "imperfections": "very subtle and realistic"
+    },
+
+    "hair": {
+      "color": "deep brunette",
+      "length": "long",
+      "style": "loose waves",
+      "behavior": "slightly wind-blown, strands glowing in sunlight"
+    },
+
+    "face": {
+      "expression": "caught mid-laugh, confident and playful",
+      "eyes": "looking straight up into the camera above",
+      "makeup": "minimal summer makeup, glossy lips, soft blush",
+      "vibe": "sweet but dangerous"
+    },
+
+    "outfit": {
+      "top": {
+        "type": "bikini-style crop top",
+        "color": "white with muted blue trim",
+        "fit": "tight, naturally stretched over chest, no bra",
+        "fabric_behavior": "visible tension from posture and breathing"
+      },
+      "bottom": {
+        "type": "matching bikini bottom",
+        "color": "white and blue",
+        "fit": "high-cut, hugging hips while seated"
+      }
+    },
+
+    "pose": {
+      "position": "seated confidently in the driver seat",
+      "legs": "angled slightly inward, relaxed",
+      "arms": "one hand resting on thigh, other lightly gripping steering wheel",
+      "shoulders": "slightly forward",
+      "micro_action": "leaning upward toward sunroof as if reacting to something funny"
+    }
+  },
+
+  "post_processing": {
+    "editing": "very light",
+    "color_grading": "warm highlights, neutral shadows",
+    "retouching": "none beyond basic exposure balance",
+    "final_look": "indistinguishable from a real iPhone camera roll photo"
+  }
+}`,
+    tags: ["Lamborghini Hurac\u00e1n", "Mediterranean", "Bikini", "Summer", "iPhone Realism", "Luxury Car", "Playful", "Photorealistic"],
+    dateAdded: "2026-01-11"
+  },
+  {
+    id: "urban-side-street-winking-korean-woman-in-sheer-gray-dress-1768167814320-10im",
+    title: "Urban Side Street - Winking Korean Woman in Sheer Gray Dress",
+    imageSrc: "/images/vault/urban-side-street-winking-korean-woman-in-sheer-gray-dress-1768167814320-10im.jpg",
+    source: "https://x.com/bananababydoll/status/2010351239205421388",
+    creator: "@bananababydoll",
+    prompt: {
+        "meta": {
+          "aspect_ratio": "4:3",
+          "quality": "ultra_photorealistic",
+          "style": "real candid social media photo"
+        },
+      
+        "camera": {
+          "device": "iPhone 13 Pro",
+          "lens": "24mm wide",
+          "mode": "photo",
+          "style": "raw iPhone street photo",
+          "feel": "handheld, imperfect framing, slight tilt, natural candid energy, no studio look"
+        },
+      
+        "lighting": {
+          "type": "natural daylight",
+          "source": "overcast urban sky",
+          "quality": "soft diffused flat light",
+          "skin_effect": "clean porcelain glow, even tone, realistic texture"
+        },
+      
+        "subject": {
+          "gender": "female",
+          "age_vibe": "young adult",
+          "ethnicity": "Korean",
+      
+          "skin": {
+            "tone": "porcelain ivory",
+            "texture": "smooth but real, ultra-fine pores, soft natural sheen"
+          },
+      
+          "face": {
+            "shape": "soft heart-shaped Korean beauty",
+            "expression": "cute playful tease",
+            "mouth": "slightly open, sweet and relaxed",
+            "cheeks": "soft natural blush",
+            "vibe": "adorable yet flirty"
+          },
+      
+          "eyes": {
+            "left_eye": "closed in a playful wink",
+            "right_eye": "open, sparkling",
+            "color": "deep dark brown",
+            "direction": "looking directly at the camera"
+          },
+      
+          "hair": {
+            "color": "jet black",
+            "length": "medium-long",
+            "style": "loose with soft curtain bangs",
+            "texture": "silky, slightly messy, natural street movement"
+          },
+      
+          "body": {
+            "build": "tight, fit, curvy",
+            "silhouette": "clean natural outline emphasized by light fabric",
+            "posture": "leaning back casually, relaxed confidence"
+          }
+        },
+      
+        "clothing": {
+          "dress": {
+            "type": "one-shoulder mini dress",
+            "color": "smoky charcoal gray",
+            "material": "sheer lightweight mesh fabric",
+            "transparency": "semi-transparent, light-revealing, silhouette-focused",
+            "fit": "body-hugging with visible fabric tension",
+            "layering": "no visible underlayers, natural clean silhouette",
+            "details": "asymmetric neckline, delicate mesh texture, elegant stretch"
+          },
+          "footwear": {
+            "type": "black boots",
+            "style": "sleek urban street boots"
+          },
+          "accessories": {
+            "earrings": "medium silver hoop earrings",
+            "necklace": "thin black cord necklace resting between collarbones"
+          }
+        },
+      
+        "pose": {
+          "position": "sitting on top of a modern outdoor trash bin",
+          "legs": "angled forward, relaxed",
+          "arms": {
+            "left": "hand resting behind for balance",
+            "right": "raised making a peace sign close to her eye"
+          },
+          "gesture": "V-sign near face with wink",
+          "energy": "cute, flirty, spontaneous street moment"
+        },
+      
+        "environment": {
+          "location": "urban side street",
+          "background": [
+            "clean modern trash bins",
+            "closed metal shop shutter",
+            "smooth concrete wall",
+            "minimal street signage"
+          ],
+          "vibe": "clean city alley, modern and tidy",
+          "cleanliness": "neat, well-maintained, aesthetic street feel"
+        },
+      
+        "composition": {
+          "framing": "mid-thigh to head",
+          "angle": "slightly low angle",
+          "focus": "sharp on subject, softly blurred background",
+          "imperfections": [
+            "minor motion blur",
+            "off-center framing",
+            "authentic iPhone exposure"
+          ]
+        },
+      
+        "overall_style": "real-life candid iPhone street photo, cute wink, sheer dress with implied silhouette, clean urban setting, NOT AI, NOT studio"
+      },
+    rawPrompt: `{
+  "meta": {
+    "aspect_ratio": "4:3",
+    "quality": "ultra_photorealistic",
+    "style": "real candid social media photo"
+  },
+
+  "camera": {
+    "device": "iPhone 13 Pro",
+    "lens": "24mm wide",
+    "mode": "photo",
+    "style": "raw iPhone street photo",
+    "feel": "handheld, imperfect framing, slight tilt, natural candid energy, no studio look"
+  },
+
+  "lighting": {
+    "type": "natural daylight",
+    "source": "overcast urban sky",
+    "quality": "soft diffused flat light",
+    "skin_effect": "clean porcelain glow, even tone, realistic texture"
+  },
+
+  "subject": {
+    "gender": "female",
+    "age_vibe": "young adult",
+    "ethnicity": "Korean",
+
+    "skin": {
+      "tone": "porcelain ivory",
+      "texture": "smooth but real, ultra-fine pores, soft natural sheen"
+    },
+
+    "face": {
+      "shape": "soft heart-shaped Korean beauty",
+      "expression": "cute playful tease",
+      "mouth": "slightly open, sweet and relaxed",
+      "cheeks": "soft natural blush",
+      "vibe": "adorable yet flirty"
+    },
+
+    "eyes": {
+      "left_eye": "closed in a playful wink",
+      "right_eye": "open, sparkling",
+      "color": "deep dark brown",
+      "direction": "looking directly at the camera"
+    },
+
+    "hair": {
+      "color": "jet black",
+      "length": "medium-long",
+      "style": "loose with soft curtain bangs",
+      "texture": "silky, slightly messy, natural street movement"
+    },
+
+    "body": {
+      "build": "tight, fit, curvy",
+      "silhouette": "clean natural outline emphasized by light fabric",
+      "posture": "leaning back casually, relaxed confidence"
+    }
+  },
+
+  "clothing": {
+    "dress": {
+      "type": "one-shoulder mini dress",
+      "color": "smoky charcoal gray",
+      "material": "sheer lightweight mesh fabric",
+      "transparency": "semi-transparent, light-revealing, silhouette-focused",
+      "fit": "body-hugging with visible fabric tension",
+      "layering": "no visible underlayers, natural clean silhouette",
+      "details": "asymmetric neckline, delicate mesh texture, elegant stretch"
+    },
+    "footwear": {
+      "type": "black boots",
+      "style": "sleek urban street boots"
+    },
+    "accessories": {
+      "earrings": "medium silver hoop earrings",
+      "necklace": "thin black cord necklace resting between collarbones"
+    }
+  },
+
+  "pose": {
+    "position": "sitting on top of a modern outdoor trash bin",
+    "legs": "angled forward, relaxed",
+    "arms": {
+      "left": "hand resting behind for balance",
+      "right": "raised making a peace sign close to her eye"
+    },
+    "gesture": "V-sign near face with wink",
+    "energy": "cute, flirty, spontaneous street moment"
+  },
+
+  "environment": {
+    "location": "urban side street",
+    "background": [
+      "clean modern trash bins",
+      "closed metal shop shutter",
+      "smooth concrete wall",
+      "minimal street signage"
+    ],
+    "vibe": "clean city alley, modern and tidy",
+    "cleanliness": "neat, well-maintained, aesthetic street feel"
+  },
+
+  "composition": {
+    "framing": "mid-thigh to head",
+    "angle": "slightly low angle",
+    "focus": "sharp on subject, softly blurred background",
+    "imperfections": [
+      "minor motion blur",
+      "off-center framing",
+      "authentic iPhone exposure"
+    ]
+  },
+
+  "overall_style": "real-life candid iPhone street photo, cute wink, sheer dress with implied silhouette, clean urban setting, NOT AI, NOT studio"
+}`,
+    tags: ["Urban Street", "Korean Woman", "Mesh Mini Dress", "Playful Wink", "Candid Photo", "iPhone Style", "Charcoal Gray", "Social Media Aesthetic"],
+    dateAdded: "2026-01-11"
+  },
+  {
+    id: "luxury-hotel-bathroom-blonde-woman-in-sheer-crop-tank-1768167814320-cva1",
+    title: "Luxury Hotel Bathroom - Blonde Woman in Sheer Crop Tank",
+    imageSrc: "/images/vault/luxury-hotel-bathroom-blonde-woman-in-sheer-crop-tank-1768167814320-cva1.jpg",
+    source: "https://x.com/bananababydoll/status/2010419942269571361",
+    creator: "@bananababydoll",
+    prompt: {
+        "meta": {
+          "aspect_ratio": "4:3",
+          "quality": "ultra_photorealistic",
+          "resolution": "8k",
+          "camera": "iPhone 15 Pro",
+          "lens": "26mm",
+          "style": "dark influencer realism, low light iphone look, natural skin texture, subtle grain"
+        },
+      
+        "scene": {
+          "location": "luxury american hotel bathroom",
+          "environment": [
+            "large frameless mirror",
+            "dark marble countertop",
+            "glass shower covered in steam",
+            "dim beige tiles",
+            "low ambient wall lights"
+          ],
+          "time": "late night",
+          "atmosphere": "private, expensive, intentionally dangerous"
+        },
+      
+        "lighting": {
+          "type": "low ambient + soft directional accent",
+          "sources": [
+            "warm wall sconces",
+            "very dim ceiling light",
+            "faint city glow through bathroom window"
+          ],
+          "direction": "side-back lighting shaping hips and lower back",
+          "effect": "deep shadows, glowing highlights on curves, cinematic darkness"
+        },
+      
+        "subject": {
+          "gender": "female",
+          "age_vibe": "young adult",
+          "ethnicity": "european / eastern european blonde",
+      
+          "body": {
+            "type": "slim hourglass",
+            "chest": "very full, heavy presence",
+            "waist": "tiny",
+            "hips": "round, lifted, dominant",
+            "legs": "long, smooth, elegant"
+          },
+      
+          "skin": {
+            "tone": "porcelain with warm low-light glow",
+            "texture": "smooth, real, luminous in shadows"
+          },
+      
+          "hair": {
+            "color": "platinum blonde",
+            "style": "long, loose, softly waved",
+            "details": "slight shadow depth, glossy highlights catching light"
+          },
+      
+          "face": {
+            "structure": "very pretty, doll-like",
+            "expression": "cold pornstar calm",
+            "eyes": "light blue, half-lidded, heavy gaze",
+            "mouth": "full lips, barely parted",
+            "makeup": "soft glam, darker lashes, subtle contour"
+          }
+        },
+      
+        "pose": {
+          "overall": "standing sideways in front of mirror, deep ARCH",
+      
+          "lower_body": {
+            "legs": "one leg straight, one knee slightly bent",
+            "stance": "stable, intentional"
+          },
+      
+          "hips": {
+            "position": "pushed back and lifted",
+            "effect": "hips and ass dominate frame in silhouette"
+          },
+      
+          "torso": {
+            "arch": "deep lower-back arch",
+            "chest": "pushed forward naturally",
+            "posture": "controlled, monetized confidence"
+          },
+      
+          "arms": {
+            "one_arm": "hand resting on dark marble counter",
+            "other_arm": "holding phone low, partially shadowed"
+          },
+      
+          "head": {
+            "tilt": "slight tilt",
+            "gaze": "looking at phone screen through mirror, unbothered dominance"
+          }
+        },
+      
+        "outfit": {
+          "clothing": {
+            "top": {
+              "type": "sheer white crop tank",
+              "fit": "tight, no bra, fabric barely visible in low light"
+            },
+            "bottom": {
+              "type": "micro bikini bottom",
+              "color": "nude / skin-tone",
+              "fit": "high-cut, minimal, clean silhouette"
+            }
+          }
+        },
+      
+        "camera_perspective": {
+          "pov": "mirror selfie",
+          "angle": "eye-level",
+          "framing": "mid-thigh to head",
+          "feel": "private footage, not meant for everyone"
+        },
+      
+        "vibe": {
+          "mood": "dark, controlled, toxic",
+          "energy": "she sells desire without asking",
+          "aesthetic": "nighttime influencer pornstar realism"
+        }
+      },
+    rawPrompt: `{
+  "meta": {
+    "aspect_ratio": "4:3",
+    "quality": "ultra_photorealistic",
+    "resolution": "8k",
+    "camera": "iPhone 15 Pro",
+    "lens": "26mm",
+    "style": "dark influencer realism, low light iphone look, natural skin texture, subtle grain"
+  },
+
+  "scene": {
+    "location": "luxury american hotel bathroom",
+    "environment": [
+      "large frameless mirror",
+      "dark marble countertop",
+      "glass shower covered in steam",
+      "dim beige tiles",
+      "low ambient wall lights"
+    ],
+    "time": "late night",
+    "atmosphere": "private, expensive, intentionally dangerous"
+  },
+
+  "lighting": {
+    "type": "low ambient + soft directional accent",
+    "sources": [
+      "warm wall sconces",
+      "very dim ceiling light",
+      "faint city glow through bathroom window"
+    ],
+    "direction": "side-back lighting shaping hips and lower back",
+    "effect": "deep shadows, glowing highlights on curves, cinematic darkness"
+  },
+
+  "subject": {
+    "gender": "female",
+    "age_vibe": "young adult",
+    "ethnicity": "european / eastern european blonde",
+
+    "body": {
+      "type": "slim hourglass",
+      "chest": "very full, heavy presence",
+      "waist": "tiny",
+      "hips": "round, lifted, dominant",
+      "legs": "long, smooth, elegant"
+    },
+
+    "skin": {
+      "tone": "porcelain with warm low-light glow",
+      "texture": "smooth, real, luminous in shadows"
+    },
+
+    "hair": {
+      "color": "platinum blonde",
+      "style": "long, loose, softly waved",
+      "details": "slight shadow depth, glossy highlights catching light"
+    },
+
+    "face": {
+      "structure": "very pretty, doll-like",
+      "expression": "cold pornstar calm",
+      "eyes": "light blue, half-lidded, heavy gaze",
+      "mouth": "full lips, barely parted",
+      "makeup": "soft glam, darker lashes, subtle contour"
+    }
+  },
+
+  "pose": {
+    "overall": "standing sideways in front of mirror, deep ARCH",
+
+    "lower_body": {
+      "legs": "one leg straight, one knee slightly bent",
+      "stance": "stable, intentional"
+    },
+
+    "hips": {
+      "position": "pushed back and lifted",
+      "effect": "hips and ass dominate frame in silhouette"
+    },
+
+    "torso": {
+      "arch": "deep lower-back arch",
+      "chest": "pushed forward naturally",
+      "posture": "controlled, monetized confidence"
+    },
+
+    "arms": {
+      "one_arm": "hand resting on dark marble counter",
+      "other_arm": "holding phone low, partially shadowed"
+    },
+
+    "head": {
+      "tilt": "slight tilt",
+      "gaze": "looking at phone screen through mirror, unbothered dominance"
+    }
+  },
+
+  "outfit": {
+    "clothing": {
+      "top": {
+        "type": "sheer white crop tank",
+        "fit": "tight, no bra, fabric barely visible in low light"
+      },
+      "bottom": {
+        "type": "micro bikini bottom",
+        "color": "nude / skin-tone",
+        "fit": "high-cut, minimal, clean silhouette"
+      }
+    }
+  },
+
+  "camera_perspective": {
+    "pov": "mirror selfie",
+    "angle": "eye-level",
+    "framing": "mid-thigh to head",
+    "feel": "private footage, not meant for everyone"
+  },
+
+  "vibe": {
+    "mood": "dark, controlled, toxic",
+    "energy": "she sells desire without asking",
+    "aesthetic": "nighttime influencer pornstar realism"
+  }
+}`,
+    tags: ["hotel bathroom", "platinum blonde", "sheer tank", "micro bikini", "dark aesthetic", "iphone realism", "mirror selfie", "luxury", "moody"],
+    dateAdded: "2026-01-11"
+  },
+  {
+    id: "buddhist-temple-courtyard-elderly-monk-in-saffron-robes-1768167814320-8630",
+    title: "Buddhist Temple Courtyard - Elderly Monk in Saffron Robes",
+    imageSrc: "/images/vault/buddhist-temple-courtyard-elderly-monk-in-saffron-robes-1768167814320-8630.jpg",
+    source: "https://x.com/0xROAS/status/2010441664553259317",
+    creator: "@0xROAS",
+    prompt: {
+        "scene_type": "spiritual_teaching_courtyard",
+        "setting": {
+          "location": "outdoor Buddhist temple courtyard",
+          "background": {
+            "architecture": "traditional East Asian temple with intricate wood carvings, red pillars, and curved roof tiles",
+            "nature": "lush green trees to the left",
+            "ground": "grey stone pavement",
+            "weather": "overcast to soft natural daylight"
+          }
+        },
+        "subject": {
+          "type": "elderly_monk",
+          "position": "seated cross-legged on the ground",
+          "pose": "sitting behind a low table, speaking directly to camera",
+          "expression": "earnest, wise, and instructional",
+          "appearance": {
+            "hair": {
+              "style": "shaved/bald",
+              "color": "none"
+            },
+            "skin_features": "aged skin with deep wrinkles",
+            "eye_color": "dark"
+          },
+          "clothing": {
+            "top": "light grey inner robe with saffron yellow outer robe draped over shoulder",
+            "bottom": "saffron yellow robe fabric covering legs"
+          },
+          "accessories": []
+        },
+        "objects": [
+          {
+            "type": "furniture",
+            "name": "low wooden table",
+            "material": "light wood",
+            "position": "foreground in front of monk"
+          },
+          {
+            "type": "book",
+            "name": "large open scripture",
+            "state": "open with visible text columns",
+            "position": "on wooden table"
+          },
+          {
+            "type": "light_source",
+            "name": "candle",
+            "color": "white wax",
+            "state": "lit with small yellow flame",
+            "position": "on table next to book"
+          }
+        ],
+        "camera": {
+          "device": "iPhone 17 Pro",
+          "angle": "eye-level",
+          "framing": "medium shot",
+          "orientation": "portrait vertical 9:16",
+          "quality": "4k video still, high definition, sharp focus"
+        },
+        "mood": "serene, philosophical, didactic",
+        "lighting": "soft, diffuse natural daylight",
+        "image_style": "viral social media video, realistic",
+        "activity": "monk delivering life advice"
+      },
+    rawPrompt: `{
+  "scene_type": "spiritual_teaching_courtyard",
+  "setting": {
+    "location": "outdoor Buddhist temple courtyard",
+    "background": {
+      "architecture": "traditional East Asian temple with intricate wood carvings, red pillars, and curved roof tiles",
+      "nature": "lush green trees to the left",
+      "ground": "grey stone pavement",
+      "weather": "overcast to soft natural daylight"
+    }
+  },
+  "subject": {
+    "type": "elderly_monk",
+    "position": "seated cross-legged on the ground",
+    "pose": "sitting behind a low table, speaking directly to camera",
+    "expression": "earnest, wise, and instructional",
+    "appearance": {
+      "hair": {
+        "style": "shaved/bald",
+        "color": "none"
+      },
+      "skin_features": "aged skin with deep wrinkles",
+      "eye_color": "dark"
+    },
+    "clothing": {
+      "top": "light grey inner robe with saffron yellow outer robe draped over shoulder",
+      "bottom": "saffron yellow robe fabric covering legs"
+    },
+    "accessories": []
+  },
+  "objects": [
+    {
+      "type": "furniture",
+      "name": "low wooden table",
+      "material": "light wood",
+      "position": "foreground in front of monk"
+    },
+    {
+      "type": "book",
+      "name": "large open scripture",
+      "state": "open with visible text columns",
+      "position": "on wooden table"
+    },
+    {
+      "type": "light_source",
+      "name": "candle",
+      "color": "white wax",
+      "state": "lit with small yellow flame",
+      "position": "on table next to book"
+    }
+  ],
+  "camera": {
+    "device": "iPhone 17 Pro",
+    "angle": "eye-level",
+    "framing": "medium shot",
+    "orientation": "portrait vertical 9:16",
+    "quality": "4k video still, high definition, sharp focus"
+  },
+  "mood": "serene, philosophical, didactic",
+  "lighting": "soft, diffuse natural daylight",
+  "image_style": "viral social media video, realistic",
+  "activity": "monk delivering life advice"
+}`,
+    tags: ["Buddhist temple", "elderly monk", "saffron robes", "serene", "philosophical", "realistic", "traditional architecture", "spiritual teaching"],
+    dateAdded: "2026-01-11"
   }
 ];

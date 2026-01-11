@@ -1042,6 +1042,860 @@ def add_images_batch():
         return jsonify({'error': str(e)}), 500
 
 
+@app.route('/api/add-tweet', methods=['POST'])
+def add_tweet():
+    """Add a new tweet entry to tweets.js."""
+    data = request.get_json()
+    url = data.get('url', '').strip()
+    tags = data.get('tags', [])
+
+    if not url:
+        return jsonify({'error': 'URL is required'}), 400
+
+    if not tags:
+        return jsonify({'error': 'At least one tag is required'}), 400
+
+    tweets_file = os.path.join(os.path.dirname(__file__), '..', 'app', 'src', 'data', 'tweets.js')
+
+    try:
+        # Read current file
+        with open(tweets_file, 'r') as f:
+            content = f.read()
+
+        # Generate unique ID from URL
+        tweet_id = extract_tweet_id(url)
+        if not tweet_id:
+            return jsonify({'error': 'Invalid X.com/Twitter URL'}), 400
+
+        unique_id = f"tweet-{tweet_id}"
+
+        # Check if tweet already exists
+        if unique_id in content:
+            return jsonify({'error': 'Tweet already exists in vault'}), 400
+
+        # Find the array content
+        match = re.search(r'export const tweets = \[(.*)\];', content, re.DOTALL)
+        if not match:
+            return jsonify({'error': 'Could not parse tweets.js'}), 500
+
+        array_content = match.group(1).strip()
+
+        # Build the entry
+        def escape_js_string(s):
+            return json.dumps(s)
+
+        tags_str = '[' + ', '.join(escape_js_string(t) for t in tags) + ']'
+        today = __import__('datetime').date.today().isoformat()
+
+        new_entry = f'''{{
+    id: {escape_js_string(unique_id)},
+    url: {escape_js_string(url)},
+    tags: {tags_str},
+    addedAt: {escape_js_string(today)}
+  }}'''
+
+        # Add to array
+        if array_content:
+            new_array_content = array_content + ',\n  ' + new_entry
+        else:
+            new_array_content = '\n  ' + new_entry + '\n'
+
+        # Write back
+        new_content = f'export const tweets = [{new_array_content}\n];\n'
+
+        with open(tweets_file, 'w') as f:
+            f.write(new_content)
+
+        return jsonify({
+            'success': True,
+            'message': 'Tweet added to vault',
+            'id': unique_id
+        })
+
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+
+@app.route('/api/add-tweets-batch', methods=['POST'])
+def add_tweets_batch():
+    """Add multiple tweets with the same tags."""
+    data = request.get_json()
+    urls = data.get('urls', [])
+    tags = data.get('tags', [])
+
+    if not urls:
+        return jsonify({'error': 'URLs array is required'}), 400
+
+    if not tags:
+        return jsonify({'error': 'At least one tag is required'}), 400
+
+    tweets_file = os.path.join(os.path.dirname(__file__), '..', 'app', 'src', 'data', 'tweets.js')
+    results = []
+    added_count = 0
+
+    try:
+        # Read current file
+        with open(tweets_file, 'r') as f:
+            content = f.read()
+
+        # Find the array content
+        match = re.search(r'export const tweets = \[(.*)\];', content, re.DOTALL)
+        if not match:
+            return jsonify({'error': 'Could not parse tweets.js'}), 500
+
+        array_content = match.group(1).strip()
+        new_entries = []
+
+        def escape_js_string(s):
+            return json.dumps(s)
+
+        today = __import__('datetime').date.today().isoformat()
+        tags_str = '[' + ', '.join(escape_js_string(t) for t in tags) + ']'
+
+        for url in urls:
+            url = url.strip()
+            tweet_id = extract_tweet_id(url)
+
+            if not tweet_id:
+                results.append({'url': url, 'success': False, 'error': 'Invalid URL'})
+                continue
+
+            unique_id = f"tweet-{tweet_id}"
+
+            # Check if already exists
+            if unique_id in content or any(unique_id in e for e in new_entries):
+                results.append({'url': url, 'success': False, 'error': 'Already exists'})
+                continue
+
+            new_entry = f'''{{
+    id: {escape_js_string(unique_id)},
+    url: {escape_js_string(url)},
+    tags: {tags_str},
+    addedAt: {escape_js_string(today)}
+  }}'''
+
+            new_entries.append(new_entry)
+            results.append({'url': url, 'success': True, 'id': unique_id})
+            added_count += 1
+
+        # Add all new entries to file
+        if new_entries:
+            if array_content:
+                new_array_content = array_content + ',\n  ' + ',\n  '.join(new_entries)
+            else:
+                new_array_content = '\n  ' + ',\n  '.join(new_entries) + '\n'
+
+            new_content = f'export const tweets = [{new_array_content}\n];\n'
+
+            with open(tweets_file, 'w') as f:
+                f.write(new_content)
+
+        return jsonify({
+            'success': True,
+            'results': results,
+            'added': added_count,
+            'total': len(urls)
+        })
+
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+
+@app.route('/api/delete-tweet', methods=['POST'])
+def delete_tweet():
+    """Delete a tweet entry from tweets.js."""
+    data = request.get_json()
+    tweet_id = data.get('id', '')
+
+    if not tweet_id:
+        return jsonify({'error': 'Tweet ID is required'}), 400
+
+    tweets_file = os.path.join(os.path.dirname(__file__), '..', 'app', 'src', 'data', 'tweets.js')
+
+    try:
+        # Read current file
+        with open(tweets_file, 'r') as f:
+            content = f.read()
+
+        # Find the array content
+        match = re.search(r'export const tweets = \[(.*)\];', content, re.DOTALL)
+        if not match:
+            return jsonify({'error': 'Could not parse tweets.js'}), 500
+
+        array_content = match.group(1)
+
+        # Check if tweet exists
+        id_pattern = rf'id:\s*["\']' + re.escape(tweet_id) + r'["\']'
+        if not re.search(id_pattern, array_content):
+            return jsonify({'error': 'Tweet not found'}), 404
+
+        # Parse and filter entries
+        new_entries = []
+        brace_count = 0
+        current_entry = ""
+        in_entry = False
+
+        for char in array_content:
+            if char == '{':
+                if brace_count == 0:
+                    in_entry = True
+                    current_entry = char
+                else:
+                    current_entry += char
+                brace_count += 1
+            elif char == '}':
+                brace_count -= 1
+                current_entry += char
+                if brace_count == 0 and in_entry:
+                    # Check if this entry has our id
+                    if not re.search(id_pattern, current_entry):
+                        new_entries.append(current_entry)
+                    current_entry = ""
+                    in_entry = False
+            elif in_entry:
+                current_entry += char
+
+        # Rebuild the file
+        if new_entries:
+            new_array_content = ',\n  '.join(e.strip() for e in new_entries)
+            new_content = f'export const tweets = [\n  {new_array_content}\n];\n'
+        else:
+            new_content = 'export const tweets = [\n];\n'
+
+        with open(tweets_file, 'w') as f:
+            f.write(new_content)
+
+        return jsonify({
+            'success': True,
+            'message': 'Tweet deleted successfully'
+        })
+
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+
+def download_twitter_video_fxtwitter(url, output_dir):
+    """Download Twitter video using FXTwitter API."""
+    tweet_id = extract_tweet_id(url)
+    if not tweet_id:
+        raise ValueError("Invalid Twitter URL")
+
+    # Extract username from URL
+    username_match = re.search(r'(?:twitter|x)\.com/([^/]+)/status', url)
+    if not username_match:
+        raise ValueError("Could not extract username from URL")
+    username = username_match.group(1)
+
+    # Use FXTwitter API
+    fx_url = f"https://api.fxtwitter.com/{username}/status/{tweet_id}"
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'
+    }
+
+    response = requests.get(fx_url, headers=headers, timeout=30)
+    if response.status_code != 200:
+        raise Exception(f"FXTwitter API error: {response.status_code}")
+
+    data = response.json()
+    if data.get("code") != 200:
+        raise Exception(f"FXTwitter error: {data.get('message', 'Unknown error')}")
+
+    tweet = data.get("tweet", {})
+    media = tweet.get("media", {})
+    videos = media.get("videos", [])
+
+    if not videos:
+        raise Exception("No video found in tweet")
+
+    # Get highest quality video (highest bitrate mp4)
+    video_info = videos[0]
+    formats = video_info.get("formats", [])
+
+    # Filter for mp4 and sort by bitrate
+    mp4_formats = [f for f in formats if f.get("container") == "mp4"]
+    if mp4_formats:
+        best_format = max(mp4_formats, key=lambda x: x.get("bitrate", 0))
+        video_url = best_format.get("url")
+    else:
+        # Fallback to the default URL
+        video_url = video_info.get("url")
+
+    if not video_url:
+        raise Exception("No video URL found")
+
+    # Download the video
+    video_response = requests.get(video_url, timeout=120)
+    if video_response.status_code != 200:
+        raise Exception(f"Failed to download video: {video_response.status_code}")
+
+    # Save to file
+    os.makedirs(output_dir, exist_ok=True)
+    video_path = os.path.join(output_dir, f"{tweet_id}.mp4")
+    with open(video_path, 'wb') as f:
+        f.write(video_response.content)
+
+    # Return metadata from fxtwitter
+    author = tweet.get("author", {})
+    return {
+        "tweet_id": tweet_id,
+        "url": url,
+        "video_path": video_path,
+        "uploader": author.get("name", ""),
+        "uploader_id": author.get("screen_name", ""),
+        "description": tweet.get("text", "")
+    }
+
+
+def generate_thumbnails_for_shots(video_path, shots, tweet_id):
+    """Generate thumbnail images for each shot using ffmpeg."""
+    thumbnails_dir = os.path.join(os.path.dirname(__file__), '..', 'app', 'public', 'thumbnails', tweet_id)
+    os.makedirs(thumbnails_dir, exist_ok=True)
+
+    for shot in shots:
+        shot_id = shot.get('id', 1)
+        start_time = shot.get('startTime', 0)
+        # Extract frame at 0.5 seconds into the shot (or at start if shot is too short)
+        frame_time = start_time + 0.5
+        output_path = os.path.join(thumbnails_dir, f"shot_{shot_id:02d}.jpg")
+
+        try:
+            subprocess.run([
+                'ffmpeg', '-y', '-ss', str(frame_time), '-i', video_path,
+                '-vframes', '1', '-q:v', '2', output_path
+            ], capture_output=True, timeout=30)
+            shot['thumbnail'] = f"/thumbnails/{tweet_id}/shot_{shot_id:02d}.jpg"
+        except Exception as e:
+            print(f"Thumbnail generation failed for shot {shot_id}: {e}")
+            shot['thumbnail'] = None
+
+    return shots
+
+
+def analyze_ad_with_gemini(transcript, tweet_text, shots):
+    """Use Gemini to analyze the ad and generate title, tactics, shot descriptions."""
+    prompt = f"""Analyze this video ad transcript and generate structured analysis.
+
+TWEET TEXT (context about the ad):
+{tweet_text[:2000] if tweet_text else 'N/A'}
+
+FULL TRANSCRIPT:
+{transcript}
+
+SHOT SEGMENTS (with timestamps and spoken words):
+{json.dumps([{"id": s["id"], "timestamp": s["timestamp"], "transcript": s["transcript"]} for s in shots], indent=2)}
+
+Generate a complete ad analysis in this EXACT JSON format:
+{{
+  "title": "Catchy 5-10 word title describing the ad concept",
+  "product": "Product/Service being advertised (e.g. 'Personal Loans', 'Weight Loss App')",
+  "vertical": "Industry vertical (e.g. 'Finance/Loans', 'Health/Fitness', 'E-commerce')",
+  "type": "Ad type: 'Affiliate', 'Paid', or 'Organic'",
+  "hook": {{
+    "textOverlay": "The attention-grabbing text shown on screen in first 3 seconds (ALL CAPS typical)",
+    "spoken": "First sentence spoken that hooks the viewer"
+  }},
+  "whyItWorked": {{
+    "summary": "2-3 sentence explanation of why this ad is effective",
+    "tactics": [
+      {{"name": "Tactic Name", "description": "How this tactic is used in the ad"}},
+      {{"name": "Another Tactic", "description": "Description of the tactic"}}
+    ],
+    "keyLesson": "One sentence key takeaway for other advertisers"
+  }},
+  "shots": [
+    {{
+      "id": 1,
+      "description": "Visual description of what's shown on screen",
+      "textOverlay": "Text shown on screen during this segment (or empty string if none)",
+      "purpose": "Why this shot works / its role in the ad"
+    }}
+  ],
+  "tags": ["tag1", "tag2", "tag3"]
+}}
+
+Important:
+- For shots, provide analysis for EACH shot ID from the input
+- Be specific about visual descriptions based on what's likely shown
+- Identify real advertising tactics being used
+- Generate 5-8 relevant tags
+
+Respond with ONLY the JSON, no other text."""
+
+    try:
+        response = requests.post(
+            f'https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent?key={GEMINI_API_KEY}',
+            headers={'Content-Type': 'application/json'},
+            json={
+                'contents': [{'parts': [{'text': prompt}]}],
+                'generationConfig': {
+                    'temperature': 0.4,
+                    'maxOutputTokens': 4096,
+                }
+            },
+            timeout=60
+        )
+
+        data = response.json()
+
+        if 'candidates' in data and data['candidates']:
+            result_text = data['candidates'][0]['content']['parts'][0]['text']
+            # Clean up markdown code blocks
+            result_text = re.sub(r'```json\n?', '', result_text)
+            result_text = re.sub(r'```\n?', '', result_text)
+            result_text = result_text.strip()
+
+            analysis = json.loads(result_text)
+            return analysis
+
+    except Exception as e:
+        print(f"Gemini ad analysis error: {e}")
+
+    return None
+
+
+def process_single_ad(url, add_to_file=True):
+    """Process a single ad - download video, transcribe, optionally add to ads.js."""
+    tweet_id = extract_tweet_id(url)
+    if not tweet_id:
+        return {'success': False, 'error': 'Invalid URL'}
+
+    try:
+        output_dir = os.path.join(os.path.dirname(__file__), '..', 'app', 'public', 'videos')
+
+        # Step 1: Download video using FXTwitter API
+        print(f"[{tweet_id}] Downloading video via FXTwitter...")
+        metadata = download_twitter_video_fxtwitter(url, output_dir)
+        video_path = metadata["video_path"]
+
+        # Step 2: Transcribe with Whisper large-v3
+        print(f"[{tweet_id}] Transcribing with Whisper large-v3...")
+        import sys
+        scripts_dir = os.path.dirname(__file__)
+        if scripts_dir not in sys.path:
+            sys.path.insert(0, scripts_dir)
+
+        from transcribe import transcribe_video, format_for_ad_vault
+        whisper_result = transcribe_video(video_path, model_name="large-v3")
+        transcript_data = format_for_ad_vault(whisper_result)
+
+        # Step 3: Build initial shots from transcript segments
+        from datetime import datetime
+        shots = []
+        for i, seg in enumerate(transcript_data["segments"], 1):
+            shots.append({
+                "id": i,
+                "startTime": seg["start"],
+                "endTime": seg["end"],
+                "timestamp": seg["timestamp"],
+                "type": "video",
+                "transcript": seg["transcript"]
+            })
+
+        # Step 4: Analyze ad with Gemini AI
+        print(f"[{tweet_id}] Analyzing ad with Gemini AI...")
+        tweet_text = metadata.get('description', '')
+        analysis = analyze_ad_with_gemini(transcript_data["fullTranscript"], tweet_text, shots)
+
+        # Step 5: Generate thumbnails for each shot
+        print(f"[{tweet_id}] Generating thumbnails...")
+        shots = generate_thumbnails_for_shots(video_path, shots, tweet_id)
+
+        # Step 6: Merge AI analysis into ad stub
+        if analysis:
+            # Merge shot analysis from AI
+            ai_shots = {s['id']: s for s in analysis.get('shots', [])}
+            for shot in shots:
+                if shot['id'] in ai_shots:
+                    ai_shot = ai_shots[shot['id']]
+                    shot['description'] = ai_shot.get('description', '[Describe what\'s shown]')
+                    shot['textOverlay'] = ai_shot.get('textOverlay', '')
+                    shot['purpose'] = ai_shot.get('purpose', '[Why this works]')
+                else:
+                    shot['description'] = '[Describe what\'s shown]'
+                    shot['textOverlay'] = ''
+                    shot['purpose'] = '[Why this works]'
+
+            ad_stub = {
+                "id": tweet_id,
+                "title": analysis.get('title', f"Ad from @{metadata.get('uploader_id', 'unknown')}"),
+                "videoSrc": f"/videos/{tweet_id}.mp4",
+                "source": url,
+                "creator": f"@{metadata.get('uploader_id', 'unknown')}",
+                "product": analysis.get('product', '[Unknown Product]'),
+                "vertical": analysis.get('vertical', '[Unknown Vertical]'),
+                "type": analysis.get('type', 'Unknown'),
+                "hook": analysis.get('hook', {
+                    "textOverlay": "",
+                    "spoken": transcript_data["segments"][0]["transcript"] if transcript_data["segments"] else ""
+                }),
+                "fullTranscript": transcript_data["fullTranscript"],
+                "whyItWorked": analysis.get('whyItWorked', {
+                    "summary": "[Analysis pending]",
+                    "tactics": [],
+                    "keyLesson": "[Key lesson pending]"
+                }),
+                "shots": shots,
+                "tags": analysis.get('tags', []),
+                "dateAdded": datetime.now().strftime("%Y-%m-%d")
+            }
+        else:
+            # Fallback if AI analysis fails
+            for shot in shots:
+                shot['description'] = '[Describe what\'s shown]'
+                shot['textOverlay'] = ''
+                shot['purpose'] = '[Why this works]'
+
+            ad_stub = {
+                "id": tweet_id,
+                "title": f"Ad from @{metadata.get('uploader_id', 'unknown')}",
+                "videoSrc": f"/videos/{tweet_id}.mp4",
+                "source": url,
+                "creator": f"@{metadata.get('uploader_id', 'unknown')}",
+                "product": "[Unknown Product]",
+                "vertical": "[Unknown Vertical]",
+                "type": "Unknown",
+                "hook": {
+                    "textOverlay": "",
+                    "spoken": transcript_data["segments"][0]["transcript"] if transcript_data["segments"] else ""
+                },
+                "fullTranscript": transcript_data["fullTranscript"],
+                "whyItWorked": {
+                    "summary": "[AI analysis failed - please add manually]",
+                    "tactics": [],
+                    "keyLesson": "[Key lesson pending]"
+                },
+                "shots": shots,
+                "tags": [],
+                "dateAdded": datetime.now().strftime("%Y-%m-%d")
+            }
+
+        if add_to_file:
+            # Add to ads.js
+            ads_file = os.path.join(os.path.dirname(__file__), '..', 'app', 'src', 'data', 'ads.js')
+
+            with open(ads_file, 'r') as f:
+                content = f.read()
+
+            if f'id: "{ad_stub["id"]}"' in content:
+                return {'success': False, 'error': 'Already exists', 'id': ad_stub["id"]}
+
+            match = re.search(r'export const ads = \[(.*)\];', content, re.DOTALL)
+            if not match:
+                return {'success': False, 'error': 'Could not parse ads.js'}
+
+            array_content = match.group(1).strip()
+            ad_json = json.dumps(ad_stub, indent=2, ensure_ascii=False)
+            ad_js = re.sub(r'"([a-zA-Z_][a-zA-Z0-9_]*)":', r'\1:', ad_json)
+
+            if array_content:
+                new_array_content = array_content + ',\n  ' + ad_js
+            else:
+                new_array_content = '\n  ' + ad_js + '\n'
+
+            new_content = f'export const ads = [{new_array_content}\n];\n'
+
+            with open(ads_file, 'w') as f:
+                f.write(new_content)
+
+        print(f"[{tweet_id}] Done!")
+        return {
+            'success': True,
+            'id': ad_stub["id"],
+            'title': ad_stub["title"],
+            'creator': ad_stub["creator"],
+            'transcript_length': len(ad_stub["fullTranscript"]),
+            'shots_count': len(ad_stub["shots"])
+        }
+
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
+        return {'success': False, 'error': str(e)}
+
+
+@app.route('/api/process-ad', methods=['POST'])
+def process_ad():
+    """Process a single ad from X.com URL - fetch video, transcribe, add to vault."""
+    data = request.get_json()
+    url = data.get('url', '').strip()
+
+    if not url:
+        return jsonify({'error': 'URL is required'}), 400
+
+    tweet_id = extract_tweet_id(url)
+    if not tweet_id:
+        return jsonify({'error': 'Invalid X.com/Twitter URL'}), 400
+
+    result = process_single_ad(url, add_to_file=True)
+
+    if result.get('success'):
+        return jsonify(result)
+    else:
+        return jsonify({'error': result.get('error', 'Unknown error')}), 400
+
+
+def download_video_for_batch(url):
+    """Download a single video for batch processing using FXTwitter."""
+    tweet_id = extract_tweet_id(url)
+    if not tweet_id:
+        return {'url': url, 'success': False, 'error': 'Invalid URL'}
+
+    try:
+        output_dir = os.path.join(os.path.dirname(__file__), '..', 'app', 'public', 'videos')
+        metadata = download_twitter_video_fxtwitter(url, output_dir)
+        return {'url': url, 'success': True, 'metadata': metadata}
+    except Exception as e:
+        return {'url': url, 'success': False, 'error': str(e)}
+
+
+@app.route('/api/process-ads-batch', methods=['POST'])
+def process_ads_batch():
+    """Process multiple ads from X.com URLs with parallel downloads."""
+    data = request.get_json()
+    urls = data.get('urls', [])
+
+    if not urls:
+        return jsonify({'error': 'URLs array is required'}), 400
+
+    # Clean URLs
+    urls = [u.strip() for u in urls if u.strip() and extract_tweet_id(u.strip())]
+
+    if not urls:
+        return jsonify({'error': 'No valid URLs provided'}), 400
+
+    print(f"[BATCH] Processing {len(urls)} ads...")
+
+    # Step 1: Download all videos in parallel
+    print(f"[BATCH] Downloading {len(urls)} videos in parallel...")
+    download_results = []
+    with ThreadPoolExecutor(max_workers=5) as executor:
+        download_results = list(executor.map(download_video_for_batch, urls))
+
+    # Filter successful downloads
+    successful_downloads = [r for r in download_results if r.get('success')]
+    failed_downloads = [r for r in download_results if not r.get('success')]
+
+    print(f"[BATCH] Downloaded {len(successful_downloads)}/{len(urls)} videos")
+
+    # Step 2: Transcribe videos (sequential to avoid memory issues with large-v3)
+    print(f"[BATCH] Transcribing {len(successful_downloads)} videos with Whisper large-v3...")
+    import sys
+    scripts_dir = os.path.dirname(__file__)
+    if scripts_dir not in sys.path:
+        sys.path.insert(0, scripts_dir)
+
+    from transcribe import transcribe_video, format_for_ad_vault
+    from datetime import datetime
+
+    processed_ads = []
+    for i, download in enumerate(successful_downloads):
+        metadata = download['metadata']
+        video_path = metadata['video_path']
+        tweet_id = metadata['tweet_id']
+
+        print(f"[BATCH] Transcribing {i+1}/{len(successful_downloads)}: {tweet_id}")
+
+        try:
+            whisper_result = transcribe_video(video_path, model_name="large-v3")
+            transcript_data = format_for_ad_vault(whisper_result)
+
+            ad_stub = {
+                "id": tweet_id,
+                "title": f"[TODO] {metadata.get('description', '')[:50]}...",
+                "videoSrc": f"/videos/{tweet_id}.mp4",
+                "source": download['url'],
+                "creator": f"@{metadata.get('uploader_id', 'unknown')}",
+                "product": "[TODO: Product/Service]",
+                "vertical": "[TODO: Vertical]",
+                "type": "[TODO: Organic/Paid/Affiliate]",
+                "hook": {
+                    "textOverlay": "[TODO: Text overlay from video]",
+                    "spoken": transcript_data["segments"][0]["transcript"] if transcript_data["segments"] else ""
+                },
+                "fullTranscript": transcript_data["fullTranscript"],
+                "whyItWorked": {
+                    "summary": "[TODO: Why this ad works]",
+                    "tactics": [],
+                    "keyLesson": "[TODO: Key takeaway]"
+                },
+                "shots": [],
+                "tags": [],
+                "dateAdded": datetime.now().strftime("%Y-%m-%d")
+            }
+
+            for j, seg in enumerate(transcript_data["segments"], 1):
+                ad_stub["shots"].append({
+                    "id": j,
+                    "startTime": seg["start"],
+                    "endTime": seg["end"],
+                    "timestamp": seg["timestamp"],
+                    "type": "video",
+                    "description": "[Describe what's shown]",
+                    "transcript": seg["transcript"],
+                    "textOverlay": "[TODO: Text on screen]",
+                    "purpose": "[Why this works]"
+                })
+
+            processed_ads.append({
+                'url': download['url'],
+                'success': True,
+                'ad_stub': ad_stub,
+                'id': tweet_id,
+                'title': ad_stub['title']
+            })
+
+        except Exception as e:
+            processed_ads.append({
+                'url': download['url'],
+                'success': False,
+                'error': f"Transcription failed: {str(e)}"
+            })
+
+    # Step 3: Add all successful ads to ads.js at once
+    successful_ads = [a for a in processed_ads if a.get('success')]
+
+    if successful_ads:
+        print(f"[BATCH] Adding {len(successful_ads)} ads to vault...")
+        ads_file = os.path.join(os.path.dirname(__file__), '..', 'app', 'src', 'data', 'ads.js')
+
+        with open(ads_file, 'r') as f:
+            content = f.read()
+
+        match = re.search(r'export const ads = \[(.*)\];', content, re.DOTALL)
+        if match:
+            array_content = match.group(1).strip()
+
+            new_entries = []
+            for ad in successful_ads:
+                ad_stub = ad['ad_stub']
+                # Check if already exists
+                if f'id: "{ad_stub["id"]}"' not in content:
+                    ad_json = json.dumps(ad_stub, indent=2, ensure_ascii=False)
+                    ad_js = re.sub(r'"([a-zA-Z_][a-zA-Z0-9_]*)":', r'\1:', ad_json)
+                    new_entries.append(ad_js)
+
+            if new_entries:
+                if array_content:
+                    new_array_content = array_content + ',\n  ' + ',\n  '.join(new_entries)
+                else:
+                    new_array_content = '\n  ' + ',\n  '.join(new_entries) + '\n'
+
+                new_content = f'export const ads = [{new_array_content}\n];\n'
+
+                with open(ads_file, 'w') as f:
+                    f.write(new_content)
+
+    # Compile results
+    all_results = []
+    for r in failed_downloads:
+        all_results.append({'url': r['url'], 'success': False, 'error': r.get('error', 'Download failed')})
+    for r in processed_ads:
+        if r.get('success'):
+            all_results.append({'url': r['url'], 'success': True, 'id': r['id'], 'title': r['title']})
+        else:
+            all_results.append({'url': r['url'], 'success': False, 'error': r.get('error', 'Processing failed')})
+
+    added_count = len([r for r in all_results if r.get('success')])
+    print(f"[BATCH] Complete! Added {added_count}/{len(urls)} ads")
+
+    return jsonify({
+        'success': True,
+        'results': all_results,
+        'added': added_count,
+        'total': len(urls)
+    })
+
+
+@app.route('/api/delete-ad', methods=['POST'])
+def delete_ad():
+    """Delete an ad entry from ads.js and optionally the video file."""
+    data = request.get_json()
+    ad_id = data.get('id', '')
+    delete_file = data.get('deleteFile', True)
+
+    if not ad_id:
+        return jsonify({'error': 'Ad ID is required'}), 400
+
+    ads_file = os.path.join(os.path.dirname(__file__), '..', 'app', 'src', 'data', 'ads.js')
+
+    try:
+        with open(ads_file, 'r') as f:
+            content = f.read()
+
+        match = re.search(r'export const ads = \[(.*)\];', content, re.DOTALL)
+        if not match:
+            return jsonify({'error': 'Could not parse ads.js'}), 500
+
+        array_content = match.group(1)
+
+        # Check if ad exists
+        id_pattern = rf'id:\s*["\']' + re.escape(str(ad_id)) + r'["\']'
+        if not re.search(id_pattern, array_content):
+            return jsonify({'error': 'Ad not found'}), 404
+
+        # Find videoSrc before deleting
+        video_src = None
+        src_match = re.search(
+            rf'\{{\s*id:\s*["\']' + re.escape(str(ad_id)) + r'["\'].*?videoSrc:\s*["\']([^"\']+)["\']',
+            array_content,
+            re.DOTALL
+        )
+        if src_match:
+            video_src = src_match.group(1)
+
+        # Parse and filter entries
+        new_entries = []
+        brace_count = 0
+        current_entry = ""
+        in_entry = False
+
+        for char in array_content:
+            if char == '{':
+                if brace_count == 0:
+                    in_entry = True
+                    current_entry = char
+                else:
+                    current_entry += char
+                brace_count += 1
+            elif char == '}':
+                brace_count -= 1
+                current_entry += char
+                if brace_count == 0 and in_entry:
+                    if not re.search(id_pattern, current_entry):
+                        new_entries.append(current_entry)
+                    current_entry = ""
+                    in_entry = False
+            elif in_entry:
+                current_entry += char
+
+        # Rebuild the file
+        if new_entries:
+            new_array_content = ',\n  '.join(e.strip() for e in new_entries)
+            new_content = f'export const ads = [\n  {new_array_content}\n];\n'
+        else:
+            new_content = 'export const ads = [];\n'
+
+        with open(ads_file, 'w') as f:
+            f.write(new_content)
+
+        # Delete the video file if requested
+        if delete_file and video_src:
+            file_path = os.path.join(
+                os.path.dirname(__file__), '..', 'app', 'public',
+                video_src.lstrip('/')
+            )
+            if os.path.exists(file_path):
+                os.remove(file_path)
+
+        return jsonify({
+            'success': True,
+            'message': 'Ad deleted successfully'
+        })
+
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+
 @app.route('/api/health', methods=['GET'])
 def health():
     """Health check endpoint."""
@@ -1056,5 +1910,11 @@ if __name__ == '__main__':
     print("  POST /api/add-image-entry - Add single image entry")
     print("  POST /api/add-images-batch - Add multiple image entries")
     print("  POST /api/delete-image - Delete image entry")
+    print("  POST /api/add-tweet - Add tweet to Tweet Vault")
+    print("  POST /api/add-tweets-batch - Add multiple tweets with same tags")
+    print("  POST /api/delete-tweet - Delete tweet from Tweet Vault")
+    print("  POST /api/process-ad - Process ad (fetch video, transcribe, add)")
+    print("  POST /api/process-ads-batch - Process multiple ads")
+    print("  POST /api/delete-ad - Delete ad from vault")
     print("  GET /api/health - Health check")
     app.run(host='localhost', port=3001, debug=True)
