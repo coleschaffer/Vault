@@ -1,4 +1,4 @@
-name = "ad-vault-api"
+name = "ad-vault"
 main = "workers/src/index.js"
 compatibility_date = "2024-01-01"
 
