@@ -1,24 +1,21 @@
+# Ad Vault - Cloudflare Pages with Functions
 name = "ad-vault"
-main = "workers/src/index.js"
 compatibility_date = "2024-01-01"
 
-# D1 Database binding
+# Pages build output (frontend static files)
+pages_build_output_dir = "app/dist"
+
+# D1 Database binding (available to Pages Functions)
 [[d1_databases]]
 binding = "DB"
 database_name = "ad-vault-db"
 database_id = "37ace019-4342-4649-bf29-78ebc5ca3945"
 
-# R2 Storage binding
+# R2 Storage binding (available to Pages Functions)
 [[r2_buckets]]
 binding = "STORAGE"
 bucket_name = "ad-vault-storage"
 
-# Environment variables (secrets set via wrangler secret put)
+# Environment variables
 [vars]
 ENVIRONMENT = "production"
-
-# Dev environment
-[env.dev]
-name = "ad-vault-api-dev"
-[env.dev.vars]
-ENVIRONMENT = "development"

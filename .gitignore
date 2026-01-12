@@ -33,3 +33,6 @@ __pycache__/
 
 # Temporary analysis frames (keep scene thumbnails)
 app/public/thumbnails/*_frame_*.jpg
+
+# Wrangler local state
+.wrangler/
