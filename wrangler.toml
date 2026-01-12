@@ -1,17 +1,19 @@
-# Ad Vault - Cloudflare Pages with Functions
+# Ad Vault - Cloudflare Worker with Sites
 name = "ad-vault"
+main = "src/index.js"
 compatibility_date = "2024-01-01"
 
-# Pages build output (frontend static files)
-pages_build_output_dir = "app/dist"
+# Workers Sites - serves static files from KV
+[site]
+bucket = "./app/dist"
 
-# D1 Database binding (available to Pages Functions)
+# D1 Database binding
 [[d1_databases]]
 binding = "DB"
 database_name = "ad-vault-db"
 database_id = "37ace019-4342-4649-bf29-78ebc5ca3945"
 
-# R2 Storage binding (available to Pages Functions)
+# R2 Storage binding
 [[r2_buckets]]
 binding = "STORAGE"
 bucket_name = "ad-vault-storage"
