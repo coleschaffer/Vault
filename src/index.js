@@ -1,11 +1,7 @@
-// Ad Vault Worker - Single entry point for API + Static files
-import { getAssetFromKV, NotFoundError } from '@cloudflare/kv-asset-handler';
-import manifestJSON from '__STATIC_CONTENT_MANIFEST';
+// Ad Vault Worker - API routes only (static files served by Assets)
 import * as db from '../lib/database.js';
 import * as storage from '../lib/storage.js';
 import { extractTweetId, processAd } from '../lib/adProcessor.js';
-
-const assetManifest = JSON.parse(manifestJSON);
 
 // CORS headers
 const corsHeaders = {
@@ -25,7 +21,6 @@ function json(data, status = 200) {
 // API Router
 async function handleAPI(request, env, path) {
   const method = request.method;
-  const url = new URL(request.url);
 
   try {
     // Health check
@@ -231,7 +226,7 @@ async function handleAPI(request, env, path) {
       });
     }
 
-    return json({ error: 'Not found' }, 404);
+    return null; // Not an API route
   } catch (error) {
     console.error('API Error:', error);
     return json({ error: error.message || 'Internal server error' }, 500);
@@ -251,35 +246,11 @@ export default {
 
     // API routes
     if (path.startsWith('/api/') || path.startsWith('/storage/')) {
-      return handleAPI(request, env, path);
+      const response = await handleAPI(request, env, path);
+      if (response) return response;
     }
 
-    // Serve static files from KV (Workers Sites)
-    try {
-      return await getAssetFromKV(
-        { request, waitUntil: ctx.waitUntil.bind(ctx) },
-        {
-          ASSET_NAMESPACE: env.__STATIC_CONTENT,
-          ASSET_MANIFEST: assetManifest,
-        }
-      );
-    } catch (e) {
-      // If not found, serve index.html for SPA routing
-      if (e instanceof NotFoundError) {
-        try {
-          const notFoundRequest = new Request(new URL('/index.html', url.origin), request);
-          return await getAssetFromKV(
-            { request: notFoundRequest, waitUntil: ctx.waitUntil.bind(ctx) },
-            {
-              ASSET_NAMESPACE: env.__STATIC_CONTENT,
-              ASSET_MANIFEST: assetManifest,
-            }
-          );
-        } catch {
-          return new Response('Not Found', { status: 404 });
-        }
-      }
-      return new Response('Internal Error', { status: 500 });
-    }
+    // Let Assets handle static files (falls through to asset serving)
+    return env.ASSETS.fetch(request);
   }
 };

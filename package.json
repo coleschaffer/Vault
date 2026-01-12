@@ -7,9 +7,6 @@
     "build": "cd app && npm install && npm run build",
     "deploy": "npm run build && wrangler deploy"
   },
-  "dependencies": {
-    "@cloudflare/kv-asset-handler": "^0.3.0"
-  },
   "devDependencies": {
     "wrangler": "^3.0.0"
   }
