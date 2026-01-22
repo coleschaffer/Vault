@@ -36,3 +36,7 @@ app/public/thumbnails/*_frame_*.jpg
 
 # Wrangler local state
 .wrangler/
+
+# Local storage (uploaded files)
+storage/
+!storage/.gitkeep
