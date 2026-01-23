@@ -207,15 +207,24 @@ app.post('/api/add-tweet', async (req, res) => {
 // POST /api/add-tweets-batch
 app.post('/api/add-tweets-batch', async (req, res) => {
   try {
-    const { tweets } = req.body;
-    if (!Array.isArray(tweets)) return res.status(400).json({ error: 'tweets array is required' });
-    const results = [];
-    for (const tweet of tweets) {
-      const id = crypto.randomUUID();
-      await db.createTweet({ id, ...tweet });
-      results.push({ id, url: tweet.url });
+    const { urls, tags } = req.body;
+    if (!Array.isArray(urls) || urls.length === 0) {
+      return res.status(400).json({ error: 'URLs array is required' });
     }
-    res.json({ success: true, added: results.length, results });
+    if (!Array.isArray(tags) || tags.length === 0) {
+      return res.status(400).json({ error: 'At least one tag is required' });
+    }
+
+    const results = [];
+    const addedAt = new Date().toISOString();
+
+    for (const url of urls) {
+      const id = crypto.randomUUID();
+      await db.createTweet({ id, url, tags, addedAt });
+      results.push({ id, url });
+    }
+
+    res.json({ success: true, added: results.length, total: urls.length, results });
   } catch (error) {
     console.error('Error adding tweets batch:', error);
     res.status(500).json({ error: error.message });
