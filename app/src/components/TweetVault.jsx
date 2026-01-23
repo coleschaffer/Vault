@@ -4,12 +4,14 @@ import TweetCard from './TweetCard';
 
 export default function TweetVault() {
   // Fetch tweets from API
-  const { tweets, loading, error, deleteTweet, deleteTweetsBatch, refetch } = useTweets();
+  const { tweets, loading, error, deleteTweet, deleteTweetsBatch, removeTagFromAll, refetch } = useTweets();
 
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedTags, setSelectedTags] = useState([]);
   const [selectMode, setSelectMode] = useState(false);
   const [selectedTweets, setSelectedTweets] = useState(new Set());
+  const [editTagsMode, setEditTagsMode] = useState(false);
+  const [tagToDelete, setTagToDelete] = useState(null);
 
   // Get all unique tags
   const allTags = useMemo(() => {
@@ -81,6 +83,13 @@ export default function TweetVault() {
   // Delete single tweet
   const handleDelete = async (tweetId) => {
     await deleteTweet(tweetId);
+  };
+
+  // Delete a tag from all tweets
+  const handleDeleteTag = async (tag) => {
+    await removeTagFromAll(tag);
+    setTagToDelete(null);
+    setSelectedTags(prev => prev.filter(t => t !== tag));
   };
 
   // Show loading state
@@ -166,21 +175,54 @@ export default function TweetVault() {
 
         {/* Tag Filters */}
         {allTags.length > 0 && (
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap items-center gap-2">
             {allTags.map(tag => (
-              <button
-                key={tag}
-                onClick={() => toggleTag(tag)}
-                className={`px-2 py-1 text-xs rounded-sm border transition-colors ${
-                  selectedTags.includes(tag)
-                    ? 'bg-stone-900 text-white border-stone-900'
-                    : 'text-stone-500 bg-stone-50 border-stone-200 hover:border-stone-400'
-                }`}
-              >
-                {tag}
-              </button>
+              <div key={tag} className="relative group flex items-center">
+                {tagToDelete === tag ? (
+                  <div className="flex items-center gap-1 px-2 py-1 text-xs bg-red-50 border border-red-200 rounded-sm">
+                    <span className="text-red-600">Delete "{tag}"?</span>
+                    <button
+                      onClick={() => handleDeleteTag(tag)}
+                      className="text-red-500 hover:text-red-700 font-medium"
+                    >
+                      Yes
+                    </button>
+                    <button
+                      onClick={() => setTagToDelete(null)}
+                      className="text-stone-400 hover:text-stone-600"
+                    >
+                      No
+                    </button>
+                  </div>
+                ) : (
+                  <>
+                    <button
+                      onClick={() => toggleTag(tag)}
+                      className={`px-2 py-1 text-xs rounded-sm border transition-colors ${
+                        selectedTags.includes(tag)
+                          ? 'bg-stone-900 text-white border-stone-900'
+                          : 'text-stone-500 bg-stone-50 border-stone-200 hover:border-stone-400'
+                      } ${editTagsMode ? 'pr-6' : ''}`}
+                    >
+                      {tag}
+                    </button>
+                    {editTagsMode && (
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setTagToDelete(tag);
+                        }}
+                        className="absolute right-1 top-1/2 -translate-y-1/2 w-4 h-4 flex items-center justify-center text-stone-400 hover:text-red-500 transition-colors"
+                        title={`Delete tag "${tag}"`}
+                      >
+                        ×
+                      </button>
+                    )}
+                  </>
+                )}
+              </div>
             ))}
-            {selectedTags.length > 0 && (
+            {selectedTags.length > 0 && !editTagsMode && (
               <button
                 onClick={() => setSelectedTags([])}
                 className="px-2 py-1 text-xs text-stone-400 hover:text-stone-600"
@@ -188,6 +230,16 @@ export default function TweetVault() {
                 Clear filters
               </button>
             )}
+            <button
+              onClick={() => setEditTagsMode(!editTagsMode)}
+              className={`px-2 py-1 text-xs rounded-sm border transition-colors ${
+                editTagsMode
+                  ? 'bg-stone-900 text-white border-stone-900'
+                  : 'text-stone-400 border-stone-200 hover:border-stone-400'
+              }`}
+            >
+              {editTagsMode ? 'Done' : 'Edit Tags'}
+            </button>
           </div>
         )}
       </div>

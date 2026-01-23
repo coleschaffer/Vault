@@ -107,6 +107,13 @@ export async function deleteTweet(id) {
   });
 }
 
+export async function updateTweet(id, data) {
+  return apiFetch('/api/update-tweet', {
+    method: 'POST',
+    body: JSON.stringify({ id, ...data })
+  });
+}
+
 // ==================== HEALTH ====================
 
 export async function healthCheck() {

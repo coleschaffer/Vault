@@ -1,4 +1,6 @@
-# Deploy to Cloudflare
+---
+description: Deploy Vault to Cloudflare Workers
+---
 
 Deploy the Vault app to Cloudflare Workers.
 

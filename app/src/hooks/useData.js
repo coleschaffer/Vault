@@ -127,7 +127,24 @@ export function useTweets() {
     await Promise.all(ids.map(id => api.deleteTweet(id)));
   }, []);
 
-  return { tweets, loading, error, refetch, addTweet, addTweetsBatch, deleteTweet, deleteTweetsBatch };
+  const removeTagFromAll = useCallback(async (tagToRemove) => {
+    // Find all tweets with this tag
+    const tweetsWithTag = tweets.filter(t => t.tags?.includes(tagToRemove));
+    if (tweetsWithTag.length === 0) return;
+
+    // Optimistically update local state
+    setTweets(prev => prev.map(t => ({
+      ...t,
+      tags: t.tags?.filter(tag => tag !== tagToRemove) || []
+    })));
+
+    // Update all affected tweets in parallel
+    await Promise.all(tweetsWithTag.map(t =>
+      api.updateTweet(t.id, { tags: t.tags.filter(tag => tag !== tagToRemove) })
+    ));
+  }, [tweets]);
+
+  return { tweets, loading, error, refetch, addTweet, addTweetsBatch, deleteTweet, deleteTweetsBatch, removeTagFromAll };
 }
 
 // Get all unique tags from a data array

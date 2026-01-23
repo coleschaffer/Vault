@@ -235,6 +235,19 @@ app.post('/api/delete-tweet', async (req, res) => {
   }
 });
 
+// POST /api/update-tweet
+app.post('/api/update-tweet', async (req, res) => {
+  try {
+    const { id, tags } = req.body;
+    if (!id) return res.status(400).json({ error: 'ID is required' });
+    await db.updateTweet(id, { tags });
+    res.json({ success: true });
+  } catch (error) {
+    console.error('Error updating tweet:', error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
 // POST /api/fetch-tweet
 app.post('/api/fetch-tweet', async (req, res) => {
   try {

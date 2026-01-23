@@ -1,8 +1,0 @@
-{
-  "skills": {
-    "deploy": {
-      "description": "Deploy Vault to Cloudflare Workers",
-      "path": ".claude/skills/deploy.md"
-    }
-  }
-}
