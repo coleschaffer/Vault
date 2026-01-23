@@ -80,26 +80,54 @@ export function useImages() {
 // ==================== TWEETS ====================
 
 export function useTweets() {
-  const { data: tweets, loading, error, refetch } = useApiData(api.fetchTweets);
+  const [tweets, setTweets] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  const refetch = useCallback(async () => {
+    setLoading(true);
+    setError(null);
+    try {
+      const result = await api.fetchTweets();
+      setTweets(result);
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    refetch();
+  }, [refetch]);
 
   const addTweet = useCallback(async (data) => {
     const result = await api.addTweet(data);
-    await refetch();
+    // Optimistically add to local state
+    setTweets(prev => [{ id: result.id, ...data, addedAt: new Date().toISOString() }, ...prev]);
     return result;
-  }, [refetch]);
+  }, []);
 
   const addTweetsBatch = useCallback(async (urls, tags) => {
     const result = await api.addTweetsBatch(urls, tags);
-    await refetch();
+    await refetch(); // Refetch for batch since we get multiple IDs back
     return result;
   }, [refetch]);
 
   const deleteTweet = useCallback(async (id) => {
+    // Optimistically remove from local state (no refetch = no iframe reload)
+    setTweets(prev => prev.filter(t => t.id !== id));
     await api.deleteTweet(id);
-    await refetch();
-  }, [refetch]);
+  }, []);
 
-  return { tweets, loading, error, refetch, addTweet, addTweetsBatch, deleteTweet };
+  const deleteTweetsBatch = useCallback(async (ids) => {
+    // Optimistically remove all from local state
+    setTweets(prev => prev.filter(t => !ids.includes(t.id)));
+    // Delete all in parallel
+    await Promise.all(ids.map(id => api.deleteTweet(id)));
+  }, []);
+
+  return { tweets, loading, error, refetch, addTweet, addTweetsBatch, deleteTweet, deleteTweetsBatch };
 }
 
 // Get all unique tags from a data array

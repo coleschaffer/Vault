@@ -4,10 +4,12 @@ import TweetCard from './TweetCard';
 
 export default function TweetVault() {
   // Fetch tweets from API
-  const { tweets, loading, error, deleteTweet, refetch } = useTweets();
+  const { tweets, loading, error, deleteTweet, deleteTweetsBatch, refetch } = useTweets();
 
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedTags, setSelectedTags] = useState([]);
+  const [selectMode, setSelectMode] = useState(false);
+  const [selectedTweets, setSelectedTweets] = useState(new Set());
 
   // Get all unique tags
   const allTags = useMemo(() => {
@@ -39,7 +41,44 @@ export default function TweetVault() {
     );
   };
 
-  // Delete tweet
+  // Toggle tweet selection
+  const toggleSelectTweet = (tweetId) => {
+    setSelectedTweets(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(tweetId)) {
+        newSet.delete(tweetId);
+      } else {
+        newSet.add(tweetId);
+      }
+      return newSet;
+    });
+  };
+
+  // Select all visible tweets
+  const selectAll = () => {
+    setSelectedTweets(new Set(filteredTweets.map(t => t.id)));
+  };
+
+  // Clear selection
+  const clearSelection = () => {
+    setSelectedTweets(new Set());
+  };
+
+  // Exit select mode
+  const exitSelectMode = () => {
+    setSelectMode(false);
+    setSelectedTweets(new Set());
+  };
+
+  // Delete selected tweets
+  const handleDeleteSelected = async () => {
+    if (selectedTweets.size === 0) return;
+    await deleteTweetsBatch(Array.from(selectedTweets));
+    setSelectedTweets(new Set());
+    setSelectMode(false);
+  };
+
+  // Delete single tweet
   const handleDelete = async (tweetId) => {
     await deleteTweet(tweetId);
   };
@@ -75,7 +114,55 @@ export default function TweetVault() {
             onChange={(e) => setSearchQuery(e.target.value)}
             className="flex-1 px-4 py-2 text-sm border border-stone-200 rounded-sm focus:outline-none focus:border-stone-400"
           />
+
+          {/* Select Mode Toggle */}
+          {!selectMode ? (
+            <button
+              onClick={() => setSelectMode(true)}
+              className="px-4 py-2 text-sm text-stone-500 border border-stone-200 rounded-sm hover:border-stone-400 transition-colors"
+            >
+              Select
+            </button>
+          ) : (
+            <button
+              onClick={exitSelectMode}
+              className="px-4 py-2 text-sm text-stone-500 border border-stone-200 rounded-sm hover:border-stone-400 transition-colors"
+            >
+              Cancel
+            </button>
+          )}
         </div>
+
+        {/* Selection Actions Bar */}
+        {selectMode && (
+          <div className="flex items-center gap-4 mb-4 p-3 bg-stone-50 border border-stone-200 rounded-sm">
+            <span className="text-sm text-stone-600">
+              {selectedTweets.size} selected
+            </span>
+            <button
+              onClick={selectAll}
+              className="text-sm text-stone-500 hover:text-stone-700"
+            >
+              Select all ({filteredTweets.length})
+            </button>
+            {selectedTweets.size > 0 && (
+              <>
+                <button
+                  onClick={clearSelection}
+                  className="text-sm text-stone-500 hover:text-stone-700"
+                >
+                  Clear
+                </button>
+                <button
+                  onClick={handleDeleteSelected}
+                  className="ml-auto px-3 py-1 text-sm text-white bg-red-500 hover:bg-red-600 rounded-sm transition-colors"
+                >
+                  Delete {selectedTweets.size} tweet{selectedTweets.size !== 1 ? 's' : ''}
+                </button>
+              </>
+            )}
+          </div>
+        )}
 
         {/* Tag Filters */}
         {allTags.length > 0 && (
@@ -112,6 +199,9 @@ export default function TweetVault() {
             key={tweet.id}
             tweet={tweet}
             onDelete={handleDelete}
+            selectMode={selectMode}
+            isSelected={selectedTweets.has(tweet.id)}
+            onToggleSelect={() => toggleSelectTweet(tweet.id)}
           />
         ))}
       </div>
