@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { useAds, useImages, useTweets } from './hooks/useData';
 import AdCard from './components/AdCard';
 import AddAdForm from './components/AddAdForm';
@@ -16,6 +16,13 @@ function App() {
   const { ads, loading: adsLoading, error: adsError, deleteAd, refetch: refetchAds } = useAds();
   const { images, loading: imagesLoading, refetch: refetchImages } = useImages();
   const { tweets, loading: tweetsLoading, refetch: refetchTweets } = useTweets();
+
+  // Get unique tags from tweets for AddTweetForm
+  const tweetTags = useMemo(() => {
+    const tagSet = new Set();
+    (tweets || []).forEach(tweet => tweet.tags?.forEach(tag => tagSet.add(tag)));
+    return Array.from(tagSet).sort();
+  }, [tweets]);
 
   // Initialize from localStorage or default to 'ads'
   const [activeVault, setActiveVault] = useState(() => {
@@ -234,7 +241,7 @@ function App() {
             {/* Add Tweet Form */}
             {showAddTweetForm && (
               <div className="mb-8">
-                <AddTweetForm onTweetAdded={handleTweetAdded} />
+                <AddTweetForm onTweetAdded={handleTweetAdded} existingTags={tweetTags} />
               </div>
             )}
 

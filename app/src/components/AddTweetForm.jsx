@@ -1,9 +1,7 @@
 import { useState, useMemo } from 'react';
-import { tweets } from '../data/tweets';
+import { API_BASE } from '../config.js';
 
-const API_BASE = 'http://localhost:3001';
-
-export default function AddTweetForm({ onTweetAdded }) {
+export default function AddTweetForm({ onTweetAdded, existingTags = [] }) {
   const [mode, setMode] = useState('single'); // 'single' or 'batch'
   const [url, setUrl] = useState('');
   const [tagInput, setTagInput] = useState('');
@@ -16,13 +14,6 @@ export default function AddTweetForm({ onTweetAdded }) {
   const [batchInput, setBatchInput] = useState('');
   const [batchUrls, setBatchUrls] = useState([]); // Array of { url, selected }
   const [batchResults, setBatchResults] = useState(null);
-
-  // Get all existing unique tags from tweets
-  const existingTags = useMemo(() => {
-    const tagSet = new Set();
-    tweets.forEach(tweet => tweet.tags.forEach(tag => tagSet.add(tag)));
-    return Array.from(tagSet).sort();
-  }, []);
 
   // Filter existing tags that aren't already selected
   const availableTags = useMemo(() => {
