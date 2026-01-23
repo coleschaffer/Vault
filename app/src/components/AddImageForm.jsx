@@ -1,6 +1,5 @@
 import { useState } from 'react';
-
-const API_BASE = 'http://localhost:3001';
+import { API_BASE } from '../config.js';
 
 export default function AddImageForm({ onImageAdded }) {
   const [mode, setMode] = useState('url'); // 'url', 'batch', or 'file'

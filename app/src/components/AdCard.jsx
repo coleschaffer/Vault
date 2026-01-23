@@ -1,7 +1,6 @@
 import { useState, useRef } from 'react';
 import ShotBreakdown from './ShotBreakdown';
-
-const API_BASE = 'http://localhost:3001';
+import { API_BASE } from '../config.js';
 
 export default function AdCard({ ad, onDelete }) {
   const [activeSection, setActiveSection] = useState('why');
